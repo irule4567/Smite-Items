@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Artifact\ExampleArtifact.cs" />
+    <Compile Remove="Equipment\EliteEquipment\ExampleEliteEquipment.cs" />
+    <Compile Remove="Equipment\ExampleEquipment.cs" />
+    <Compile Remove="Equipment\ExampleEquipWithTargeting.cs" />
+    <Compile Remove="Items\ExampleItem.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="smiteitemsassets" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="smiteitemsassets" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MMHOOK.RoR2" Version="2022.4.19" />
+    <PackageReference Include="R2API" Version="4.4.1" />
+    <PackageReference Include="RiskOfRain2.GameLibs" Version="1.2.4-r.0" />
+  </ItemGroup>
+
+</Project>
