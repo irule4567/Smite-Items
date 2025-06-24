@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite Items\\Smite Items.csproj": {}
+    "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Smite Items.csproj": {}
   },
   "projects": {
-    "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite Items\\Smite Items.csproj": {
+    "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Smite Items.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite Items\\Smite Items.csproj",
+        "projectUniqueName": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Smite Items.csproj",
         "projectName": "Smite Items",
-        "projectPath": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite Items\\Smite Items.csproj",
+        "projectPath": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Smite Items.csproj",
         "packagesPath": "C:\\Users\\Kyle\\.nuget\\packages\\",
-        "outputPath": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite Items\\obj\\",
+        "outputPath": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -53,6 +53,10 @@
             "MMHOOK.RoR2": {
               "target": "Package",
               "version": "[2022.4.19, )"
+            },
+            "Microsoft.CodeAnalysis.CSharp": {
+              "target": "Package",
+              "version": "[4.8.0, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",

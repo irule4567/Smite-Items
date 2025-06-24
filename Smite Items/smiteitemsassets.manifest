@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1313414692
+CRC: 856023156
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 39d93b47661ae2ef76d166af0a599d31
+    Hash: 5fb573fb064824d0e66f8103b31fd3e4
   TypeTreeHash:
     serializedVersion: 2
-    Hash: a7a21288fe2bd6ae3724c7054e7a1302
+    Hash: eeb008a4954a20964bedfac9be76f63d
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -25,11 +25,16 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Textures/Icons/Items/Chronos Pendant/Chronos Pendant Icon.png
-- Assets/Materials/Item/Chronos Pendant/Chronos Pendant Material.mat
-- Assets/Models/Prefabs/Item/Chronos Pendant/ChronosPendantDisplay.prefab
+- Assets/Materials/Item/Chronos Pendant/ChronosPendantFace.mat
+- Assets/Materials/Item/Chronos Pendant/ItemRoundedEdge.mat
+- Assets/Models/Prefabs/Item/Chronos Pendant/ChronosPendantModel.prefab
 Dependencies: []

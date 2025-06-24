@@ -25,7 +25,7 @@ namespace Smite_Items.Items
 
         public override ItemTier Tier => ItemTier.Tier2;
 
-        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("ChronosPendantDisplay.prefab");
+        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("ChronosPendantModel.prefab");
 
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Chronos Pendant Icon.png");
 
@@ -93,7 +93,7 @@ namespace Smite_Items.Items
             chronosPendantCooldown.isDebuff = false;
             chronosPendantCooldown.name = "ChronosPendantCooldown";
             chronosPendantCooldown.isCooldown = true;
-            chronosPendantCooldown.iconSprite = Addressables.LoadAssetAsync<Sprite>("Chronos Pendant Icon.png").WaitForCompletion();
+            chronosPendantCooldown.iconSprite = MainAssets.LoadAsset<Sprite>("Chronos Pendant Icon.png");
             ContentAddition.AddBuffDef(chronosPendantCooldown);
         }
 
@@ -107,6 +107,7 @@ namespace Smite_Items.Items
     public class ChronosPendantBehavior : CharacterBody.ItemBehavior
     {
         private float cooldownTimer;
+        
 
         private void Awake()
         {

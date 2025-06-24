@@ -1,6 +1,14 @@
 is_global = true
+build_property.TargetFramework = netstandard2.0
+build_property.TargetPlatformMinVersion = 7.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Smite_Items
-build_property.ProjectDir = C:\Various stuff\Miscellaneous Gaming content\RoR2 mod creation\Smite Items\
+build_property.ProjectDir = C:\Various stuff\Miscellaneous Gaming content\RoR2 mod creation\Smite-Items\Smite Items\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false
