@@ -12,16 +12,17 @@ namespace Smite_Items.Items
 {
     public class ChronosPendant : ItemBase<ChronosPendant>
     {
-        public ConfigEntry<float> ItemCooldown;
+        public ConfigEntry<int> ItemCooldown;
+        public ConfigEntry<float> CooldownsRemovedPerActivation;
         public override string ItemName => "Chronos Pendant";
 
         public override string ItemLangTokenName => "CHRONOS_PENDANT";
 
-        public override string ItemPickupDesc => "Periodically lower cooldowns by 1 second.";
+        public override string ItemPickupDesc => "Periodically lower ability cooldowns.";
 
-        public override string ItemFullDescription => "Every 10 seconds, lower all ability cooldowns by 1 second";
+        public override string ItemFullDescription => $"Every <style=cIsUtility>{ItemCooldown.Value}</style> seconds, lower all ability cooldowns by <style=cIsUtility>{CooldownsRemovedPerActivation.Value}</style> <style=cStack>(+{CooldownsRemovedPerActivation.Value} per stack)</style> seconds.";
 
-        public override string ItemLore => "Item taken from Smite 2";
+        public override string ItemLore => "Item taken from Smite 2.";
 
         public override ItemTier Tier => ItemTier.Tier2;
 
@@ -31,9 +32,13 @@ namespace Smite_Items.Items
 
         public static BuffDef chronosPendantCooldown;
 
-        public static float secondsRemovedPerActivation = 1f;
+        //public static float secondsRemovedPerActivation = 1f;
 
-        public static float chronosPendantCooldownDuration = 10f;
+        //public static float chronosPendantCooldownDuration = 10f;
+
+        //public static float secondsRemovedPerActivation => instance.CooldownsRemovedPerActivation.Value;
+
+       // public static float chronosPendantCooldownDuration => instance.ItemCooldown.Value;
 
         public static GameObject ItemBodyModelPrefab;
 
@@ -49,7 +54,8 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            ItemCooldown = config.Bind<float>("Item " + ItemName, "Item Cooldown", 10, "How many seconds between each item proc?");
+            ItemCooldown = config.Bind<int>("Item " + ItemName, "Item Cooldown", 10, "How many seconds between each item proc?");
+            CooldownsRemovedPerActivation = config.Bind<float>("Item " + ItemName, "Ability cooldowns removed per activation", 1, "How many seconds removed from each ability cooldown per item proc?");
         }
 
         public override void Hooks()
@@ -119,10 +125,26 @@ namespace Smite_Items.Items
             cooldownTimer = 0f;
         }
 
+        private void OnDisable()
+        {
+            if (body && body.HasBuff(ChronosPendant.chronosPendantCooldown))
+            {
+                body.ClearTimedBuffs(ChronosPendant.chronosPendantCooldown);
+            }
+        }
+
         private void FixedUpdate()
         {
             if (!body || !body.skillLocator)
                 return;
+
+            /*if(stack == 0)
+            {
+                if (body.HasBuff(ChronosPendant.chronosPendantCooldown))
+                {
+                    body.RemoveBuff(ChronosPendant.chronosPendantCooldown);
+                }
+            }*/
 
             int currentStacks = body.GetBuffCount(ChronosPendant.chronosPendantCooldown);
 
@@ -131,12 +153,16 @@ namespace Smite_Items.Items
                 return;
             }
 
-            float reduction = ChronosPendant.secondsRemovedPerActivation;
+            //float reduction = ChronosPendant.secondsRemovedPerActivation * stack;
+            float reduction = ChronosPendant.instance.CooldownsRemovedPerActivation.Value * stack;
+            // Reduction is currently 1 second per stack, may change to be hyperbolic
+            // Hyperbolic idea: Reduction = secondsRemovedPerActivation + (1 - 1/(1 + (stack-1) * coefficient))
             body.skillLocator.DeductCooldownFromAllSkillsServer(reduction);
 
             //body.SetBuffCount(ChronosPendant.chronosPendantCooldown.buffIndex, (int)ChronosPendant.chronosPendantCooldownDuration);
 
-            for (int k = 1; (int)k <= ChronosPendant.chronosPendantCooldownDuration; k++)
+            //for (int k = 1; (int)k <= ChronosPendant.chronosPendantCooldownDuration; k++)
+            for (int k = 1; (int)k <= ChronosPendant.instance.ItemCooldown.Value; k++)
             {
                 body.AddTimedBuff(ChronosPendant.chronosPendantCooldown, k);
             }
