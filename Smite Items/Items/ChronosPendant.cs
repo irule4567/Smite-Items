@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Networking;
 using static Smite_Items.Main;
 
 namespace Smite_Items.Items
@@ -112,10 +113,10 @@ namespace Smite_Items.Items
 
     public class ChronosPendantBehavior : CharacterBody.ItemBehavior
     {
-        private float cooldownTimer;
+        //private float cooldownTimer;
         
 
-        private void Awake()
+        /*private void Awake()
         {
             
         }
@@ -123,7 +124,7 @@ namespace Smite_Items.Items
         private void OnEnable()
         {
             cooldownTimer = 0f;
-        }
+        }*/
 
         private void OnDisable()
         {
@@ -138,6 +139,10 @@ namespace Smite_Items.Items
             if (!body || !body.skillLocator)
                 return;
 
+            if (!NetworkServer.active)
+            {
+                return;
+            }
             /*if(stack == 0)
             {
                 if (body.HasBuff(ChronosPendant.chronosPendantCooldown))
@@ -146,14 +151,21 @@ namespace Smite_Items.Items
                 }
             }*/
 
-            int currentStacks = body.GetBuffCount(ChronosPendant.chronosPendantCooldown);
+            /*int currentStacks = body.GetBuffCount(ChronosPendant.chronosPendantCooldown);
 
             if (currentStacks > 0)
             {
                 return;
-            }
+            }*/
+            if (body.HasBuff(ChronosPendant.chronosPendantCooldown))
+                return;
 
             //float reduction = ChronosPendant.secondsRemovedPerActivation * stack;
+            if (ChronosPendant.instance == null)
+            {
+                Debug.Log("ChronosPendant.instance was somehow null");
+                return;
+            }
             float reduction = ChronosPendant.instance.CooldownsRemovedPerActivation.Value * stack;
             // Reduction is currently 1 second per stack, may change to be hyperbolic
             // Hyperbolic idea: Reduction = secondsRemovedPerActivation + (1 - 1/(1 + (stack-1) * coefficient))
@@ -162,7 +174,7 @@ namespace Smite_Items.Items
             //body.SetBuffCount(ChronosPendant.chronosPendantCooldown.buffIndex, (int)ChronosPendant.chronosPendantCooldownDuration);
 
             //for (int k = 1; (int)k <= ChronosPendant.chronosPendantCooldownDuration; k++)
-            for (int k = 1; (int)k <= ChronosPendant.instance.ItemCooldown.Value; k++)
+            for (int k = 1; k <= ChronosPendant.instance.ItemCooldown.Value; k++)
             {
                 body.AddTimedBuff(ChronosPendant.chronosPendantCooldown, k);
             }

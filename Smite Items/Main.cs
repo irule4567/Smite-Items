@@ -21,7 +21,7 @@ namespace Smite_Items
     {
         public const string ModGuid = "com.irule4567.SmiteItems";
         public const string ModName = "Smite Items";
-        public const string ModVer = "0.0.1";
+        public const string ModVer = "0.1.0";
 
         public static AssetBundle MainAssets;
 
@@ -36,6 +36,10 @@ namespace Smite_Items
         private void Awake()
         {
             ModLogger = Logger;
+
+            // Remove this line before publishing/releasing your mod!
+            //On.RoR2.Networking.NetworkManagerSystemSteam.OnClientConnect += (s, u, t) => { };
+
 
             // Don't know how to create/use an asset bundle, or don't have a unity project set up?
             // Look here for info on how to set these up: https://github.com/KomradeSpectre/AetheriumMod/blob/rewrite-master/Tutorials/Item%20Mod%20Creation.md#unity-project
