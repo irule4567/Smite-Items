@@ -38,8 +38,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChronosPendant.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ChronosPendant.cs",
+              "RelativeDocumentMoniker": "Items\\ChronosPendant.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ChronosPendant.cs",
+              "RelativeToolTip": "Items\\ChronosPendant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T14:28:03.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -48,14 +65,10 @@
               "RelativeDocumentMoniker": "Items\\MysticalMail.cs",
               "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\MysticalMail.cs",
               "RelativeToolTip": "Items\\MysticalMail.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAiwGMAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAA6wDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-08T13:46:43.967Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -91,8 +104,7 @@
               "RelativeToolTip": "Items\\ItemBase.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAgwEkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T14:59:18.822Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T14:59:18.822Z"
             },
             {
               "$type": "Document",
@@ -114,43 +126,9 @@
               "RelativeDocumentMoniker": "Main.cs",
               "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Main.cs",
               "RelativeToolTip": "Main.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwBcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T14:51:13.229Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "e07bdc83-f8c6-4851-a044-0613ecd369f9",
-        "Display": 0,
-        "X": -7,
-        "Y": 58,
-        "Width": 2217,
-        "Height": 1159,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChronosPendant.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ChronosPendant.cs",
-              "RelativeDocumentMoniker": "Items\\ChronosPendant.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ChronosPendant.cs",
-              "RelativeToolTip": "Items\\ChronosPendant.cs",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAQwKwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T14:59:19.578Z",
               "EditorCaption": ""
             }
           ]

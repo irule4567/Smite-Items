@@ -3,6 +3,7 @@ using R2API;
 using RoR2;
 using System;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.Networking;
 using static Smite_Items.Main;
 
@@ -12,6 +13,7 @@ namespace Smite_Items.Items
     {
         public ConfigEntry<float> Frequency;
         public ConfigEntry<float> Damage;
+        public ConfigEntry<float> DamagePerStack;
         public ConfigEntry<float> Radius;
         public override string ItemName => "Mystical Mail";
 
@@ -19,7 +21,7 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Damage nearby enemies every second";
 
-        public override string ItemFullDescription => "Every 1 second, deal {Insert damage} damage to all enemies within {Insert range} meters.";
+        public override string ItemFullDescription => $"Every <style=cIsUtility>{Frequency.Value}</style> second, deal <style=cIsDamage>{Damage.Value}</style> <style=cStack>(+{DamagePerStack.Value} per stack)</style> damage to all enemies within <style=cIsDamage>{Radius.Value}</style> meters.";
 
         public override string ItemLore => "Item taken from Smite 2";
 
@@ -31,12 +33,23 @@ namespace Smite_Items.Items
 
         public static GameObject AOEDamageField;
 
+        public GameObject mailPulsePrefab;
+
         public override void Init(ConfigFile config)
         {
             CreateConfig(config);
             CreateLang();
             //CreateAOE();
             CreateItem();
+            // Funky stuff to try and find a good shockwave effect, probably want to replace
+            GameObject originalEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Common/VFX/OmniImpactVFX.prefab").WaitForCompletion();
+
+            mailPulsePrefab = UnityEngine.Object.Instantiate(originalEffect);
+
+            Transform foamSplashTransform = mailPulsePrefab.transform.Find("FoamSplash");
+            if (foamSplashTransform) foamSplashTransform.gameObject.SetActive(false);
+
+            ContentAddition.AddEffect(mailPulsePrefab);
             Hooks();
         }
 
@@ -44,6 +57,7 @@ namespace Smite_Items.Items
         {
             Frequency = config.Bind<float>("Item " + ItemName, "Item Frequency", 1, "How often does the item effect activate?");
             Damage = config.Bind<float>("Item " + ItemName, "Damage", 15, "How much damage does each item activation do?");
+            DamagePerStack = config.Bind<float>("Item " + ItemName, "Damage per stack", 10, "How much damage does each stack of the item add to the effect?");
             Radius = config.Bind<float>("Item " + ItemName, "Radius", 12, "In what radius around the player does the effect occur?");
         }
 
@@ -92,16 +106,17 @@ namespace Smite_Items.Items
                 float radius = MysticalMail.instance.Radius.Value;
 
                 //Make aoe projectile here
-                /*EffectData effectData = new EffectData
+                EffectData effectData = new EffectData
                 {
                     origin = body.corePosition,
                     scale = radius
-                };*/
-                //EffectManager.SpawnEffect(MysticalMail.AOEDamageField, effectData, true);
+                };
+                //GameObject aoeEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Common/VFX/OmniImpactVFX.prefab").WaitForCompletion();
+                EffectManager.SpawnEffect(MysticalMail.instance.mailPulsePrefab, effectData, true);
                 BlastAttack blastAttack = new BlastAttack
                 {
                     attacker = body.gameObject,
-                    baseDamage = MysticalMail.instance.Damage.Value,
+                    baseDamage = MysticalMail.instance.Damage.Value + (stack-1)*MysticalMail.instance.DamagePerStack.Value,
                     baseForce = 0f,
                     bonusForce = Vector3.zero,
                     crit = body.RollCrit(),
