@@ -33,7 +33,7 @@ namespace Smite_Items.Items
 
         public static GameObject AOEDamageField;
 
-        public GameObject mailPulsePrefab;
+        //public GameObject mailPulsePrefab;
 
         public override void Init(ConfigFile config)
         {
@@ -42,14 +42,14 @@ namespace Smite_Items.Items
             //CreateAOE();
             CreateItem();
             // Funky stuff to try and find a good shockwave effect, probably want to replace
-            GameObject originalEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Common/VFX/OmniImpactVFX.prefab").WaitForCompletion();
+            /*GameObject originalEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Icicle/DisplayFrostRelic.prefab").WaitForCompletion();
 
             mailPulsePrefab = UnityEngine.Object.Instantiate(originalEffect);
 
-            Transform foamSplashTransform = mailPulsePrefab.transform.Find("FoamSplash");
+            /*Transform foamSplashTransform = mailPulsePrefab.transform.Find("FoamSplash");
             if (foamSplashTransform) foamSplashTransform.gameObject.SetActive(false);
 
-            ContentAddition.AddEffect(mailPulsePrefab);
+            ContentAddition.AddEffect(mailPulsePrefab);*/
             Hooks();
         }
 
@@ -106,13 +106,50 @@ namespace Smite_Items.Items
                 float radius = MysticalMail.instance.Radius.Value;
 
                 //Make aoe projectile here
-                EffectData effectData = new EffectData
+                /*EffectData effectData = new EffectData
                 {
                     origin = body.corePosition,
                     scale = radius
-                };
+                };*/
                 //GameObject aoeEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Common/VFX/OmniImpactVFX.prefab").WaitForCompletion();
-                EffectManager.SpawnEffect(MysticalMail.instance.mailPulsePrefab, effectData, true);
+                // Make visual effect using the pillar of design pulse, make a clone that is silent, and spawn that at the players location
+                GameObject mailPulse = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/moon2/MoonBatteryDesignPulse.prefab").WaitForCompletion();
+                //GameObject silentPulse = PrefabAPI.InstantiateClone(mailPulse, "SilentPulse", false);
+                /*foreach (AudioSource source in silentPulse.GetComponentsInChildren<AudioSource>())
+                {
+                    source.volume = 0f;
+                }*/
+
+
+
+                GameObject spawnedEffect = GameObject.Instantiate(mailPulse, body.transform.position, body.transform.rotation);
+                /*AkGameObj[] akGameObjs = spawnedEffect.GetComponentsInChildren<AkGameObj>();
+                foreach (AkGameObj akObj in akGameObjs)
+                {
+                    akObj.enabled = false;
+                }*/
+                /*AudioSource[] audioSources = spawnedEffect.GetComponentsInChildren<AudioSource>();
+                foreach (AudioSource audio in audioSources)
+                {
+                    audio.volume = 0f;
+                }*/
+                Component[] allComponents = spawnedEffect.GetComponentsInChildren<Component>();
+                foreach (Component component in allComponents)
+                {
+                    Debug.Log($"Component: {component.GetType().Name} on {component.gameObject.name}");
+                }
+
+                foreach (Component component in allComponents)
+                {
+                    if (component.GetType().Name == "AkGameObj" || component.GetType().Name == "AkEvent")
+                    {
+                        GameObject.Destroy(component);
+                    }
+                }
+                NetworkServer.Spawn(spawnedEffect);
+                //EffectManager.SpawnEffect(mailPulse, effectData, true);
+                //GameObject obj = UnityEngine.Object.Instantiate(MysticalMail.instance.mailPulsePrefab, base.transform.position, base.transform.rotation);
+                //NetworkServer.Spawn(obj);
                 BlastAttack blastAttack = new BlastAttack
                 {
                     attacker = body.gameObject,
