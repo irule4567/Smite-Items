@@ -21,7 +21,7 @@ namespace Smite_Items
     {
         public const string ModGuid = "com.irule4567.SmiteItems";
         public const string ModName = "Smite Items";
-        public const string ModVer = "0.1.1";
+        public const string ModVer = "0.2.1";
 
         public static AssetBundle MainAssets;
 
@@ -126,6 +126,8 @@ namespace Smite_Items
         /// <param name="itemList">The list you would like to add this to if it passes the config check.</param>
         public bool ValidateItem(ItemBase item, List<ItemBase> itemList)
         {
+            string name = item.ItemName.Replace("'", string.Empty); // Remove apostrophes from item names
+            Debug.Log("name in main: " + name);
             var enabled = Config.Bind<bool>("Item: " + item.ItemName, "Enable Item?", true, "Should this item appear in runs?").Value;
             var aiBlacklist = Config.Bind<bool>("Item: " + item.ItemName, "Blacklist Item from AI Use?", false, "Should the AI not be able to obtain this item?").Value;
             if (enabled)

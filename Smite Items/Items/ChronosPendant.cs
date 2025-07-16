@@ -17,7 +17,7 @@ namespace Smite_Items.Items
         public ConfigEntry<float> CooldownsRemovedPerActivation;
         public override string ItemName => "Chronos Pendant";
 
-        public override string ItemLangTokenName => "CHRONOS_PENDANT";
+        public override string ItemLangTokenName => "CHRONOSPENDANT_ITEM";
 
         public override string ItemPickupDesc => "Periodically lower ability cooldowns.";
 
@@ -57,6 +57,14 @@ namespace Smite_Items.Items
         {
             ItemCooldown = config.Bind<int>("Item " + ItemName, "Item Cooldown", 10, "How many seconds between each item proc?");
             CooldownsRemovedPerActivation = config.Bind<float>("Item " + ItemName, "Ability cooldowns removed per activation", 1, "How many seconds removed from each ability cooldown per item proc?");
+        }
+
+        protected override void CreateLang()
+        {
+            LanguageAPI.Add("ITEM_" + ItemLangTokenName + "_NAME", "Chronos' Pendant");
+            LanguageAPI.Add("ITEM_" + ItemLangTokenName + "_PICKUP", ItemPickupDesc);
+            LanguageAPI.Add("ITEM_" + ItemLangTokenName + "_DESCRIPTION", ItemFullDescription);
+            LanguageAPI.Add("ITEM_" + ItemLangTokenName + "_LORE", ItemLore);
         }
 
         public override void Hooks()

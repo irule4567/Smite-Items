@@ -15,7 +15,7 @@ namespace Smite_Items.Items
         public ConfigEntry<int> StackDuration;
         public override string ItemName => "Tekko-Kagi";
 
-        public override string ItemLangTokenName => "TEKKO_KAGI";
+        public override string ItemLangTokenName => "TEKKOKAGI_ITEM";
 
         public override string ItemPickupDesc => "Gain movement speed on skill use.";
 
@@ -95,11 +95,12 @@ namespace Smite_Items.Items
 
         private void AddMoveStack(On.RoR2.CharacterBody.orig_OnSkillActivated orig, RoR2.CharacterBody self, RoR2.GenericSkill skill)
         {
+            orig(self, skill);
             var inventoryCount = GetCount(self);
             if (inventoryCount > 0)
             {
                 bool isPrimary = (self.skillLocator.primary.skillDef == skill.skillDef);
-                Debug.Log("Is Primary skill: " + isPrimary);
+                //Debug.Log("Is Primary skill: " + isPrimary);
                 // Add movement speed buff if skill wasn't primary and buff count is under max
                 if (!isPrimary && self.GetBuffCount(tekkoMoveSpeed) < MaxStacks.Value * inventoryCount)
                 {

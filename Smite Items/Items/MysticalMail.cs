@@ -17,7 +17,7 @@ namespace Smite_Items.Items
         public ConfigEntry<float> Radius;
         public override string ItemName => "Mystical Mail";
 
-        public override string ItemLangTokenName => "MYSTICAL_MAIL";
+        public override string ItemLangTokenName => "MYSTICALMAIL_ITEM";
 
         public override string ItemPickupDesc => "Damage nearby enemies every second";
 
