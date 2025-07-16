@@ -17,7 +17,7 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Using a skill gives your next primary skill bonus damage.";
 
-        public override string ItemFullDescription => "Using a non-primary skill grants your next primary skill (Insert damage) bonus damage.";
+        public override string ItemFullDescription => $"Using a non-primary skill grants your next primary skill an addition <style=cIsDamage>{BonusDamage.Value * 100}%</style> <style=cStack>(+{BonusDamage.Value * 100}% per stack)</style> base damage.";
 
         public override string ItemLore => "Item taken from Smite 2.";
 
@@ -109,7 +109,7 @@ namespace Smite_Items.Items
                         }
                         if (attackerBody.HasBuff(hydrasBonusDamage) && isPrimaryAttack)
                         {
-                            damageInfo.damage = attackerBody.baseDamage * BonusDamage.Value; // Add bonus damage from buff
+                            damageInfo.damage = attackerBody.baseDamage * (BonusDamage.Value * stackCount); // Add bonus damage from buff
                             damageInfo.damageColorIndex = DamageColorIndex.Item;
                             damageInfo.procCoefficient = 0f;
                             damageInfo.crit = false;

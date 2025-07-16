@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\draconicscale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\draconicscale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\hydras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\hydras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -55,19 +59,36 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DraconicScale.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\DraconicScale.cs",
+              "RelativeDocumentMoniker": "Items\\DraconicScale.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\DraconicScale.cs",
+              "RelativeToolTip": "Items\\DraconicScale.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAADLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T17:57:57.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Hydras.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\Hydras.cs",
               "RelativeDocumentMoniker": "Items\\Hydras.cs",
               "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\Hydras.cs",
               "RelativeToolTip": "Items\\Hydras.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAHMAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAD6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-16T13:25:00.128Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ItemBase.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ItemBase.cs",
               "RelativeDocumentMoniker": "Items\\ItemBase.cs",
@@ -75,12 +96,11 @@
               "RelativeToolTip": "Items\\ItemBase.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAYwEAAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T15:41:10.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T15:41:10.551Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Main.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Main.cs",
               "RelativeDocumentMoniker": "Main.cs",
@@ -88,12 +108,11 @@
               "RelativeToolTip": "Main.cs",
               "ViewState": "AgIAAGIAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T15:41:07.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T15:41:07.59Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TekkoKagi.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\TekkoKagi.cs",
               "RelativeDocumentMoniker": "Items\\TekkoKagi.cs",
@@ -101,25 +120,24 @@
               "RelativeToolTip": "Items\\TekkoKagi.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAEwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T13:53:15.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-16T13:53:15.746Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ChronosPendant.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ChronosPendant.cs",
               "RelativeDocumentMoniker": "Items\\ChronosPendant.cs",
               "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ChronosPendant.cs",
               "RelativeToolTip": "Items\\ChronosPendant.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAAD0AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA5wJwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-16T13:52:53.77Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MysticalMail.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\MysticalMail.cs",
               "RelativeDocumentMoniker": "Items\\MysticalMail.cs",
@@ -127,12 +145,11 @@
               "RelativeToolTip": "Items\\MysticalMail.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAYwBMAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T15:42:01.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T15:42:01.162Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ItemHelpers.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\ItemHelpers.cs",
               "RelativeDocumentMoniker": "Utils\\ItemHelpers.cs",
@@ -140,12 +157,11 @@
               "RelativeToolTip": "Utils\\ItemHelpers.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T14:36:13.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-14T14:36:13.408Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "MathHelpers.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\MathHelpers.cs",
               "RelativeDocumentMoniker": "Utils\\MathHelpers.cs",
@@ -153,12 +169,11 @@
               "RelativeToolTip": "Utils\\MathHelpers.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T14:36:21.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-14T14:36:21.473Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MiscUtils.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\MiscUtils.cs",
               "RelativeDocumentMoniker": "Utils\\MiscUtils.cs",
@@ -166,12 +181,11 @@
               "RelativeToolTip": "Utils\\MiscUtils.cs",
               "ViewState": "AgIAAKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T14:36:22.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-14T14:36:22.232Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "NetworkingHelpers.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\NetworkingHelpers.cs",
               "RelativeDocumentMoniker": "Utils\\NetworkingHelpers.cs",
@@ -179,12 +193,7 @@
               "RelativeToolTip": "Utils\\NetworkingHelpers.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T14:36:23.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2025-07-14T14:36:23.57Z"
             }
           ]
         }
