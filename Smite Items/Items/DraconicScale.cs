@@ -22,7 +22,7 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Gain temporary armor after taking damage";
 
-        public override string ItemFullDescription => "Each time you take damage, gain a stack of (value) armor for (time) seconds up to a maximum of (max). Stacks decay by 1 instead of being fully removed.";
+        public override string ItemFullDescription => $"Each time you take damage, gain a buff that grants <style=cIsHealing>{ScaleArmorFlat.Value}</style> armor and increase armor by <style=cIsHealing>{ScaleArmorPercent.Value * 100}%</style> for <style=cIsUtility>{BuffDuration.Value}</style> seconds up to a maximum of <style=cIsUtility>{MaxStacks.Value}</style> <style=cStack>(+{MaxStacks.Value} per stack)</style> <style=cIsUtility>times</style>. This buff decays by 1 stack at a time.";
 
         public override string ItemLore => "";
 
@@ -104,7 +104,7 @@ namespace Smite_Items.Items
                 if(stackCount > 0)
                 {
                     ItemHelpers.RefreshTimedBuffs(self.body, scaleArmorBuff, BuffDuration.Value);
-                    if (self.body.GetBuffCount(scaleArmorBuff) < MaxStacks.Value)
+                    if (self.body.GetBuffCount(scaleArmorBuff) < MaxStacks.Value*GetCount(self.body))
                     {
                         self.body.AddBuff(scaleArmorBuff);
                         //self.body.AddTimedBuff(scaleArmorBuff, BuffDuration.Value, MaxStacks.Value); 
