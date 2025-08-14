@@ -17,11 +17,13 @@ namespace Smite_Items.Equipment
 
         public override string EquipmentFullDescription => $"Become invulnerable for <style=cIsUtility>{InvulnDuration.Value}</style> seconds.";
 
-        public override string EquipmentLore => "";
+        public override string EquipmentLore => "Item taken from Smite 2";
 
         public override GameObject EquipmentModel => MainAssets.LoadAsset<GameObject>("ExampleEquipmentPrefab.prefab");
 
         public override Sprite EquipmentIcon => MainAssets.LoadAsset<Sprite>("ExampleEquipmentIcon.png");
+
+        public override float Cooldown => 40;
 
         public override void Init(ConfigFile config)
         {
@@ -43,7 +45,8 @@ namespace Smite_Items.Equipment
 
         protected override bool ActivateEquipment(EquipmentSlot slot)
         {
-            return false;
+            slot.characterBody.AddTimedBuff(RoR2Content.Buffs.Immune, InvulnDuration.Value);
+            return true;
         }
 
 
