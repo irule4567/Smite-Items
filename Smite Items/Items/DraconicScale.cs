@@ -24,7 +24,7 @@ namespace Smite_Items.Items
 
         public override string ItemFullDescription => $"Each time you take damage, gain a buff that grants <style=cIsHealing>{ScaleArmorFlat.Value}</style> armor and increase armor by <style=cIsHealing>{ScaleArmorPercent.Value * 100}%</style> for <style=cIsUtility>{BuffDuration.Value}</style> seconds up to a maximum of <style=cIsUtility>{MaxStacks.Value}</style> <style=cStack>(+{MaxStacks.Value} per stack)</style> <style=cIsUtility>times</style>. This buff decays by 1 stack at a time.";
 
-        public override string ItemLore => "";
+        public override string ItemLore => "Item taken from Smite 2.";
 
         public override ItemTier Tier => ItemTier.Tier2;
 
