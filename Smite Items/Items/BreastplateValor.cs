@@ -79,7 +79,7 @@ namespace Smite_Items.Items
                 if (!self.body.skillLocator) return;
                     if (stackCount > 0)
                 {
-                    float percentDamageTaken = damageInfo.damage / self.fullCombinedHealth;
+                    float percentDamageTaken = damageInfo.damage / self.body.maxHealth;
                     //int buffsToAdd = (int)(percentDamageTaken * 1000);
                     int buffsToAdd = Mathf.RoundToInt(percentDamageTaken * 1000);
                     if(buffsToAdd > 0)
