@@ -4,6 +4,7 @@ using RoR2;
 using Smite_Items.Utils;
 using System;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using static Smite_Items.Main;
 
 namespace Smite_Items.Items
