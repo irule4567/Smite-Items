@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 856023156
+CRC: 3631666934
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 5fb573fb064824d0e66f8103b31fd3e4
+    Hash: 0ecc5d04c63ccc4fc40837c5c489a782
   TypeTreeHash:
     serializedVersion: 2
     Hash: eeb008a4954a20964bedfac9be76f63d
@@ -33,8 +33,11 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/Materials/Item/Breastplate of Valor/BreastplateFace.mat
 - Assets/Textures/Icons/Items/Chronos Pendant/Chronos Pendant Icon.png
+- Assets/Textures/Icons/Items/Breastplate of Valor/Breastplate Icon.png
 - Assets/Materials/Item/Chronos Pendant/ChronosPendantFace.mat
+- Assets/Models/Prefabs/Item/Breastplate of Valor/BreastplateModel.prefab
 - Assets/Materials/Item/Chronos Pendant/ItemRoundedEdge.mat
 - Assets/Models/Prefabs/Item/Chronos Pendant/ChronosPendantModel.prefab
 Dependencies: []
