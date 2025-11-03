@@ -17,15 +17,15 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Using a skill gives your next primary skill bonus damage.";
 
-        public override string ItemFullDescription => $"Using a non-primary skill makes your next primary skill deal an extra hit equal to <style=cIsDamage>{BonusDamage.Value * 100}%</style> <style=cStack>(+{BonusDamage.Value * 100}% per stack)</style> base damage.";
+        public override string ItemFullDescription => $"Using a non-primary skill makes your next primary skill deals an extra hit equal to <style=cIsDamage>{BonusDamage.Value * 100}%</style> <style=cStack>(+{BonusDamage.Value * 100}% per stack)</style> base damage.";
 
         public override string ItemLore => "Item taken from Smite 2.";
 
         public override ItemTier Tier => ItemTier.Tier1;
 
-        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("ExampleItemPrefab.prefab");
+        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("HydrasLamentModel.prefab");
 
-        public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("ExampleItemIcon.png");
+        public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Hydras Lament Icon.png");
 
         public static BuffDef hydrasBonusDamage;
 
@@ -61,6 +61,12 @@ namespace Smite_Items.Items
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()
         {
+            var mpp = ItemModel.AddComponent<ModelPanelParameters>();
+            mpp.focusPointTransform = ItemModel.transform.Find("Target");
+            mpp.cameraPositionTransform = ItemModel.transform.Find("Source");
+            mpp.minDistance = 4f;
+            mpp.maxDistance = 8f;
+            mpp.modelRotation = Quaternion.Euler(new Vector3(0, 90, 0));
             return new ItemDisplayRuleDict();
         }
 

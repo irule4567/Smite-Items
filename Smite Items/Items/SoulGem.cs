@@ -29,16 +29,16 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Charge by using skills to get bonus damage and area healing.";
 
-        public override string ItemFullDescription => $"Activating <style=cIsUtility>skills</style> stores up to <style=cIsUtility>3 charges</style>. " +
+        public override string ItemFullDescription => $"Activating <style=cIsUtility>skills</style> stores a charge, up to <style=cIsUtility>3 charges</style>. " +
             $"Requires <style=cIsUtility>3 charges</style> for your next hit to deal <style=cIsDamage>{BonusDamage.Value*100}%</style> <style=cStack>(+{BonusDamagePerStack.Value * 100}% per stack)</style> base damage and <style=cIsHealing>heal</style> yourself and allies for <style=cIsHealing>{HealValue.Value}</style> <style=cStack>(+{HealValuePerStack.Value} per stack)</style> within a <style=cIsHealing>{HealRadius.Value}m</style> <style=cStack>(+{HealRadiusPerStack.Value}m per stack)</style> radius.";
 
         public override string ItemLore => "Item taken from Smite 2";
 
         public override ItemTier Tier => ItemTier.Tier1;
 
-        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("ExampleItemPrefab.prefab");
+        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("SoulGemModel.prefab");
 
-        public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("ExampleItemIcon.png");
+        public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Soul Gem Icon.png");
 
         public static BuffDef soulGemStack;
 
@@ -82,6 +82,12 @@ namespace Smite_Items.Items
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()
         {
+            var mpp = ItemModel.AddComponent<ModelPanelParameters>();
+            mpp.focusPointTransform = ItemModel.transform.Find("Target");
+            mpp.cameraPositionTransform = ItemModel.transform.Find("Source");
+            mpp.minDistance = 4f;
+            mpp.maxDistance = 8f;
+            mpp.modelRotation = Quaternion.Euler(new Vector3(0, 90, 0));
             return new ItemDisplayRuleDict();
         }
 

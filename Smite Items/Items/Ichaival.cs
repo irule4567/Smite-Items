@@ -33,9 +33,9 @@ namespace Smite_Items.Items
 
         public override ItemTier Tier => ItemTier.Tier1;
 
-        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("ExampleItemPrefab.prefab");
+        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("IchaivalModel.prefab");
 
-        public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("ExampleItemIcon.png");
+        public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Ichaival Icon.png");
 
         public static BuffDef ichDamageBuff;
         public static BuffDef ichDamageDebuff;
@@ -82,6 +82,12 @@ namespace Smite_Items.Items
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()
         {
+            var mpp = ItemModel.AddComponent<ModelPanelParameters>();
+            mpp.focusPointTransform = ItemModel.transform.Find("Target");
+            mpp.cameraPositionTransform = ItemModel.transform.Find("Source");
+            mpp.minDistance = 4f;
+            mpp.maxDistance = 8f;
+            mpp.modelRotation = Quaternion.Euler(new Vector3(0, 90, 0));
             return new ItemDisplayRuleDict();
         }
 

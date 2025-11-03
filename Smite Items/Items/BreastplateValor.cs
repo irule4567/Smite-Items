@@ -65,7 +65,7 @@ namespace Smite_Items.Items
             mpp.cameraPositionTransform = ItemModel.transform.Find("Source");
             mpp.minDistance = 4f;
             mpp.maxDistance = 8f;
-            mpp.modelRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            mpp.modelRotation = Quaternion.Euler(new Vector3(0, 90, 0));
             return new ItemDisplayRuleDict();
         }
 

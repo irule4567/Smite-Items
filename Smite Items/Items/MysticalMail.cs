@@ -27,13 +27,15 @@ namespace Smite_Items.Items
 
         public override ItemTier Tier => ItemTier.Tier1;
 
-        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("ExampleItemPrefab.prefab");
+        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("MysticalMailModel.prefab");
 
-        public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("ExampleItemIcon.png");
+        public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Mystical Mail Icon.png");
 
         public static GameObject AOEDamageField;
 
         //public GameObject mailPulsePrefab;
+
+        public static GameObject cachedPulseEffect;
 
         public override void Init(ConfigFile config)
         {
@@ -41,6 +43,9 @@ namespace Smite_Items.Items
             CreateLang();
             //CreateAOE();
             CreateItem();
+            cachedPulseEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/moon2/MoonBatteryDesignPulse.prefab").WaitForCompletion();
+            var effect = cachedPulseEffect.AddComponent<EffectComponent>();
+            ContentAddition.AddEffect(cachedPulseEffect);
             // Funky stuff to try and find a good shockwave effect, probably want to replace
             /*GameObject originalEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Icicle/DisplayFrostRelic.prefab").WaitForCompletion();
 
@@ -68,6 +73,12 @@ namespace Smite_Items.Items
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()
         {
+            var mpp = ItemModel.AddComponent<ModelPanelParameters>();
+            mpp.focusPointTransform = ItemModel.transform.Find("Target");
+            mpp.cameraPositionTransform = ItemModel.transform.Find("Source");
+            mpp.minDistance = 4f;
+            mpp.maxDistance = 8f;
+            mpp.modelRotation = Quaternion.Euler(new Vector3(0, 90, 0));
             return new ItemDisplayRuleDict();
         }
 
@@ -113,7 +124,7 @@ namespace Smite_Items.Items
                 };*/
                 //GameObject aoeEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Common/VFX/OmniImpactVFX.prefab").WaitForCompletion();
                 // Make visual effect using the pillar of design pulse, make a clone that is silent, and spawn that at the players location
-                GameObject mailPulse = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/moon2/MoonBatteryDesignPulse.prefab").WaitForCompletion();
+                //GameObject mailPulse = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/moon2/MoonBatteryDesignPulse.prefab").WaitForCompletion();
                 //GameObject silentPulse = PrefabAPI.InstantiateClone(mailPulse, "SilentPulse", false);
                 /*foreach (AudioSource source in silentPulse.GetComponentsInChildren<AudioSource>())
                 {
@@ -122,7 +133,13 @@ namespace Smite_Items.Items
 
 
 
-                GameObject spawnedEffect = GameObject.Instantiate(mailPulse, body.transform.position, body.transform.rotation);
+                //GameObject spawnedEffect = GameObject.Instantiate(mailPulse, body.transform.position, body.transform.rotation);
+                EffectManager.SpawnEffect(MysticalMail.cachedPulseEffect, new EffectData
+                {
+                    origin = body.corePosition,
+                    scale = radius,
+                    rotation = body.transform.rotation
+                }, transmit: true);
                 /*AkGameObj[] akGameObjs = spawnedEffect.GetComponentsInChildren<AkGameObj>();
                 foreach (AkGameObj akObj in akGameObjs)
                 {
@@ -133,7 +150,7 @@ namespace Smite_Items.Items
                 {
                     audio.volume = 0f;
                 }*/
-                Component[] allComponents = spawnedEffect.GetComponentsInChildren<Component>();
+                /*Component[] allComponents = spawnedEffect.GetComponentsInChildren<Component>();
                 foreach (Component component in allComponents)
                 {
                     Debug.Log($"Component: {component.GetType().Name} on {component.gameObject.name}");
@@ -146,7 +163,7 @@ namespace Smite_Items.Items
                         GameObject.Destroy(component);
                     }
                 }
-                NetworkServer.Spawn(spawnedEffect);
+                NetworkServer.Spawn(spawnedEffect);*/
                 //EffectManager.SpawnEffect(mailPulse, effectData, true);
                 //GameObject obj = UnityEngine.Object.Instantiate(MysticalMail.instance.mailPulsePrefab, base.transform.position, base.transform.rotation);
                 //NetworkServer.Spawn(obj);

@@ -19,15 +19,15 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Gain movement speed on skill use.";
 
-        public override string ItemFullDescription => $"After using a non-primary skill, gain a stack of <style=cIsUtility>{MoveSpeedPerStack.Value * 100}%</style> movement speed up to <style=cIsUtility>{MoveSpeedPerStack.Value}</style> <style=cStack>(+{MoveSpeedPerStack.Value} per stack)</style> that lasts <style=cIsUtility>{StackDuration.Value}</style> seconds.";
+        public override string ItemFullDescription => $"After using a non-primary skill, gain a stack of <style=cIsUtility>{MoveSpeedPerStack.Value * 100}%</style> movement speed up to <style=cIsUtility>{MaxStacks.Value * MoveSpeedPerStack.Value * 100}%</style> <style=cStack>(+{MaxStacks.Value * MoveSpeedPerStack.Value * 100}% per stack)</style> that lasts <style=cIsUtility>{StackDuration.Value}</style> seconds.";
 
         public override string ItemLore => "Item taken from Smite 2.";
 
         public override ItemTier Tier => ItemTier.Tier1;
 
-        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("ExampleItemPrefab.prefab");
+        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("TekkoKagiModel.prefab");
 
-        public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("ExampleItemIcon.png");
+        public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Tekko Kagi Icon.png");
 
         public static BuffDef tekkoMoveSpeed;
 
@@ -63,6 +63,12 @@ namespace Smite_Items.Items
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()
         {
+            var mpp = ItemModel.AddComponent<ModelPanelParameters>();
+            mpp.focusPointTransform = ItemModel.transform.Find("Target");
+            mpp.cameraPositionTransform = ItemModel.transform.Find("Source");
+            mpp.minDistance = 4f;
+            mpp.maxDistance = 8f;
+            mpp.modelRotation = Quaternion.Euler(new Vector3(0, 90, 0));
             return new ItemDisplayRuleDict();
         }
 

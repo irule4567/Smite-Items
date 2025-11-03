@@ -19,9 +19,9 @@ namespace Smite_Items.Equipment
 
         public override string EquipmentLore => "Item taken from Smite 2";
 
-        public override GameObject EquipmentModel => MainAssets.LoadAsset<GameObject>("ExampleEquipmentPrefab.prefab");
+        public override GameObject EquipmentModel => MainAssets.LoadAsset<GameObject>("AegisAmuletModel.prefab");
 
-        public override Sprite EquipmentIcon => MainAssets.LoadAsset<Sprite>("ExampleEquipmentIcon.png");
+        public override Sprite EquipmentIcon => MainAssets.LoadAsset<Sprite>("Aegis Amulet Icon.png");
 
         public override float Cooldown => 40;
 
@@ -40,6 +40,12 @@ namespace Smite_Items.Equipment
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()
         {
+            var mpp = EquipmentModel.AddComponent<ModelPanelParameters>();
+            mpp.focusPointTransform = EquipmentModel.transform.Find("Target");
+            mpp.cameraPositionTransform = EquipmentModel.transform.Find("Source");
+            mpp.minDistance = 4f;
+            mpp.maxDistance = 8f;
+            mpp.modelRotation = Quaternion.Euler(new Vector3(0, 90, 0));
             return new ItemDisplayRuleDict();
         }
 

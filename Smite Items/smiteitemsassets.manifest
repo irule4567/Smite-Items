@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3631666934
+CRC: 336839735
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0ecc5d04c63ccc4fc40837c5c489a782
+    Hash: e099685152581df28d15c308ce1e116a
   TypeTreeHash:
     serializedVersion: 2
     Hash: eeb008a4954a20964bedfac9be76f63d
@@ -33,11 +33,47 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/Models/Prefabs/Item/Gluttonous Grimoire/GluttonousGrimoireModel.prefab
+- Assets/Materials/Item/Musahis/Musashis Face.mat
 - Assets/Materials/Item/Breastplate of Valor/BreastplateFace.mat
-- Assets/Textures/Icons/Items/Chronos Pendant/Chronos Pendant Icon.png
+- Assets/Models/Prefabs/Item/Glorious Pridwen/GloriousPridwenModel.prefab
+- Assets/Materials/Item/Gluttonous Grimoire/Gluttonous Grimoire Face.mat
+- Assets/Models/Prefabs/Item/Ichaival/IchaivalModel.prefab
+- Assets/Materials/Item/Ichaival/Ichaival Face.mat
+- Assets/Textures/Icons/Items/Soul Gem/Soul Gem Icon.png
+- Assets/Textures/Icons/Items/Hydras Lament/Hydras Lament Icon.png
+- Assets/Materials/Item/Shifters Shield/Shifters Shield Face.mat
+- Assets/Models/Prefabs/Item/Soul Gem/SoulGemModel.prefab
 - Assets/Textures/Icons/Items/Breastplate of Valor/Breastplate Icon.png
-- Assets/Materials/Item/Chronos Pendant/ChronosPendantFace.mat
-- Assets/Models/Prefabs/Item/Breastplate of Valor/BreastplateModel.prefab
+- Assets/Materials/Item/Aegis Amulet/Aegis Amulet Face.mat
+- Assets/Textures/Icons/Items/Shifters Shield/Shifters Shield Icon.png
+- Assets/Materials/Item/Soul Gem/Soul Gem Face.mat
 - Assets/Materials/Item/Chronos Pendant/ItemRoundedEdge.mat
+- Assets/Textures/Icons/Items/Draconic Scale/Draconic Scale Icon.png
+- Assets/Models/Prefabs/Item/Aegis Amulet/AegisAmuletModel.prefab
+- Assets/Textures/Icons/Items/Musashis/Dual Blades Icon.png
 - Assets/Models/Prefabs/Item/Chronos Pendant/ChronosPendantModel.prefab
+- Assets/Textures/Icons/Items/Aegis Amulet/Aegis Amulet Icon.png
+- Assets/Models/Prefabs/Item/Tekko Kagi/TekkoKagiModel.prefab
+- Assets/Textures/Icons/Items/Stone of Binding/Stone of Binding Icon.png
+- Assets/Models/Prefabs/Item/Hydras Lament/HydrasLamentModel.prefab
+- Assets/Materials/Item/Tekko Kagi/Tekko Kagi Face.mat
+- Assets/Textures/Icons/Items/Glorious Pridwen/Glorious Pridwen Icon.png
+- Assets/Models/Prefabs/Item/Draconic Scale/DraconicScaleModel.prefab
+- Assets/Models/Prefabs/Item/Mystical Mail/MysticalMailModel.prefab
+- Assets/Textures/Icons/Items/Chronos Pendant/Chronos Pendant Icon.png
+- Assets/Materials/Item/Hydras Lament/Hydras Lament Face.mat
+- Assets/Models/Prefabs/Item/Musahis/MusashisModel.prefab
+- Assets/Models/Prefabs/Item/Shifters Shield/ShiftersShieldModel.prefab
+- Assets/Textures/Icons/Items/Ichaival/Ichaival Icon.png
+- Assets/Materials/Item/Stone of Binding/Stone of Binding Face.mat
+- Assets/Materials/Item/Chronos Pendant/ChronosPendantFace.mat
+- Assets/Materials/Item/Glorious Pridwen/Glorious Pridwen Face.mat
+- Assets/Textures/Icons/Items/Gluttonous Grimoire/Gluttonous Grimoire Icon.png
+- Assets/Models/Prefabs/Item/Breastplate of Valor/BreastplateModel.prefab
+- Assets/Materials/Item/Draconic Scale/Draconic Face.mat
+- Assets/Models/Prefabs/Item/Stone of Binding/StoneOfBindingModel.prefab
+- Assets/Materials/Item/Mystical Mail/Mystical Mail Face.mat
+- Assets/Textures/Icons/Items/Tekko Kagi/Tekko Kagi Icon.png
+- Assets/Textures/Icons/Items/Mystical Mail/Mystical Mail Icon.png
 Dependencies: []

@@ -22,15 +22,15 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Gain temporary armor after taking damage";
 
-        public override string ItemFullDescription => $"Each time you take damage, gain a buff that grants <style=cIsHealing>{ScaleArmorFlat.Value}</style> armor and increase armor by <style=cIsHealing>{ScaleArmorPercent.Value * 100}%</style> for <style=cIsUtility>{BuffDuration.Value}</style> seconds up to a maximum of <style=cIsUtility>{MaxStacks.Value}</style> <style=cStack>(+{MaxStacks.Value} per stack)</style> <style=cIsUtility>times</style>. This buff decays by 1 stack at a time.";
+        public override string ItemFullDescription => $"Each time you take damage, gain a buff that grants <style=cIsHealing>{ScaleArmorFlat.Value}</style> armor and increases armor by <style=cIsHealing>{ScaleArmorPercent.Value * 100}%</style> for <style=cIsUtility>{BuffDuration.Value}</style> seconds up to a maximum of <style=cIsUtility>{MaxStacks.Value}</style> <style=cStack>(+{MaxStacks.Value} per stack)</style> <style=cIsUtility>times</style>. This buff decays by 1 stack at a time.";
 
         public override string ItemLore => "Item taken from Smite 2.";
 
         public override ItemTier Tier => ItemTier.Tier2;
 
-        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("ExampleItemPrefab.prefab");
+        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("DraconicScaleModel.prefab");
 
-        public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("ExampleItemIcon.png");
+        public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Draconic Scale Icon.png");
 
         public static BuffDef scaleArmorBuff;
 
@@ -64,6 +64,12 @@ namespace Smite_Items.Items
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()
         {
+            var mpp = ItemModel.AddComponent<ModelPanelParameters>();
+            mpp.focusPointTransform = ItemModel.transform.Find("Target");
+            mpp.cameraPositionTransform = ItemModel.transform.Find("Source");
+            mpp.minDistance = 4f;
+            mpp.maxDistance = 8f;
+            mpp.modelRotation = Quaternion.Euler(new Vector3(0, 90, 0));
             return new ItemDisplayRuleDict();
         }
 
