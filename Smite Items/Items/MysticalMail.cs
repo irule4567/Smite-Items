@@ -34,6 +34,7 @@ namespace Smite_Items.Items
         public static GameObject AOEDamageField;
 
         //public GameObject mailPulsePrefab;
+        //public static GameObject originalPulseEffect;
 
         public static GameObject cachedPulseEffect;
 
@@ -44,8 +45,9 @@ namespace Smite_Items.Items
             //CreateAOE();
             CreateItem();
             cachedPulseEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/moon2/MoonBatteryDesignPulse.prefab").WaitForCompletion();
-            var effect = cachedPulseEffect.AddComponent<EffectComponent>();
-            ContentAddition.AddEffect(cachedPulseEffect);
+            //cachedPulseEffect = GameObject.Instantiate(originalPulseEffect);
+            //var effect = cachedPulseEffect.AddComponent<EffectComponent>();
+            //ContentAddition.AddEffect(cachedPulseEffect);
             // Funky stuff to try and find a good shockwave effect, probably want to replace
             /*GameObject originalEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Icicle/DisplayFrostRelic.prefab").WaitForCompletion();
 

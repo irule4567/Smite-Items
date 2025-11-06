@@ -49,21 +49,21 @@ namespace Smite_Items.Items
             Hooks();
         }
 
-        public void CreateBuff()
+        public void CreateBuff() // ToDo: Create unique icon for debuff; try to find ichaival debuff icon
         {
             ichDamageBuff = ScriptableObject.CreateInstance<BuffDef>();
             ichDamageBuff.canStack = true;
             ichDamageBuff.isDebuff = false;
             ichDamageBuff.name = "ichDamageBuff";
             ichDamageBuff.isCooldown = false;
-            ichDamageBuff.iconSprite = MainAssets.LoadAsset<Sprite>("Chronos Pendant Icon.png");
+            ichDamageBuff.iconSprite = MainAssets.LoadAsset<Sprite>("Ichaival Icon.png");
             ContentAddition.AddBuffDef(ichDamageBuff);
             ichDamageDebuff = ScriptableObject.CreateInstance<BuffDef>();
             ichDamageDebuff.canStack = true;
             ichDamageDebuff.isDebuff = true;
             ichDamageDebuff.name = "ichDamageDebuff";
             ichDamageDebuff.isCooldown = false;
-            ichDamageDebuff.iconSprite = MainAssets.LoadAsset<Sprite>("Chronos Pendant Icon.png");
+            ichDamageDebuff.iconSprite = MainAssets.LoadAsset<Sprite>("Ichaival Icon.png");
             ContentAddition.AddBuffDef(ichDamageDebuff);
         }
 
