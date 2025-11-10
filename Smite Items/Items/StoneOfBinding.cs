@@ -27,6 +27,10 @@ namespace Smite_Items.Items
 
         public override ItemTier Tier => ItemTier.Tier2;
 
+        public override ItemTag[] ItemTags => new ItemTag[]
+        {
+            ItemTag.Damage
+        };
         public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("StoneOfBindingModel.prefab");
 
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Stone of Binding Icon.png");
@@ -49,7 +53,7 @@ namespace Smite_Items.Items
             bindingArmorReduction.isDebuff = true;
             bindingArmorReduction.name = "bindingArmorReduction";
             bindingArmorReduction.isCooldown = false;
-            bindingArmorReduction.iconSprite = MainAssets.LoadAsset<Sprite>("ExampleItemIcon.png");
+            bindingArmorReduction.iconSprite = MainAssets.LoadAsset<Sprite>("Stone of Binding Icon.png");
             ContentAddition.AddBuffDef(bindingArmorReduction);
         }
 

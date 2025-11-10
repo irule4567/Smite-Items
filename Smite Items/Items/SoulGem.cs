@@ -30,12 +30,17 @@ namespace Smite_Items.Items
         public override string ItemPickupDesc => "Charge by using skills to get bonus damage and area healing.";
 
         public override string ItemFullDescription => $"Activating <style=cIsUtility>skills</style> stores a charge, up to <style=cIsUtility>3 charges</style>. " +
-            $"Requires <style=cIsUtility>3 charges</style> for your next hit to deal <style=cIsDamage>{BonusDamage.Value*100}%</style> <style=cStack>(+{BonusDamagePerStack.Value * 100}% per stack)</style> base damage and <style=cIsHealing>heal</style> yourself and allies for <style=cIsHealing>{HealValue.Value}</style> <style=cStack>(+{HealValuePerStack.Value} per stack)</style> within a <style=cIsHealing>{HealRadius.Value}m</style> <style=cStack>(+{HealRadiusPerStack.Value}m per stack)</style> radius.";
+            $"Requires <style=cIsUtility>3 charges</style> for your next hit to deal <style=cIsDamage>{BonusDamage.Value*100}%</style> <style=cStack>(+{BonusDamagePerStack.Value * 100}% per stack)</style> base damage and <style=cIsHealing>heal</style> yourself and allies for <style=cIsHealing>{HealValue.Value}</style> <style=cStack>(+{HealValuePerStack.Value} per stack)</style> within <style=cIsHealing>{HealRadius.Value}m</style> <style=cStack>(+{HealRadiusPerStack.Value}m per stack)</style>.";
 
         public override string ItemLore => "Item taken from Smite 2";
 
         public override ItemTier Tier => ItemTier.Tier1;
 
+        public override ItemTag[] ItemTags => new ItemTag[]
+        {
+            ItemTag.Damage,
+            ItemTag.Healing
+        };
         public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("SoulGemModel.prefab");
 
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Soul Gem Icon.png");
@@ -65,7 +70,7 @@ namespace Smite_Items.Items
             soulGemStack.isDebuff = false;
             soulGemStack.name = "soulGemStack";
             soulGemStack.isCooldown = false;
-            soulGemStack.iconSprite = MainAssets.LoadAsset<Sprite>("Chronos Pendant Icon.png");
+            soulGemStack.iconSprite = MainAssets.LoadAsset<Sprite>("Soul Gem Icon.png");
             ContentAddition.AddBuffDef(soulGemStack);
         }
 
@@ -99,73 +104,81 @@ namespace Smite_Items.Items
 
         private void ActivateSoulGem(On.RoR2.HealthComponent.orig_TakeDamage orig, HealthComponent self, DamageInfo damageInfo)
         {
-            orig(self, damageInfo);
-            if (damageInfo.attacker && damageInfo.attacker.GetComponent<CharacterBody>() && NetworkServer.active)
+            CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
+            if (attackerBody.inventory)
             {
-                CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
-                if (attackerBody.inventory)
+                var stackCount = GetCount(attackerBody);
+
+                if (stackCount > 0)
                 {
-                    var stackCount = GetCount(attackerBody);
-
-                    if (stackCount > 0)
+                    if (damageInfo.procCoefficient != 0f)
                     {
-                        if (attackerBody.GetBuffCount(soulGemStack) >= StacksNeeded.Value)
+                        if (damageInfo.attacker && damageInfo.attacker.GetComponent<CharacterBody>() && NetworkServer.active)
                         {
-                            // Calculate and deal damage
-                            damageInfo.damage = attackerBody.baseDamage * (BonusDamage.Value + BonusDamagePerStack.Value * (stackCount-1)); // Add bonus damage from buff
-                            damageInfo.damageColorIndex = DamageColorIndex.Item;
-                            damageInfo.procCoefficient = 0f;
-                            damageInfo.crit = false;
-                            //damageInfo.damageType = DamageType.Generic;
-                            damageInfo.inflictor = damageInfo.attacker;
-                            attackerBody.SetBuffCount(soulGemStack.buffIndex, 0);
-                            self.TakeDamage(damageInfo);
-                            // Calcuate and apply healing
-                            
-                            float healRadius = HealRadius.Value + (HealRadiusPerStack.Value * (stackCount - 1));
-                            float healValue = HealValue.Value + (HealValuePerStack.Value * (stackCount - 1));
-                            /*GameObject nova = UnityEngine.Object.Instantiate(cachedPulseEffect, attackerBody.corePosition, Quaternion.identity);
-                            TeleporterHealNovaPulse pulse = nova.GetComponent<TeleporterHealNovaPulse>();
-                            if (pulse != null)
+                    
+                            if (attackerBody.GetBuffCount(soulGemStack) >= StacksNeeded.Value)
                             {
-                                pulse.radius = healRadius;
-                                
-                            }
-                            NetworkServer.Spawn(nova);*/
-                            EffectManager.SpawnEffect(cachedPulseEffect, new EffectData
-                            {
-                                origin = attackerBody.corePosition,
-                                scale = healRadius,
-                                rotation = attackerBody.transform.rotation
-                            }, transmit: true);
-                            TeamIndex teamIndex = attackerBody.teamComponent.teamIndex;
-                            SphereSearch sphereSearch = new SphereSearch
-                            {
-                                mask = LayerIndex.entityPrecise.mask,
-                                origin = attackerBody.corePosition,
-                                queryTriggerInteraction = QueryTriggerInteraction.Collide,
-                                radius = healRadius
-                            };
-                            TeamMask teamMask = default(TeamMask);
-                            teamMask.AddTeam(teamIndex);
-                            List<HurtBox> hurtBoxesList = new List<HurtBox>();
-                            sphereSearch.RefreshCandidates().FilterCandidatesByHurtBoxTeam(teamMask).FilterCandidatesByDistinctHurtBoxEntities().GetHurtBoxes(hurtBoxesList);
-                            int i = 0;
-                            foreach (HurtBox hurtBox in hurtBoxesList)
-                            {
-                                HealthComponent healthComponent = hurtBox.healthComponent;
-                                if (healthComponent)
-                                {
-                                    healthComponent.Heal(healValue, default(ProcChainMask), true);
-                                }
-                            }
-                            hurtBoxesList.Clear();
-                            Debug.Log("gets to removing buff");
-                        }
+                                var SoulGemDamage = new DamageInfo { };
+                                // Calculate and deal damage
+                                SoulGemDamage.damage = attackerBody.baseDamage * (BonusDamage.Value + BonusDamagePerStack.Value * (stackCount - 1)); // Add bonus damage from buff
+                                SoulGemDamage.damageColorIndex = DamageColorIndex.Item;
+                                SoulGemDamage.procCoefficient = 0f;
+                                SoulGemDamage.crit = false;
+                                SoulGemDamage.position = damageInfo.position;
+                                SoulGemDamage.damageType = DamageType.Generic;
+                                //damageInfo.damageType = DamageType.Generic;
+                                SoulGemDamage.inflictor = damageInfo.inflictor;
+                                SoulGemDamage.attacker = damageInfo.attacker;
+                                attackerBody.SetBuffCount(soulGemStack.buffIndex, 0);
+                                self.TakeDamage(SoulGemDamage);
+                                // Calcuate and apply healing
 
+                                float healRadius = HealRadius.Value + (HealRadiusPerStack.Value * (stackCount - 1));
+                                float healValue = HealValue.Value + (HealValuePerStack.Value * (stackCount - 1));
+                                /*GameObject nova = UnityEngine.Object.Instantiate(cachedPulseEffect, attackerBody.corePosition, Quaternion.identity);
+                                TeleporterHealNovaPulse pulse = nova.GetComponent<TeleporterHealNovaPulse>();
+                                if (pulse != null)
+                                {
+                                    pulse.radius = healRadius;
+
+                                }
+                                NetworkServer.Spawn(nova);*/
+                                EffectManager.SpawnEffect(cachedPulseEffect, new EffectData
+                                {
+                                    origin = attackerBody.corePosition,
+                                    scale = healRadius,
+                                    rotation = attackerBody.transform.rotation
+                                }, transmit: true);
+                                TeamIndex teamIndex = attackerBody.teamComponent.teamIndex;
+                                SphereSearch sphereSearch = new SphereSearch
+                                {
+                                    mask = LayerIndex.entityPrecise.mask,
+                                    origin = attackerBody.corePosition,
+                                    queryTriggerInteraction = QueryTriggerInteraction.Collide,
+                                    radius = healRadius
+                                };
+                                TeamMask teamMask = default(TeamMask);
+                                teamMask.AddTeam(teamIndex);
+                                List<HurtBox> hurtBoxesList = new List<HurtBox>();
+                                sphereSearch.RefreshCandidates().FilterCandidatesByHurtBoxTeam(teamMask).FilterCandidatesByDistinctHurtBoxEntities().GetHurtBoxes(hurtBoxesList);
+                                int i = 0;
+                                foreach (HurtBox hurtBox in hurtBoxesList)
+                                {
+                                    HealthComponent healthComponent = hurtBox.healthComponent;
+                                    if (healthComponent)
+                                    {
+                                        healthComponent.Heal(healValue, default(ProcChainMask), true);
+                                    }
+                                }
+                                hurtBoxesList.Clear();
+                                //Debug.Log("gets to removing buff");
+                            }
+
+                        }
                     }
                 }
             }
+            orig(self, damageInfo);
         }
 
         private void GiveSoulGemStack(On.RoR2.CharacterBody.orig_OnSkillActivated orig, CharacterBody self, GenericSkill skill)

@@ -27,6 +27,12 @@ namespace Smite_Items.Items
 
         public override ItemTier Tier => ItemTier.Tier1;
 
+        public override ItemTag[] ItemTags => new ItemTag[]
+        {
+            ItemTag.Damage,
+            ItemTag.AIBlacklist
+        };
+
         public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("MysticalMailModel.prefab");
 
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Mystical Mail Icon.png");

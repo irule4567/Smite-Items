@@ -25,6 +25,10 @@ namespace Smite_Items.Items
 
         public override ItemTier Tier => ItemTier.Tier1;
 
+        public override ItemTag[] ItemTags => new ItemTag[]
+        {
+            ItemTag.Utility
+        };
         public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("TekkoKagiModel.prefab");
 
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Tekko Kagi Icon.png");
@@ -49,7 +53,7 @@ namespace Smite_Items.Items
             tekkoMoveSpeed.isDebuff = false;
             tekkoMoveSpeed.name = "tekkoMoveSpeed";
             tekkoMoveSpeed.isCooldown = false;
-            tekkoMoveSpeed.iconSprite = MainAssets.LoadAsset<Sprite>("ExampleItemIcon.png");
+            tekkoMoveSpeed.iconSprite = MainAssets.LoadAsset<Sprite>("Tekko Kagi Icon.png");
             ContentAddition.AddBuffDef(tekkoMoveSpeed);
         }
 

@@ -25,7 +25,7 @@ namespace Smite_Items.Items
 
         public override string ItemLangTokenName => "CANNONEERS_CUIRASS_ITEM";
 
-        public override string ItemPickupDesc => "Explode monsters for bonus gold.";
+        public override string ItemPickupDesc => "Explode non-boss enemies for bonus gold. Recharges over time.";
 
         public override string ItemFullDescription => $"Your next attack will <style=cIsDamage>instantly kill</style> a <style=cIsDamage>non-Boss enemy</style> and create an <style=cIsDamage>explosion</style> in a <style=cIsDamage>{ExplosionRadius.Value}m</style> <style=cStack>(+{BonusExplosionRadiusPerStack.Value}m per stack)</style> radius for <style=cIsHealth>{PercentHealthExplosionDamage.Value * 100}%</style> <style=cStack>(+{BonusPercentHealthExplosionDamagePerStack.Value * 100}% per stack)</style> of that enemy's <style=cIsHealth>health</style>." +
             $" Additionally, you gain <style=cIsUtility>{BaseGoldOnProc.Value}</style> <style=cStack>(+{BonusGoldPerStack.Value} per stack)</style> <style=cIsUtility>gold</style> that <style=cIsUtility>scales over time</style>. Recharges every <style=cIsUtility>{ItemCooldown.Value}</style> seconds.";
@@ -33,6 +33,15 @@ namespace Smite_Items.Items
         public override string ItemLore => "Item taken from Smite 1.";
 
         public override ItemTier Tier => ItemTier.Tier3;
+
+        public override ItemTag[] ItemTags => new ItemTag[]
+        {
+            ItemTag.AIBlacklist,
+            ItemTag.BrotherBlacklist,
+            ItemTag.Damage,
+            ItemTag.Utility,
+            ItemTag.OnKillEffect
+        };
 
         public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("CannoneersCuirassModel.prefab");
 

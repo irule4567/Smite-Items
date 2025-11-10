@@ -33,6 +33,10 @@ namespace Smite_Items.Items
 
         public override ItemTier Tier => ItemTier.Tier1;
 
+        public override ItemTag[] ItemTags => new ItemTag[]
+        {
+            ItemTag.Damage
+        };
         public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("IchaivalModel.prefab");
 
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Ichaival Icon.png");

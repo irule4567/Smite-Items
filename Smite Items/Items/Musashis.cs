@@ -28,6 +28,11 @@ namespace Smite_Items.Items
 
         public override ItemTier Tier => ItemTier.Tier2;
 
+        public override ItemTag[] ItemTags => new ItemTag[]
+        {
+            ItemTag.Utility
+        };
+
         public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("MusashisModel.prefab");
 
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Dual Blades Icon.png");
@@ -50,7 +55,7 @@ namespace Smite_Items.Items
             musashiMoveSpeed.isDebuff = false;
             musashiMoveSpeed.name = "musashiMoveSpeed";
             musashiMoveSpeed.isCooldown = false;
-            musashiMoveSpeed.iconSprite = MainAssets.LoadAsset<Sprite>("ExampleItemIcon.png");
+            musashiMoveSpeed.iconSprite = MainAssets.LoadAsset<Sprite>("Dual Blades Icon.png");
             ContentAddition.AddBuffDef(musashiMoveSpeed);
         }
 

@@ -24,7 +24,11 @@ namespace Smite_Items.Items
         public override string ItemLore => "Item taken from Smite 2.";
 
         public override ItemTier Tier => ItemTier.Lunar;
-
+        public override ItemTag[] ItemTags => new ItemTag[]
+        {
+            ItemTag.Healing,
+            ItemTag.Damage
+        };
         public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("GluttonousGrimoireModel.prefab");
 
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Gluttonous Grimoire Icon.png");

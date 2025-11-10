@@ -27,7 +27,10 @@ namespace Smite_Items.Items
         public override string ItemLore => "Item taken from Smite 2.";
 
         public override ItemTier Tier => ItemTier.Tier2;
-
+        public override ItemTag[] ItemTags => new ItemTag[]
+        {
+            ItemTag.Utility
+        };
         public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("DraconicScaleModel.prefab");
 
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Draconic Scale Icon.png");
@@ -50,7 +53,7 @@ namespace Smite_Items.Items
             scaleArmorBuff.isDebuff = false;
             scaleArmorBuff.name = "scaleArmorBuff";
             scaleArmorBuff.isCooldown = false;
-            scaleArmorBuff.iconSprite = MainAssets.LoadAsset<Sprite>("ExampleItemIcon.png");
+            scaleArmorBuff.iconSprite = MainAssets.LoadAsset<Sprite>("Draconic Scale Icon.png");
             ContentAddition.AddBuffDef(scaleArmorBuff);
         }
 

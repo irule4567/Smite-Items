@@ -26,6 +26,10 @@ namespace Smite_Items.Items
 
         public override ItemTier Tier => ItemTier.Tier2;
 
+        public override ItemTag[] ItemTags => new ItemTag[]
+        {
+            ItemTag.Utility
+        };
         public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("BreastplateModel.prefab");
 
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Breastplate Icon.png");
@@ -48,7 +52,7 @@ namespace Smite_Items.Items
             breastplateHealthTracker.name = "breastplateHealthTracker";
             breastplateHealthTracker.isCooldown = false;
             breastplateHealthTracker.isHidden = false;
-            breastplateHealthTracker.iconSprite = MainAssets.LoadAsset<Sprite>("ExampleItemIcon.png");
+            breastplateHealthTracker.iconSprite = MainAssets.LoadAsset<Sprite>("Breastplate Icon.png");
             ContentAddition.AddBuffDef(breastplateHealthTracker);
         }
 

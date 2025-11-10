@@ -30,6 +30,12 @@ namespace Smite_Items.Items
 
         public override ItemTier Tier => ItemTier.Tier2;
 
+        public override ItemTag[] ItemTags => new ItemTag[]
+        {
+            ItemTag.Damage,
+            ItemTag.Utility
+        };
+
         public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("GloriousPridwenModel.prefab");
 
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Glorious Pridwen Icon.png");

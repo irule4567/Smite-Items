@@ -22,7 +22,10 @@ namespace Smite_Items.Items
         public override string ItemLore => "Item taken from Smite 2.";
 
         public override ItemTier Tier => ItemTier.Tier1;
-
+        public override ItemTag[] ItemTags => new ItemTag[]
+        {
+            ItemTag.Damage
+        };
         public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("HydrasLamentModel.prefab");
 
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Hydras Lament Icon.png");
@@ -48,7 +51,7 @@ namespace Smite_Items.Items
             hydrasBonusDamage.isDebuff = false;
             hydrasBonusDamage.name = "hydrasBonusDamage";
             hydrasBonusDamage.isCooldown = false;
-            hydrasBonusDamage.iconSprite = MainAssets.LoadAsset<Sprite>("ExampleItemIcon.png");
+            hydrasBonusDamage.iconSprite = MainAssets.LoadAsset<Sprite>("Hydras Lament Icon.png");
             ContentAddition.AddBuffDef(hydrasBonusDamage);
         }
 
@@ -97,37 +100,45 @@ namespace Smite_Items.Items
 
         private void HydrasDamageBonus(On.RoR2.HealthComponent.orig_TakeDamage orig, HealthComponent self, DamageInfo damageInfo)
         {
-
-            orig(self, damageInfo);
-            if (damageInfo.attacker && damageInfo.attacker.GetComponent<CharacterBody>())
+            CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
+            if (attackerBody.inventory)
             {
-                CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
-                if (attackerBody.inventory)
-                {
-                    var stackCount = GetCount(attackerBody);
+                var stackCount = GetCount(attackerBody);
 
-                    if (stackCount > 0)
+                if (stackCount > 0)
+                {
+                    if (damageInfo.procCoefficient != 0f)
                     {
-                        bool isPrimaryAttack = false;
-                        if (lastPrimaryUseTime.ContainsKey(attackerBody))
+                        if (damageInfo.attacker && damageInfo.attacker.GetComponent<CharacterBody>())
                         {
-                            isPrimaryAttack = (Time.time - lastPrimaryUseTime[attackerBody]) < PRIMARY_SKILL_WINDOW;
+                    
+                            bool isPrimaryAttack = false;
+                            if (lastPrimaryUseTime.ContainsKey(attackerBody))
+                            {
+                                isPrimaryAttack = (Time.time - lastPrimaryUseTime[attackerBody]) < PRIMARY_SKILL_WINDOW;
+                            }
+                            if (attackerBody.HasBuff(hydrasBonusDamage) && isPrimaryAttack)
+                            {
+                                var HydrasDamage = new DamageInfo { };
+                                HydrasDamage.damage = attackerBody.baseDamage * (BonusDamage.Value * stackCount); // Add bonus damage from buff
+                                HydrasDamage.damageColorIndex = DamageColorIndex.Item;
+                                HydrasDamage.procCoefficient = 0f;
+                                HydrasDamage.damageType = DamageType.Generic;
+                                HydrasDamage.crit = false;
+                                HydrasDamage.position = damageInfo.position;
+                                //damageInfo.damageType = DamageType.Generic;
+                                HydrasDamage.inflictor = damageInfo.inflictor;
+                                HydrasDamage.attacker = damageInfo.attacker;
+                                attackerBody.RemoveBuff(hydrasBonusDamage);
+                                self.TakeDamage(HydrasDamage);
+                            }
+
                         }
-                        if (attackerBody.HasBuff(hydrasBonusDamage) && isPrimaryAttack)
-                        {
-                            damageInfo.damage = attackerBody.baseDamage * (BonusDamage.Value * stackCount); // Add bonus damage from buff
-                            damageInfo.damageColorIndex = DamageColorIndex.Item;
-                            damageInfo.procCoefficient = 0f;
-                            damageInfo.crit = false;
-                            //damageInfo.damageType = DamageType.Generic;
-                            damageInfo.inflictor = damageInfo.attacker;
-                            attackerBody.RemoveBuff(hydrasBonusDamage);
-                            self.TakeDamage(damageInfo);
-                        }
-                        
                     }
                 }
             }
+
+            orig(self, damageInfo);
         }
 
         private void ApplyHydrasBuff(On.RoR2.CharacterBody.orig_OnSkillActivated orig, CharacterBody self, GenericSkill skill)
