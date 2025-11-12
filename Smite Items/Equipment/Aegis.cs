@@ -6,12 +6,12 @@ using static Smite_Items.Main;
 
 namespace Smite_Items.Equipment
 {
-    public class Aegis : EquipmentBase
+    public class AegisAmulet : EquipmentBase
     {
         public ConfigEntry<float> InvulnDuration;
         public override string EquipmentName => "Aegis Amulet";
 
-        public override string EquipmentLangTokenName => "AEGIS_AMULET";
+        public override string EquipmentLangTokenName => "AEGIS_AMULET_EQUIPMENT";
 
         public override string EquipmentPickupDesc => "Grants temporary invulernability";
 
