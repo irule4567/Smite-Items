@@ -134,15 +134,15 @@ namespace Smite_Items.Items
                         if (attackerBody.GetBuffCount(ichDamageBuff) < (MaxBuffStacks.Value + ((stackCount - 1) * AdditionalMaxBuffStacksPerStack.Value)))
                         {
                             attackerBody.AddTimedBuff(ichDamageBuff, BuffDuration.Value);
-                            ItemHelpers.RefreshTimedBuffs(attackerBody, ichDamageBuff, BuffDuration.Value);
                         }
+                        ItemHelpers.RefreshTimedBuffs(attackerBody, ichDamageBuff, BuffDuration.Value);
                         if (self.body)
                         {
                             if (self.body.GetBuffCount(ichDamageDebuff) < (MaxDebuffStacks.Value + ((stackCount - 1) * AdditionalMaxDebuffStacksPerStack.Value)) && self.body.GetBuffCount(ichDamageDebuff) < HardMaxDamageDebuffStacks.Value)
                             {
                                 self.body.AddTimedBuff(ichDamageDebuff, DebuffDuration.Value);
-                                ItemHelpers.RefreshTimedBuffs(self.body, ichDamageDebuff, DebuffDuration.Value);
                             }
+                            ItemHelpers.RefreshTimedBuffs(self.body, ichDamageDebuff, DebuffDuration.Value);
                         }
                     }
                 }

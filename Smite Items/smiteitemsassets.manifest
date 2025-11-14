@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1751021988
+CRC: 1463706099
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6d4b94a1d37f41039857acfe4eb43c0d
+    Hash: 0699b4a9a9011f703821173d78bc00ee
   TypeTreeHash:
     serializedVersion: 2
     Hash: eeb008a4954a20964bedfac9be76f63d
@@ -38,9 +38,11 @@ Assets:
 - Assets/Materials/Item/Breastplate of Valor/BreastplateFace.mat
 - Assets/Materials/Item/Qins Blade/Qins Blade Face.mat
 - Assets/Textures/Icons/Items/Dagger of Frenzy/Dagger of Frenzy Icon.png
+- Assets/Textures/Icons/Items/Phalanx/Phalanx Icon.png
 - Assets/Textures/Icons/Items/Qins Blade/Qins Blade Icon.png
 - Assets/Models/Prefabs/Item/Glorious Pridwen/GloriousPridwenModel.prefab
 - Assets/Materials/Item/Gluttonous Grimoire/Gluttonous Grimoire Face.mat
+- Assets/Models/Prefabs/Item/Phalanx/PhalanxModel.prefab
 - Assets/Models/Prefabs/Item/Ichaival/IchaivalModel.prefab
 - Assets/Textures/Icons/Items/Cannoneers Cuirass/Cannoneers Cuirass Icon.png
 - Assets/Materials/Item/Ichaival/Ichaival Face.mat
@@ -70,6 +72,7 @@ Assets:
 - Assets/Materials/Item/Hydras Lament/Hydras Lament Face.mat
 - Assets/Models/Prefabs/Item/Musahis/MusashisModel.prefab
 - Assets/Models/Prefabs/Item/Qins Blade/QinsBladeModel.prefab
+- Assets/Materials/Item/Phalanx/Phalanx Face.mat
 - Assets/Models/Prefabs/Item/Shifters Shield/ShiftersShieldModel.prefab
 - Assets/Textures/Icons/Items/Ichaival/Ichaival Icon.png
 - Assets/Models/Prefabs/Item/Cannoneers Cuirass/CannoneersCuirassModel.prefab

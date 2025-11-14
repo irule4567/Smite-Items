@@ -70,27 +70,30 @@ namespace Smite_Items.Items
 
         private void QinsBonusDamage(On.RoR2.HealthComponent.orig_TakeDamage orig, RoR2.HealthComponent self, RoR2.DamageInfo damageInfo)
         {
-            CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
-            if (attackerBody.inventory)
+            if (damageInfo.attacker)
             {
-                var stackCount = GetCount(attackerBody);
-
-                if (stackCount > 0)
+                CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
+                if (attackerBody.inventory)
                 {
-                    if (damageInfo.procCoefficient != 0f)
+                    var stackCount = GetCount(attackerBody);
+
+                    if (stackCount > 0)
                     {
-                        if (damageInfo.attacker && damageInfo.attacker.GetComponent<CharacterBody>() && NetworkServer.active && self.body)
+                        if (damageInfo.procCoefficient != 0f)
                         {
-                            var QinsDamage = new RoR2.DamageInfo { };
-                            QinsDamage.damage = (PercentHPBonusDamage.Value + ((stackCount - 1) * PercentHPBonusDamagePerStack.Value)) * self.body.maxHealth * damageInfo.procCoefficient;
-                            QinsDamage.damageColorIndex = DamageColorIndex.Item;
-                            QinsDamage.procCoefficient = 0f;
-                            QinsDamage.damageType = DamageType.Generic;
-                            QinsDamage.crit = false;
-                            QinsDamage.inflictor = damageInfo.inflictor;
-                            QinsDamage.attacker = damageInfo.attacker;
-                            QinsDamage.position = damageInfo.position;
-                            self.TakeDamage(QinsDamage);
+                            if (damageInfo.attacker && damageInfo.attacker.GetComponent<CharacterBody>() && NetworkServer.active && self.body)
+                            {
+                                var QinsDamage = new RoR2.DamageInfo { };
+                                QinsDamage.damage = (PercentHPBonusDamage.Value + ((stackCount - 1) * PercentHPBonusDamagePerStack.Value)) * self.body.maxHealth * damageInfo.procCoefficient;
+                                QinsDamage.damageColorIndex = DamageColorIndex.Item;
+                                QinsDamage.procCoefficient = 0f;
+                                QinsDamage.damageType = DamageType.Generic;
+                                QinsDamage.crit = false;
+                                QinsDamage.inflictor = damageInfo.inflictor;
+                                QinsDamage.attacker = damageInfo.attacker;
+                                QinsDamage.position = damageInfo.position;
+                                self.TakeDamage(QinsDamage);
+                            }
                         }
                     }
                 }

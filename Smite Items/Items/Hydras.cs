@@ -100,39 +100,42 @@ namespace Smite_Items.Items
 
         private void HydrasDamageBonus(On.RoR2.HealthComponent.orig_TakeDamage orig, HealthComponent self, DamageInfo damageInfo)
         {
-            CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
-            if (attackerBody.inventory)
+            if (damageInfo.attacker)
             {
-                var stackCount = GetCount(attackerBody);
-
-                if (stackCount > 0)
+                CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
+                if (attackerBody.inventory)
                 {
-                    if (damageInfo.procCoefficient != 0f)
-                    {
-                        if (damageInfo.attacker && damageInfo.attacker.GetComponent<CharacterBody>())
-                        {
-                    
-                            bool isPrimaryAttack = false;
-                            if (lastPrimaryUseTime.ContainsKey(attackerBody))
-                            {
-                                isPrimaryAttack = (Time.time - lastPrimaryUseTime[attackerBody]) < PRIMARY_SKILL_WINDOW;
-                            }
-                            if (attackerBody.HasBuff(hydrasBonusDamage) && isPrimaryAttack)
-                            {
-                                var HydrasDamage = new DamageInfo { };
-                                HydrasDamage.damage = attackerBody.baseDamage * (BonusDamage.Value * stackCount); // Add bonus damage from buff
-                                HydrasDamage.damageColorIndex = DamageColorIndex.Item;
-                                HydrasDamage.procCoefficient = 0f;
-                                HydrasDamage.damageType = DamageType.Generic;
-                                HydrasDamage.crit = false;
-                                HydrasDamage.position = damageInfo.position;
-                                //damageInfo.damageType = DamageType.Generic;
-                                HydrasDamage.inflictor = damageInfo.inflictor;
-                                HydrasDamage.attacker = damageInfo.attacker;
-                                attackerBody.RemoveBuff(hydrasBonusDamage);
-                                self.TakeDamage(HydrasDamage);
-                            }
+                    var stackCount = GetCount(attackerBody);
 
+                    if (stackCount > 0)
+                    {
+                        if (damageInfo.procCoefficient != 0f)
+                        {
+                            if (damageInfo.attacker && damageInfo.attacker.GetComponent<CharacterBody>())
+                            {
+
+                                bool isPrimaryAttack = false;
+                                if (lastPrimaryUseTime.ContainsKey(attackerBody))
+                                {
+                                    isPrimaryAttack = (Time.time - lastPrimaryUseTime[attackerBody]) < PRIMARY_SKILL_WINDOW;
+                                }
+                                if (attackerBody.HasBuff(hydrasBonusDamage) && isPrimaryAttack)
+                                {
+                                    var HydrasDamage = new DamageInfo { };
+                                    HydrasDamage.damage = attackerBody.baseDamage * (BonusDamage.Value * stackCount); // Add bonus damage from buff
+                                    HydrasDamage.damageColorIndex = DamageColorIndex.Item;
+                                    HydrasDamage.procCoefficient = 0f;
+                                    HydrasDamage.damageType = DamageType.Generic;
+                                    HydrasDamage.crit = false;
+                                    HydrasDamage.position = damageInfo.position;
+                                    //damageInfo.damageType = DamageType.Generic;
+                                    HydrasDamage.inflictor = damageInfo.inflictor;
+                                    HydrasDamage.attacker = damageInfo.attacker;
+                                    attackerBody.RemoveBuff(hydrasBonusDamage);
+                                    self.TakeDamage(HydrasDamage);
+                                }
+
+                            }
                         }
                     }
                 }
