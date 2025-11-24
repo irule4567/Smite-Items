@@ -40,6 +40,11 @@ namespace Smite_Items.Items
 
         public static BuffDef attackSpeedOnDamageBuff;
 
+        public override ItemTag[] ItemTags => new ItemTag[]
+        {
+            ItemTag.Damage
+        };
+
         //public static GameObject radiusIndicator;
 
         public static Dictionary<CharacterBody,GameObject> radiusIndicators = new Dictionary<CharacterBody, GameObject>();

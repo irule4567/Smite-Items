@@ -76,7 +76,7 @@ namespace Smite_Items.Equipment
                 return;
             }
             CharacterBody attackerBody = damageReport.attackerBody;
-            if(attackerBody.equipmentSlot)
+            if((bool)attackerBody.equipmentSlot && attackerBody.equipmentSlot.equipmentIndex == this.EquipmentDef.equipmentIndex)
             {
                 attackerBody.inventory.DeductActiveEquipmentCooldown(SecondsReducedPerKill.Value);
             }

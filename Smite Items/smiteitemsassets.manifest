@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1463706099
+CRC: 3034000382
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0699b4a9a9011f703821173d78bc00ee
+    Hash: 99acfb942207a2d608ef33f652510822
   TypeTreeHash:
     serializedVersion: 2
     Hash: eeb008a4954a20964bedfac9be76f63d
@@ -36,6 +36,7 @@ Assets:
 - Assets/Models/Prefabs/Item/Gluttonous Grimoire/GluttonousGrimoireModel.prefab
 - Assets/Materials/Item/Musahis/Musashis Face.mat
 - Assets/Materials/Item/Breastplate of Valor/BreastplateFace.mat
+- Assets/Textures/Icons/Items/Bancrofts Claw/Bancrofts Claw Icon.png
 - Assets/Materials/Item/Qins Blade/Qins Blade Face.mat
 - Assets/Textures/Icons/Items/Dagger of Frenzy/Dagger of Frenzy Icon.png
 - Assets/Textures/Icons/Items/Phalanx/Phalanx Icon.png
@@ -82,9 +83,11 @@ Assets:
 - Assets/Models/Prefabs/Item/Breastplate of Valor/BreastplateModel.prefab
 - Assets/Materials/Item/Draconic Scale/Draconic Face.mat
 - Assets/Models/Prefabs/Item/Stone of Binding/StoneOfBindingModel.prefab
+- Assets/Models/Prefabs/Item/Bancrofts Claw/BancroftsClawModel.prefab
 - Assets/Models/Prefabs/Item/Dagger of Frenzy/DaggerOfFrenzyModel.prefab
 - Assets/Materials/Item/Mystical Mail/Mystical Mail Face.mat
 - Assets/Textures/Icons/Items/Tekko Kagi/Tekko Kagi Icon.png
 - Assets/Textures/Icons/Items/Mystical Mail/Mystical Mail Icon.png
 - Assets/Materials/Item/Stone of Binding/Stone of Binding Face.mat
+- Assets/Materials/Item/Bancrofts Claw/Bancrofts Claw Face.mat
 Dependencies: []
