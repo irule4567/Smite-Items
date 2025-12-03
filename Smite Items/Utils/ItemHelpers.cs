@@ -134,7 +134,7 @@ namespace Smite_Items.Utils
         /// <param name="duration">The duration of the buff or dot.</param>
         /// <param name="stackCount">The amount of buff stacks to apply.</param>
         /// <param name="body">The body to apply the buff or dot to.</param>
-        public static void AddBuffAndDot(BuffDef buff, float duration, int stackCount, RoR2.CharacterBody body)
+       /* public static void AddBuffAndDot(BuffDef buff, float duration, int stackCount, RoR2.CharacterBody body)
         {
             if (!NetworkServer.active) { return; }
 
@@ -150,7 +150,7 @@ namespace Smite_Items.Utils
                     body.AddTimedBuff(buff.buffIndex, duration);
                 }
             }
-        }
+        }*/
 
         /// <summary>
         /// Finds the associated DotController from a buff, if applicable.

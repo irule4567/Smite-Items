@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3034000382
+CRC: 40979819
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 99acfb942207a2d608ef33f652510822
+    Hash: 037d0eaa75541c6ca167e9652847a923
   TypeTreeHash:
     serializedVersion: 2
     Hash: eeb008a4954a20964bedfac9be76f63d
@@ -77,12 +77,15 @@ Assets:
 - Assets/Models/Prefabs/Item/Shifters Shield/ShiftersShieldModel.prefab
 - Assets/Textures/Icons/Items/Ichaival/Ichaival Icon.png
 - Assets/Models/Prefabs/Item/Cannoneers Cuirass/CannoneersCuirassModel.prefab
+- Assets/Textures/Icons/Items/Eros Bow/Eros Bow Icon.png
+- Assets/Models/Prefabs/Item/Eros Bow/ErosBowModel.prefab
 - Assets/Materials/Item/Chronos Pendant/ChronosPendantFace.mat
 - Assets/Materials/Item/Glorious Pridwen/Glorious Pridwen Face.mat
 - Assets/Textures/Icons/Items/Gluttonous Grimoire/Gluttonous Grimoire Icon.png
 - Assets/Models/Prefabs/Item/Breastplate of Valor/BreastplateModel.prefab
 - Assets/Materials/Item/Draconic Scale/Draconic Face.mat
 - Assets/Models/Prefabs/Item/Stone of Binding/StoneOfBindingModel.prefab
+- Assets/Materials/Item/Eros Bow/Eros Bow Face.mat
 - Assets/Models/Prefabs/Item/Bancrofts Claw/BancroftsClawModel.prefab
 - Assets/Models/Prefabs/Item/Dagger of Frenzy/DaggerOfFrenzyModel.prefab
 - Assets/Materials/Item/Mystical Mail/Mystical Mail Face.mat

@@ -10,6 +10,7 @@ using Smite_Items.Equipment;
 using Smite_Items.Equipment.EliteEquipment;
 using Smite_Items.Items;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace Smite_Items
 {
