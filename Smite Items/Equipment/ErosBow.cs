@@ -6,17 +6,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using static RoR2.EquipmentSlot;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Networking;
+using static RoR2.DotController;
+using static RoR2.EquipmentSlot;
 using static Smite_Items.Main;
 
-// Current issues:
-// Target for healing doesn't default to self, needs initial activation
-// Target for healing doesn't return to self when activating with no target; sends to whoever was last targted instead
-// ToDo:
-// Maybe change color of idicator
-// Handle death (both for target and user)
+//Small note: When switching equipment, eros bow is totally disabled and resets its target. Treat as intended.
 
 namespace Smite_Items.Equipment
 {
@@ -29,7 +25,7 @@ namespace Smite_Items.Equipment
 
         public override string EquipmentPickupDesc => "Heal on hit. Activate to direct healing to ally.";
 
-        public override string EquipmentFullDescription => $"Whenever you deal damage, heal <style=cIsHealing>{PercentMaxHpHeal.Value*100}% of your maximum health</style>. Target an ally to have them heal <style=cIsHealing>{PercentMaxHpHeal.Value * 100}% of their maximum health</style> every time you deal damage.";
+        public override string EquipmentFullDescription => $"Whenever you deal damage, heals a friendly target for <style=cIsHealing>{PercentMaxHpHeal.Value*100}% of their maximum health</style>. Activating the equipment assigns a new target, or yourself if there are no targets available.";
 
         public override string EquipmentLore => "Equipment taken from Smite 2.";
 
@@ -65,9 +61,90 @@ namespace Smite_Items.Equipment
         public override void Hooks()
         {
             On.RoR2.CharacterBody.OnInventoryChanged += GiveErosEffect;
+            //On.RoR2.Inventory.SetEquipmentIndex_EquipmentIndex += HandleInitialErosEffect;
+            //On.RoR2.EquipmentSlot.Start += HandleInitialErosEffect;
             On.RoR2.GlobalEventManager.OnHitEnemy += GiveHealth;
             //On.RoR2.EquipmentSlot.FixedUpdate += ErosUpdate;
             On.RoR2.EquipmentSlot.UpdateTargets += ErosTarget;
+
+            On.RoR2.CharacterBody.OnDeathStart += CleanupOnDeath;
+        }
+
+        /*private void HandleInitialErosEffect(On.RoR2.Inventory.orig_SetEquipmentIndex_EquipmentIndex orig, Inventory self, EquipmentIndex newEquipmentIndex)
+        {
+            orig(self, newEquipmentIndex);
+            if (!NetworkServer.active) return;
+            Debug.Log(self.currentEquipmentIndex);
+            Debug.Log(this.EquipmentDef.equipmentIndex);
+            if (self.currentEquipmentIndex == this.EquipmentDef.equipmentIndex)
+            {
+                //itemActive = true;
+                if (!erosPairs.ContainsKey(self.GetComponent<CharacterBody>()))
+                {
+                    erosPairs[self.GetComponent<CharacterBody>()] = self.GetComponent<CharacterBody>();
+                }
+            }
+            else // Cleanup
+            {
+                //itemActive = false;
+                erosPairs.Remove(self.GetComponent<CharacterBody>());
+            }
+        }
+
+        private void HandleInitialErosEffect(On.RoR2.Inventory.orig_SetActiveEquipmentSlot orig, Inventory self, byte slotIndex)
+        {
+            orig(self, slotIndex);
+            if (!NetworkServer.active) return;
+            if (self.currentEquipmentIndex == this.EquipmentDef.equipmentIndex)
+            {
+                //itemActive = true;
+                if (!erosPairs.ContainsKey(self.GetComponent<CharacterBody>()))
+                {
+                    erosPairs[self.GetComponent<CharacterBody>()] = self.GetComponent<CharacterBody>();
+                }
+            }
+            else // Cleanup
+            {
+                //itemActive = false;
+                erosPairs.Remove(self.GetComponent<CharacterBody>());
+            }
+        }
+
+        private void HandleInitialErosEffect(On.RoR2.EquipmentSlot.orig_Start orig, EquipmentSlot self)
+        {
+            orig(self);
+            if (!NetworkServer.active) return;
+            if (self.equipmentIndex == this.EquipmentDef.equipmentIndex)
+            {
+                //itemActive = true;
+                if (!erosPairs.ContainsKey(self.characterBody))
+                {
+                    erosPairs[self.characterBody] = self.characterBody;
+                }
+            }
+            else // Cleanup
+            {
+                //itemActive = false;
+                erosPairs.Remove(self.characterBody);
+            }
+        }*/
+
+        private void CleanupOnDeath(On.RoR2.CharacterBody.orig_OnDeathStart orig, CharacterBody self)
+        {
+            orig(self);
+            //CharacterBody originBody = erosPairs.FirstOrDefault(x => x.Value == self).Key;
+            var affectedKeys = erosPairs.Where(kvp => kvp.Value == self).Select(kvp => kvp.Key).ToList();
+            foreach (var key in affectedKeys)
+            {
+                erosPairs[key] = key;
+            }
+            /*while (originBody != null) // Continually searches for instances of the dead character being the recipient of an eros bow.
+            {
+                erosPairs[originBody] = originBody; // Reset recipient to self when recipient dies
+                originBody = erosPairs.FirstOrDefault(x => x.Value == self).Key;
+            }*/
+            erosPairs.Remove(self);
+            
         }
 
         private void ErosTarget(On.RoR2.EquipmentSlot.orig_UpdateTargets orig, EquipmentSlot self, EquipmentIndex targetingEquipmentIndex, bool userShouldAnticipateTarget)
@@ -83,21 +160,23 @@ namespace Smite_Items.Equipment
                 //self.targetIndicator.visualizerPrefab = TargetingIndicatorPrefabBase;
                 self.ConfigureTargetFinderForFriendlies();
                 HurtBox hurtBox = self.targetFinder.GetResults().FirstOrDefault();
-                if (hurtBox != null)
+                if (hurtBox != null && self.stock > 0)
                 {
-                    self.targetIndicator.visualizerPrefab = LegacyResourcesAPI.Load<GameObject>("Prefabs/WoodSpriteIndicator");
+                    //self.targetIndicator.visualizerPrefab = LegacyResourcesAPI.Load<GameObject>("Prefabs/WoodSpriteIndicator");
+                    self.targetIndicator.visualizerPrefab = TargetingIndicatorPrefabBase;
                     self.targetIndicator.targetTransform = hurtBox.transform;
                     self.targetIndicator.active = true;
                     self.currentTarget = new UserTargetInfo(hurtBox);
                 }
                 else
                 {
+                    self.currentTarget = new UserTargetInfo(self.characterBody.mainHurtBox);
                     self.targetIndicator.active = false;
                 }
             }
         }
 
-        private void ErosUpdate(On.RoR2.EquipmentSlot.orig_FixedUpdate orig, EquipmentSlot self)
+        /*private void ErosUpdate(On.RoR2.EquipmentSlot.orig_FixedUpdate orig, EquipmentSlot self)
         {
             if (self.equipmentIndex == this.EquipmentDef.equipmentIndex)
             {
@@ -116,13 +195,15 @@ namespace Smite_Items.Equipment
                 }
             }
             orig(self);
-        }
+        }*/
 
         private void GiveErosEffect(On.RoR2.CharacterBody.orig_OnInventoryChanged orig, CharacterBody self)
         {
             orig(self);
             if (!NetworkServer.active) return;
-            if (self.equipmentSlot.equipmentIndex == this.EquipmentDef.equipmentIndex)
+            //Debug.Log(self.inventory.GetActiveEquipment().equipmentDef);
+            //Debug.Log(this.EquipmentDef);
+            if (self.inventory.GetActiveEquipment().equipmentDef == this.EquipmentDef)
             {
                 //itemActive = true;
                 if (!erosPairs.ContainsKey(self))
@@ -175,9 +256,13 @@ namespace Smite_Items.Equipment
                 CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
                 if ((bool)attackerBody.equipmentSlot && attackerBody.equipmentSlot.equipmentIndex == this.EquipmentDef.equipmentIndex)
                 {
-                    if (erosPairs.ContainsKey(attackerBody))
+                    if (erosPairs.ContainsKey(attackerBody) && erosPairs[attackerBody] != null)
                     {
-                        erosPairs[attackerBody].healthComponent.HealFraction(PercentMaxHpHeal.Value, default(ProcChainMask));
+                        var targetBody = erosPairs[attackerBody];
+                        if (targetBody.healthComponent && targetBody.healthComponent.alive)
+                        {
+                            targetBody.healthComponent.HealFraction(PercentMaxHpHeal.Value, default(ProcChainMask));
+                        }
                     }
                 }
             }
@@ -192,9 +277,9 @@ namespace Smite_Items.Equipment
             //TargetingIndicatorPrefabBase = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/PassiveHealing/WoodSpriteIndicator.prefab").WaitForCompletion();
             TargetingIndicatorPrefabBase = PrefabAPI.InstantiateClone(Resources.Load<GameObject>("Prefabs/WoodSpriteIndicator"), "ErosBowIndicator", false);
             //TargetingIndicatorPrefabBase.GetComponentInChildren<SpriteRenderer>().sprite = MainAssets.LoadAsset<Sprite>("ExampleReticuleIcon.png");
-            TargetingIndicatorPrefabBase.GetComponentInChildren<SpriteRenderer>().color = Color.white;
+            TargetingIndicatorPrefabBase.GetComponentInChildren<SpriteRenderer>().color = new Color(1, 0.753f, 0.797f); // Pink for reticle color
             TargetingIndicatorPrefabBase.GetComponentInChildren<SpriteRenderer>().transform.rotation = Quaternion.identity;
-            TargetingIndicatorPrefabBase.GetComponentInChildren<TMPro.TextMeshPro>().color = new Color(0.423f, 1, 0.749f);
+            TargetingIndicatorPrefabBase.GetComponentInChildren<TMPro.TextMeshPro>().color = new Color(1, 0.714f, 0.757f); // Light pink for text color
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()
@@ -210,6 +295,7 @@ namespace Smite_Items.Equipment
 
         protected override bool ActivateEquipment(EquipmentSlot slot)
         {
+            if (!NetworkServer.active) { return false; }
             //We check for the characterbody, and if that has an inputbank that we'll be getting our aimray from. If we don't have it, we don't continue.
             if (!slot.characterBody || !slot.characterBody.inputBank) { return false; }
 
@@ -240,7 +326,7 @@ namespace Smite_Items.Equipment
             return true;
         }
 
-        private CharacterBody GetTargetedAlly(EquipmentSlot slot)
+        /*private CharacterBody GetTargetedAlly(EquipmentSlot slot)
         {
             slot.ConfigureTargetFinderForFriendlies();
             HurtBox hurtBox = slot.targetFinder.GetResults().FirstOrDefault();
@@ -250,6 +336,6 @@ namespace Smite_Items.Equipment
                 return hurtBox.GetComponent<CharacterBody>();
             }
             return null;
-        }
+        }*/
     }
 }
