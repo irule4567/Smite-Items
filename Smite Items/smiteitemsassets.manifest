@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 40979819
+CRC: 1007451485
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 037d0eaa75541c6ca167e9652847a923
+    Hash: 0b74dd13c4a7415ca8a6c0a5fc980749
   TypeTreeHash:
     serializedVersion: 2
     Hash: eeb008a4954a20964bedfac9be76f63d
@@ -47,6 +47,7 @@ Assets:
 - Assets/Models/Prefabs/Item/Ichaival/IchaivalModel.prefab
 - Assets/Textures/Icons/Items/Cannoneers Cuirass/Cannoneers Cuirass Icon.png
 - Assets/Materials/Item/Ichaival/Ichaival Face.mat
+- Assets/Materials/Item/Regrowth Striders/Icon_T3_RegrowthStriders.png
 - Assets/Textures/Icons/Items/Soul Gem/Soul Gem Icon.png
 - Assets/Textures/Icons/Items/Hydras Lament/Hydras Lament Icon.png
 - Assets/Materials/Item/Shifters Shield/Shifters Shield Face.mat
@@ -59,9 +60,11 @@ Assets:
 - Assets/Materials/Item/Soul Gem/Soul Gem Face.mat
 - Assets/Models/Prefabs/Item/Aegis Amulet/AegisAmuletModel.prefab
 - Assets/Textures/Icons/Items/Draconic Scale/Draconic Scale Icon.png
+- Assets/Textures/Icons/Items/Regrowth Striders/Regrowth Striders Icon.png
 - Assets/Textures/Icons/Items/Musashis/Dual Blades Icon.png
 - Assets/Models/Prefabs/Item/Chronos Pendant/ChronosPendantModel.prefab
 - Assets/Textures/Icons/Items/Aegis Amulet/Aegis Amulet Icon.png
+- Assets/Materials/Item/Regrowth Striders/RegrowthStridersFace.mat
 - Assets/Models/Prefabs/Item/Tekko Kagi/TekkoKagiModel.prefab
 - Assets/Textures/Icons/Items/Stone of Binding/Stone of Binding Icon.png
 - Assets/Models/Prefabs/Item/Hydras Lament/HydrasLamentModel.prefab
@@ -76,12 +79,14 @@ Assets:
 - Assets/Materials/Item/Phalanx/Phalanx Face.mat
 - Assets/Models/Prefabs/Item/Shifters Shield/ShiftersShieldModel.prefab
 - Assets/Textures/Icons/Items/Ichaival/Ichaival Icon.png
+- Assets/Materials/Item/Cannoneers Cuirass/Cannoneers Cuirass Face.mat
 - Assets/Models/Prefabs/Item/Cannoneers Cuirass/CannoneersCuirassModel.prefab
+- Assets/Models/Prefabs/Item/Regrowth Striders/RegrowthStridersModel.prefab
 - Assets/Textures/Icons/Items/Eros Bow/Eros Bow Icon.png
-- Assets/Models/Prefabs/Item/Eros Bow/ErosBowModel.prefab
+- Assets/Textures/Icons/Items/Gluttonous Grimoire/Gluttonous Grimoire Icon.png
 - Assets/Materials/Item/Chronos Pendant/ChronosPendantFace.mat
 - Assets/Materials/Item/Glorious Pridwen/Glorious Pridwen Face.mat
-- Assets/Textures/Icons/Items/Gluttonous Grimoire/Gluttonous Grimoire Icon.png
+- Assets/Models/Prefabs/Item/Eros Bow/ErosBowModel.prefab
 - Assets/Models/Prefabs/Item/Breastplate of Valor/BreastplateModel.prefab
 - Assets/Materials/Item/Draconic Scale/Draconic Face.mat
 - Assets/Models/Prefabs/Item/Stone of Binding/StoneOfBindingModel.prefab

@@ -70,7 +70,7 @@ namespace Smite_Items.Items
         {
             Frequency = config.Bind<float>("Item " + ItemName, "Item Frequency", 1, "How often does the item effect activate?");
             Damage = config.Bind<float>("Item " + ItemName, "Damage", 15, "How much damage does each item activation do?");
-            DamagePerStack = config.Bind<float>("Item " + ItemName, "Damage per stack", 10, "How much damage does each stack of the item add to the effect?");
+            DamagePerStack = config.Bind<float>("Item " + ItemName, "Damage per stack", 15, "How much damage does each stack of the item add to the effect?");
             Radius = config.Bind<float>("Item " + ItemName, "Radius", 12, "In what radius around the player does the effect occur?");
         }
 

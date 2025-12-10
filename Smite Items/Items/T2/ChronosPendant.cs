@@ -44,7 +44,7 @@ namespace Smite_Items.Items
 
        // public static float chronosPendantCooldownDuration => instance.ItemCooldown.Value;
 
-        public static GameObject ItemBodyModelPrefab;
+        //public static GameObject ItemBodyModelPrefab;
 
 
         public override void Init(ConfigFile config)
