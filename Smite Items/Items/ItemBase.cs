@@ -84,6 +84,28 @@ namespace Smite_Items.Items
             ItemDef.hidden = false;
             ItemDef.canRemove = CanRemove;
             ItemDef.deprecatedTier = Tier;
+            /*var prefab = this.ItemDef?.pickupModelPrefab;
+            if (prefab)
+            {
+                //ExtraFireworks.ConvertAllRenderersToHopooShader(prefab);
+
+                if (this.ModelScale.HasValue)
+                    prefab.transform.localScale = this.ModelScale.Value;
+
+                if (!prefab.TryGetComponent<ModelPanelParameters>(out var mdlParams))
+                    mdlParams = prefab.AddComponent<ModelPanelParameters>();
+
+                if (!mdlParams.focusPointTransform)
+                {
+                    mdlParams.focusPointTransform = new GameObject("FocusPoint").transform;
+                    mdlParams.focusPointTransform.SetParent(this.ItemDef.pickupModelPrefab.transform);
+                }
+                if (!mdlParams.cameraPositionTransform)
+                {
+                    mdlParams.cameraPositionTransform = new GameObject("CameraPosition").transform;
+                    mdlParams.cameraPositionTransform.SetParent(this.ItemDef.pickupModelPrefab.transform);
+                }
+            }*/
 
             if (ItemTags.Length > 0) { ItemDef.tags = ItemTags; }
 

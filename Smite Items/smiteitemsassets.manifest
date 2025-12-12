@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1007451485
+CRC: 4127960592
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0b74dd13c4a7415ca8a6c0a5fc980749
+    Hash: a786c555bba34ae20b86e6e6cce343cf
   TypeTreeHash:
     serializedVersion: 2
     Hash: eeb008a4954a20964bedfac9be76f63d
@@ -33,6 +33,7 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/Materials/Item/Stone of Binding/Stone of Binding Face.mat
 - Assets/Models/Prefabs/Item/Gluttonous Grimoire/GluttonousGrimoireModel.prefab
 - Assets/Materials/Item/Musahis/Musashis Face.mat
 - Assets/Materials/Item/Breastplate of Valor/BreastplateFace.mat
@@ -64,7 +65,6 @@ Assets:
 - Assets/Textures/Icons/Items/Musashis/Dual Blades Icon.png
 - Assets/Models/Prefabs/Item/Chronos Pendant/ChronosPendantModel.prefab
 - Assets/Textures/Icons/Items/Aegis Amulet/Aegis Amulet Icon.png
-- Assets/Materials/Item/Regrowth Striders/RegrowthStridersFace.mat
 - Assets/Models/Prefabs/Item/Tekko Kagi/TekkoKagiModel.prefab
 - Assets/Textures/Icons/Items/Stone of Binding/Stone of Binding Icon.png
 - Assets/Models/Prefabs/Item/Hydras Lament/HydrasLamentModel.prefab
@@ -82,11 +82,11 @@ Assets:
 - Assets/Materials/Item/Cannoneers Cuirass/Cannoneers Cuirass Face.mat
 - Assets/Models/Prefabs/Item/Cannoneers Cuirass/CannoneersCuirassModel.prefab
 - Assets/Models/Prefabs/Item/Regrowth Striders/RegrowthStridersModel.prefab
-- Assets/Textures/Icons/Items/Eros Bow/Eros Bow Icon.png
-- Assets/Textures/Icons/Items/Gluttonous Grimoire/Gluttonous Grimoire Icon.png
+- Assets/Materials/Item/Regrowth Striders/Regrowth Striders Face.mat
 - Assets/Materials/Item/Chronos Pendant/ChronosPendantFace.mat
 - Assets/Materials/Item/Glorious Pridwen/Glorious Pridwen Face.mat
-- Assets/Models/Prefabs/Item/Eros Bow/ErosBowModel.prefab
+- Assets/Textures/Icons/Items/Eros Bow/Eros Bow Icon.png
+- Assets/Textures/Icons/Items/Gluttonous Grimoire/Gluttonous Grimoire Icon.png
 - Assets/Models/Prefabs/Item/Breastplate of Valor/BreastplateModel.prefab
 - Assets/Materials/Item/Draconic Scale/Draconic Face.mat
 - Assets/Models/Prefabs/Item/Stone of Binding/StoneOfBindingModel.prefab
@@ -96,6 +96,6 @@ Assets:
 - Assets/Materials/Item/Mystical Mail/Mystical Mail Face.mat
 - Assets/Textures/Icons/Items/Tekko Kagi/Tekko Kagi Icon.png
 - Assets/Textures/Icons/Items/Mystical Mail/Mystical Mail Icon.png
-- Assets/Materials/Item/Stone of Binding/Stone of Binding Face.mat
+- Assets/Models/Prefabs/Item/Eros Bow/ErosBowModel.prefab
 - Assets/Materials/Item/Bancrofts Claw/Bancrofts Claw Face.mat
 Dependencies: []

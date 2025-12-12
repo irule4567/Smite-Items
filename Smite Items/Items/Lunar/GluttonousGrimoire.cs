@@ -62,7 +62,7 @@ namespace Smite_Items.Items
             storedBonusDamage.isDebuff = false;
             storedBonusDamage.name = "storedBonusDamage";
             storedBonusDamage.isCooldown = false;
-            storedBonusDamage.iconSprite = MainAssets.LoadAsset<Sprite>("Chronos Pendant Icon.png");
+            storedBonusDamage.iconSprite = MainAssets.LoadAsset<Sprite>("Gluttonous Grimoire Icon.png");
             ContentAddition.AddBuffDef(storedBonusDamage);
         }
 

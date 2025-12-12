@@ -1,6 +1,7 @@
 ﻿using BepInEx.Configuration;
 using R2API;
 using RoR2;
+using Smite_Items.Utils;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,7 +23,7 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Gain bursts of movement speed by healing.";
 
-        public override string ItemFullDescription => $"Every <style=cIsHealing>{PercentMaxHpForBuff.Value * 100}%</style> of your <style=cIsHealing>maximum health</style> that you <style=cIsHealing>heal</style> increases <style=cIsUtility>movement speed</style> by <style=cIsUtility>{MoveSpeedPerStack.Value * 100}%</style>, up to a <style=cIsUtility>{MaxBuffStacks.Value * MoveSpeedPerStack.Value * 100}%</style> increase, fading at a rate of <style=cIsUtility>{MoveSpeedPerStack.Value * 100} movement speed</style> every <style=cIsUtility>{BaseBuffDuration.Value}</style> <style=cStack>(+{AddedBuffDurationPerStack.Value} per stack)</style> seconds.";
+        public override string ItemFullDescription => $"Every <style=cIsHealing>{PercentMaxHpForBuff.Value * 100}%</style> of your <style=cIsHealing>maximum health</style> that you <style=cIsHealing>heal</style> increases <style=cIsUtility>movement speed</style> by <style=cIsUtility>{MoveSpeedPerStack.Value * 100}%</style>, up to a <style=cIsUtility>{MaxBuffStacks.Value * MoveSpeedPerStack.Value * 100}%</style> increase, fading at a rate of <style=cIsUtility>{MoveSpeedPerStack.Value * 100}% movement speed</style> every <style=cIsUtility>{BaseBuffDuration.Value}</style> <style=cStack>(+{AddedBuffDurationPerStack.Value} per stack)</style> seconds.";
 
         public override string ItemLore => "Item based on the item of the same name from Smite 2.";
 
@@ -38,6 +39,7 @@ namespace Smite_Items.Items
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Regrowth Striders Icon.png");
 
         public static BuffDef regrowthMoveSpeed;
+        //public static GameObject ItemBodyModelPrefab;
 
         public static Dictionary<CharacterBody, float> storedHealingValues = new Dictionary<CharacterBody, float>(); // Store healing values that get used for movement speed buff per character
         public override void Init(ConfigFile config)
@@ -71,6 +73,9 @@ namespace Smite_Items.Items
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()
         {
+            /*ItemBodyModelPrefab = MainAssets.LoadAsset<GameObject>("RegrowthStridersModel.prefab");
+            var itemDisplay = ItemBodyModelPrefab.AddComponent<ItemDisplay>();
+            itemDisplay.rendererInfos = ItemHelpers.ItemDisplaySetup(ItemBodyModelPrefab);*/
             var mpp = ItemModel.AddComponent<ModelPanelParameters>();
             mpp.focusPointTransform = ItemModel.transform.Find("Target");
             mpp.cameraPositionTransform = ItemModel.transform.Find("Source");
