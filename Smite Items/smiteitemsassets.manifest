@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4127960592
+CRC: 4065259387
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a786c555bba34ae20b86e6e6cce343cf
+    Hash: f7825c3a46cc89ba41c1fd956dffef24
   TypeTreeHash:
     serializedVersion: 2
     Hash: eeb008a4954a20964bedfac9be76f63d
@@ -38,6 +38,7 @@ Assets:
 - Assets/Materials/Item/Musahis/Musashis Face.mat
 - Assets/Materials/Item/Breastplate of Valor/BreastplateFace.mat
 - Assets/Textures/Icons/Items/Bancrofts Claw/Bancrofts Claw Icon.png
+- Assets/Models/Prefabs/Item/Regrowth Striders/RegrowthStridersLogbookModel.prefab
 - Assets/Materials/Item/Qins Blade/Qins Blade Face.mat
 - Assets/Textures/Icons/Items/Dagger of Frenzy/Dagger of Frenzy Icon.png
 - Assets/Textures/Icons/Items/Phalanx/Phalanx Icon.png

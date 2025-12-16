@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using static Rewired.UI.ControlMapper.ControlMapper;
 using static Smite_Items.Main;
 
 namespace Smite_Items.Items
@@ -39,7 +40,7 @@ namespace Smite_Items.Items
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Regrowth Striders Icon.png");
 
         public static BuffDef regrowthMoveSpeed;
-        //public static GameObject ItemBodyModelPrefab;
+        public static GameObject ItemBodyModelPrefab;
 
         public static Dictionary<CharacterBody, float> storedHealingValues = new Dictionary<CharacterBody, float>(); // Store healing values that get used for movement speed buff per character
         public override void Init(ConfigFile config)
@@ -73,15 +74,31 @@ namespace Smite_Items.Items
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()
         {
-            /*ItemBodyModelPrefab = MainAssets.LoadAsset<GameObject>("RegrowthStridersModel.prefab");
+            ItemBodyModelPrefab = MainAssets.LoadAsset<GameObject>("RegrowthStridersLogbookModel.prefab");
             var itemDisplay = ItemBodyModelPrefab.AddComponent<ItemDisplay>();
-            itemDisplay.rendererInfos = ItemHelpers.ItemDisplaySetup(ItemBodyModelPrefab);*/
+            itemDisplay.rendererInfos = ItemHelpers.ItemDisplaySetup(ItemBodyModelPrefab);
             var mpp = ItemModel.AddComponent<ModelPanelParameters>();
+            /*if (!ItemBodyModelPrefab.TryGetComponent<ModelPanelParameters>(out var mdlParams))
+                mdlParams = ItemBodyModelPrefab.AddComponent<ModelPanelParameters>();
+
+            if (!mdlParams.focusPointTransform)
+            {
+                mdlParams.focusPointTransform = new GameObject("FocusPoint").transform;
+                mdlParams.focusPointTransform.SetParent(ItemBodyModelPrefab.transform);
+            }
+            if (!mdlParams.cameraPositionTransform)
+            {
+                mdlParams.cameraPositionTransform = new GameObject("CameraPosition").transform;
+                mdlParams.cameraPositionTransform.SetParent(ItemBodyModelPrefab.transform);
+            }*/
             mpp.focusPointTransform = ItemModel.transform.Find("Target");
             mpp.cameraPositionTransform = ItemModel.transform.Find("Source");
             mpp.minDistance = 4f;
             mpp.maxDistance = 8f;
             mpp.modelRotation = Quaternion.Euler(new Vector3(0, 90, 0));
+            //mdlParams.minDistance = 4f;
+            //mdlParams.maxDistance = 8f;
+            //mdlParams.modelRotation = Quaternion.Euler(new Vector3(0, 90, 0));
             return new ItemDisplayRuleDict();
         }
 
