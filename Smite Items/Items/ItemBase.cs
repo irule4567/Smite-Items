@@ -43,6 +43,32 @@ namespace Smite_Items.Items
 
         public virtual bool AIBlacklisted { get; set; } = false;
 
+        /*public virtual void AdjustPickupModel()
+        {
+            var prefab = this.ItemModel;
+            if (prefab)
+            {
+                //ExtraFireworks.ConvertAllRenderersToHopooShader(prefab);
+
+                if (this.ModelScale.HasValue)
+                    prefab.transform.localScale = this.ModelScale.Value;
+
+                if (!prefab.TryGetComponent<ModelPanelParameters>(out var mdlParams))
+                    mdlParams = prefab.AddComponent<ModelPanelParameters>();
+
+                if (!mdlParams.focusPointTransform)
+                {
+                    mdlParams.focusPointTransform = new GameObject("FocusPoint").transform;
+                    mdlParams.focusPointTransform.SetParent(this.ItemModel.transform);
+                }
+                if (!mdlParams.cameraPositionTransform)
+                {
+                    mdlParams.cameraPositionTransform = new GameObject("CameraPosition").transform;
+                    mdlParams.cameraPositionTransform.SetParent(this.ItemModel.transform);
+                }
+            }
+        }*/
+
         /// <summary>
         /// This method structures your code execution of this class. An example implementation inside of it would be:
         /// <para>CreateConfig(config);</para>

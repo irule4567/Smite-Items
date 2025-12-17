@@ -52,11 +52,22 @@ namespace Smite_Items.Equipment
         public override ItemDisplayRuleDict CreateItemDisplayRules()
         {
             var mpp = EquipmentModel.AddComponent<ModelPanelParameters>();
-            mpp.focusPointTransform = EquipmentModel.transform.Find("Target");
-            mpp.cameraPositionTransform = EquipmentModel.transform.Find("Source");
-            mpp.minDistance = 4f;
-            mpp.maxDistance = 8f;
+            GameObject focusPoint = new GameObject("FocusPoint");
+            focusPoint.transform.SetParent(EquipmentModel.transform);
+            focusPoint.transform.localPosition = Vector3.zero; // Center of model
+            focusPoint.transform.localRotation = Quaternion.identity;
+
+            // Create camera position transform (defines viewing angle)
+            GameObject cameraPosition = new GameObject("CameraPosition");
+            cameraPosition.transform.SetParent(EquipmentModel.transform);
+            cameraPosition.transform.localPosition = new Vector3(1f, 0f, 0f); // Offset from focus point
+            cameraPosition.transform.localRotation = Quaternion.identity;
+            mpp.focusPointTransform = focusPoint.transform; //EquipmentModel.transform.Find("Target");
+            mpp.cameraPositionTransform = cameraPosition.transform; //EquipmentModel.transform.Find("Source");
+            mpp.minDistance = 100f;
+            mpp.maxDistance = 200f;
             mpp.modelRotation = Quaternion.Euler(new Vector3(0, 90, 0));
+            mpp.modelPositionOffset = new Vector3(0, 50, 0);
             return new ItemDisplayRuleDict();
         }
 

@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using BepInEx;
+﻿using BepInEx;
 using R2API;
 using R2API.Utils;
+using RoR2;
 using Smite_Items.Artifact;
 using Smite_Items.Equipment;
 using Smite_Items.Equipment.EliteEquipment;
 using Smite_Items.Items;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -25,6 +26,11 @@ namespace Smite_Items
         public const string ModVer = "0.9.5";
 
         public static AssetBundle MainAssets;
+
+        public static Dictionary<string, string> ShaderLookup = new Dictionary<string, string>()
+        {
+            {"stubbed hopoo games/deferred/standard", "shaders/deferred/hgstandard" }
+        };
 
         public List<ArtifactBase> Artifacts = new List<ArtifactBase>();
         public List<ItemBase> Items = new List<ItemBase>();
@@ -50,6 +56,8 @@ namespace Smite_Items
             {
                 MainAssets = AssetBundle.LoadFromStream(stream);
             }
+
+            ShaderConversion(MainAssets);
 
             //This section automatically scans the project for all artifacts
             var ArtifactTypes = Assembly.GetExecutingAssembly().GetTypes().Where(type => !type.IsAbstract && type.IsSubclassOf(typeof(ArtifactBase)));
@@ -100,6 +108,20 @@ namespace Smite_Items
                 }
             }
 
+        }
+        public static void ShaderConversion(AssetBundle assets)
+        {
+            var materialAssets = assets.LoadAllAssets<Material>().Where(material => material.shader.name.StartsWith("stubbed"));
+
+            foreach (Material material in materialAssets)
+            {
+                var replacementShader = LegacyResourcesAPI.Load<Shader>(ShaderLookup[material.shader.name.ToLowerInvariant()]); // TODO this might not be correct
+                if (replacementShader)
+                {
+                    material.shader = replacementShader;
+                    //SwappedMaterials.Add(material);
+                }
+            }
         }
 
 

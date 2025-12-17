@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Rendering;
 using static Rewired.UI.ControlMapper.ControlMapper;
 using static Smite_Items.Main;
 
@@ -40,7 +41,8 @@ namespace Smite_Items.Items
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Regrowth Striders Icon.png");
 
         public static BuffDef regrowthMoveSpeed;
-        public static GameObject ItemBodyModelPrefab;
+
+        //public static GameObject ItemBodyModelPrefab;
 
         public static Dictionary<CharacterBody, float> storedHealingValues = new Dictionary<CharacterBody, float>(); // Store healing values that get used for movement speed buff per character
         public override void Init(ConfigFile config)
@@ -74,10 +76,13 @@ namespace Smite_Items.Items
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()
         {
-            ItemBodyModelPrefab = MainAssets.LoadAsset<GameObject>("RegrowthStridersLogbookModel.prefab");
-            var itemDisplay = ItemBodyModelPrefab.AddComponent<ItemDisplay>();
-            itemDisplay.rendererInfos = ItemHelpers.ItemDisplaySetup(ItemBodyModelPrefab);
-            var mpp = ItemModel.AddComponent<ModelPanelParameters>();
+            //ItemBodyModelPrefab = MainAssets.LoadAsset<GameObject>("RegrowthStridersLogbookModel.prefab");
+            //var itemDisplay = ItemBodyModelPrefab.AddComponent<ItemDisplay>();
+            //itemDisplay.rendererInfos = ItemHelpers.ItemDisplaySetup(ItemBodyModelPrefab);
+            //GameObject modelChild = new GameObject("Model");
+            //modelChild.transform.SetParent(ItemModel.transform);
+            //ItemModel.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+
             /*if (!ItemBodyModelPrefab.TryGetComponent<ModelPanelParameters>(out var mdlParams))
                 mdlParams = ItemBodyModelPrefab.AddComponent<ModelPanelParameters>();
 
@@ -91,11 +96,34 @@ namespace Smite_Items.Items
                 mdlParams.cameraPositionTransform = new GameObject("CameraPosition").transform;
                 mdlParams.cameraPositionTransform.SetParent(ItemBodyModelPrefab.transform);
             }*/
-            mpp.focusPointTransform = ItemModel.transform.Find("Target");
-            mpp.cameraPositionTransform = ItemModel.transform.Find("Source");
-            mpp.minDistance = 4f;
-            mpp.maxDistance = 8f;
+            // Setting focus point and camera position manually in code.
+            // Works because each model is near identical.
+            // If needed, can simply add Target and Source game objects to unity project
+            var mpp = ItemModel.AddComponent<ModelPanelParameters>();
+            GameObject focusPoint = new GameObject("FocusPoint");
+            focusPoint.transform.SetParent(ItemModel.transform);
+            focusPoint.transform.localPosition = Vector3.zero; // Center of model
+            focusPoint.transform.localRotation = Quaternion.identity;
+
+            // Create camera position transform (defines viewing angle)
+            GameObject cameraPosition = new GameObject("CameraPosition");
+            cameraPosition.transform.SetParent(ItemModel.transform);
+            cameraPosition.transform.localPosition = new Vector3(1f, 0f, 0f); // Offset from focus point
+            cameraPosition.transform.localRotation = Quaternion.identity;
+            mpp.focusPointTransform = focusPoint.transform; //ItemModel.transform.Find("Target");
+            mpp.cameraPositionTransform = cameraPosition.transform; //ItemModel.transform.Find("Source");
+            mpp.minDistance = 100f;
+            mpp.maxDistance = 200f;
             mpp.modelRotation = Quaternion.Euler(new Vector3(0, 90, 0));
+            mpp.modelPositionOffset = new Vector3(0, 50, 0);
+            /*ItemModel.AddComponent<LogbookLightingFix>();
+            // Disables ambient lighting to fix issue with mid-run logbook
+            Renderer[] renderers = ItemModel.GetComponentsInChildren<Renderer>();
+            foreach (Renderer renderer in renderers)
+            {
+                renderer.lightProbeUsage = LightProbeUsage.Off;
+                renderer.reflectionProbeUsage = ReflectionProbeUsage.Off;
+            }*/
             //mdlParams.minDistance = 4f;
             //mdlParams.maxDistance = 8f;
             //mdlParams.modelRotation = Quaternion.Euler(new Vector3(0, 90, 0));
@@ -232,5 +260,39 @@ namespace Smite_Items.Items
 
             public int CurrentStacks => stackTimers.Count;
         }
+
+        /*public class LogbookLightingFix : MonoBehaviour
+        {
+            private Renderer[] renderers;
+
+            private void Awake()
+            {
+                renderers = GetComponentsInChildren<Renderer>();
+                ApplyLightingFix();
+            }
+
+            private void OnEnable()
+            {
+                ApplyLightingFix();
+            }
+
+            private void ApplyLightingFix()
+            {
+                foreach (Renderer renderer in renderers)
+                {
+                    renderer.lightProbeUsage = LightProbeUsage.Off;
+                    renderer.reflectionProbeUsage = ReflectionProbeUsage.Off;
+
+                    // Force material property block to override any cached lighting
+                    MaterialPropertyBlock mpb = new MaterialPropertyBlock();
+                    renderer.GetPropertyBlock(mpb);
+
+                    // Set ambient override if using Standard shader
+                    mpb.SetColor("_AmbientColor", Color.white);
+
+                    renderer.SetPropertyBlock(mpb);
+                }
+            }
+        }*/
     }
 }
