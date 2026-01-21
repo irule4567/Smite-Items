@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4065259387
+CRC: 1043662019
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f7825c3a46cc89ba41c1fd956dffef24
+    Hash: e493fcf1bb27bc714ea0f9f99f8bd5db
   TypeTreeHash:
     serializedVersion: 2
     Hash: eeb008a4954a20964bedfac9be76f63d
@@ -38,13 +38,13 @@ Assets:
 - Assets/Materials/Item/Musahis/Musashis Face.mat
 - Assets/Materials/Item/Breastplate of Valor/BreastplateFace.mat
 - Assets/Textures/Icons/Items/Bancrofts Claw/Bancrofts Claw Icon.png
-- Assets/Models/Prefabs/Item/Regrowth Striders/RegrowthStridersLogbookModel.prefab
 - Assets/Materials/Item/Qins Blade/Qins Blade Face.mat
 - Assets/Textures/Icons/Items/Dagger of Frenzy/Dagger of Frenzy Icon.png
 - Assets/Textures/Icons/Items/Phalanx/Phalanx Icon.png
 - Assets/Textures/Icons/Items/Qins Blade/Qins Blade Icon.png
 - Assets/Models/Prefabs/Item/Glorious Pridwen/GloriousPridwenModel.prefab
 - Assets/Materials/Item/Gluttonous Grimoire/Gluttonous Grimoire Face.mat
+- Assets/Models/Prefabs/Item/Sacrifical Shroud/SacrificalShroudModel.prefab
 - Assets/Models/Prefabs/Item/Phalanx/PhalanxModel.prefab
 - Assets/Models/Prefabs/Item/Ichaival/IchaivalModel.prefab
 - Assets/Textures/Icons/Items/Cannoneers Cuirass/Cannoneers Cuirass Icon.png
@@ -64,9 +64,11 @@ Assets:
 - Assets/Textures/Icons/Items/Draconic Scale/Draconic Scale Icon.png
 - Assets/Textures/Icons/Items/Regrowth Striders/Regrowth Striders Icon.png
 - Assets/Textures/Icons/Items/Musashis/Dual Blades Icon.png
-- Assets/Models/Prefabs/Item/Chronos Pendant/ChronosPendantModel.prefab
+- Assets/Textures/Icons/Items/Sacrifical Shroud/Sacrificial Shroud Icon.png
 - Assets/Textures/Icons/Items/Aegis Amulet/Aegis Amulet Icon.png
+- Assets/Models/Prefabs/Item/Chronos Pendant/ChronosPendantModel.prefab
 - Assets/Models/Prefabs/Item/Tekko Kagi/TekkoKagiModel.prefab
+- Assets/Materials/Item/Sacrifical Shroud/Sacrifical Shroud Face.mat
 - Assets/Textures/Icons/Items/Stone of Binding/Stone of Binding Icon.png
 - Assets/Models/Prefabs/Item/Hydras Lament/HydrasLamentModel.prefab
 - Assets/Materials/Item/Tekko Kagi/Tekko Kagi Face.mat

@@ -130,7 +130,7 @@ namespace Smite_Items.Items
                                 {
                                     isPrimaryAttack = (Time.time - lastPrimaryUseTime[attackerBody]) < PRIMARY_SKILL_WINDOW;
                                 }
-                                if (attackerBody.HasBuff(hydrasBonusDamage) && isPrimaryAttack)
+                                if (attackerBody.HasBuff(hydrasBonusDamage) && isPrimaryAttack) //&& !damageInfo.damageType.IsDamageSourceSkillBased)
                                 {
                                     var HydrasDamage = new DamageInfo { };
                                     HydrasDamage.damage = attackerBody.baseDamage * (BonusDamage.Value * stackCount); // Add bonus damage from buff
