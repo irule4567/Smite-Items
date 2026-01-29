@@ -32,8 +32,8 @@ namespace Smite_Items.Items
 
         public static BuffDef hydrasBonusDamage;
 
-        private Dictionary<CharacterBody, float> lastPrimaryUseTime = new Dictionary<CharacterBody, float>();
-        private const float PRIMARY_SKILL_WINDOW = 0.5f;
+        //private Dictionary<CharacterBody, float> lastPrimaryUseTime = new Dictionary<CharacterBody, float>();
+        //private const float PRIMARY_SKILL_WINDOW = 0.5f;
 
         public override void Init(ConfigFile config)
         {
@@ -94,12 +94,99 @@ namespace Smite_Items.Items
 
         public override void Hooks()
         {
-            On.RoR2.CharacterBody.OnSkillActivated += ApplyHydrasBuff;
+            //On.RoR2.CharacterBody.OnSkillActivated += ApplyHydrasBuff;
+            On.RoR2.GenericSkill.DeductStock += ApplyHydrasBuffStock; // Skill is special and directly calls deductStock
+            On.RoR2.Skills.SkillDef.OnExecute += ApplyHydrasBuff;
+            On.EntityStates.Mage.Weapon.PrepWall.OnExit += ApplyHydrasBuffOnIceWall; // Artificer Ice wall needs manual exception
+            On.EntityStates.Engi.EngiMissilePainter.Fire.FireMissile += ApplyHydrasBuffOnHarpoon; // Engi harpoon needs manual exception
             On.RoR2.HealthComponent.TakeDamage += HydrasDamageBonus;
-            On.RoR2.CharacterBody.OnSkillActivated += TrackPrimarySkillUse;
+            //On.RoR2.CharacterBody.OnSkillActivated += TrackPrimarySkillUse;
+            //On.RoR2.CharacterBody.OnDestroy += CleanupBody;
         }
 
-        private void TrackPrimarySkillUse(On.RoR2.CharacterBody.orig_OnSkillActivated orig, CharacterBody self, GenericSkill skill)
+        /*private void CleanupBody(On.RoR2.CharacterBody.orig_OnDestroy orig, CharacterBody self)
+        {
+            lastPrimaryUseTime.Remove(self);
+            orig(self);
+        }*/
+
+        private void ApplyHydrasBuffOnHarpoon(On.EntityStates.Engi.EngiMissilePainter.Fire.orig_FireMissile orig, EntityStates.Engi.EngiMissilePainter.Fire self, HurtBox target, Vector3 position)
+        {
+            orig(self, target, position);
+            // If skill use wasn't primary fire, apply self damage
+            var inventoryCount = GetCount(self.characterBody);
+            if (inventoryCount > 0)
+            {
+                if (self.characterBody.GetBuffCount(hydrasBonusDamage) == 0)
+                {
+                    //Debug.Log("Buff is added");
+                    self.characterBody.AddBuff(hydrasBonusDamage);
+                }
+
+            }
+            
+
+        }
+
+        private void ApplyHydrasBuffOnIceWall(On.EntityStates.Mage.Weapon.PrepWall.orig_OnExit orig, EntityStates.Mage.Weapon.PrepWall self)
+        {
+            if (self.goodPlacement)
+            {
+
+                // If skill use wasn't primary fire, apply self damage
+                var inventoryCount = GetCount(self.characterBody);
+                if (inventoryCount > 0)
+                {
+                    if(self.characterBody.GetBuffCount(hydrasBonusDamage) == 0)
+                    {
+                        //Debug.Log("Buff is added");
+                        self.characterBody.AddBuff(hydrasBonusDamage);
+                    }
+                    
+                }
+            }
+            orig(self);
+        }
+
+        private void ApplyHydrasBuff(On.RoR2.Skills.SkillDef.orig_OnExecute orig, RoR2.Skills.SkillDef self, GenericSkill skillSlot)
+        {
+            orig(self, skillSlot);
+            // If skill use wasn't primary fire, apply self damage
+            var inventoryCount = GetCount(skillSlot.characterBody);
+            if (inventoryCount > 0)
+            {
+                bool isPrimary = (skillSlot.characterBody.skillLocator.primary.skillDef == skillSlot.skillDef);
+                if (!isPrimary && self.baseRechargeInterval > 0f && (skillSlot.cooldownRemaining > 0f || skillSlot.stock < skillSlot.maxStock) && skillSlot.skillDef.skillNameToken != "MAGE_UTILITY_ICE_NAME" && skillSlot.skillDef.skillNameToken != "ENGI_SKILL_HARPOON_NAME") // Check that skill has a cooldown and isn't primary, as well as confirming that the skill went on cooldown
+                {
+                    if (!isPrimary && skillSlot.characterBody.GetBuffCount(hydrasBonusDamage) == 0)
+                    {
+                        //Debug.Log("Buff is added");
+                        skillSlot.characterBody.AddBuff(hydrasBonusDamage);
+                    }
+                }
+            }
+        }
+
+        private void ApplyHydrasBuffStock(On.RoR2.GenericSkill.orig_DeductStock orig, GenericSkill self, int count)
+        {
+            orig(self, count);
+            // If skill use wasn't primary fire, apply self damage
+            var inventoryCount = GetCount(self.characterBody);
+            if (inventoryCount > 0)
+            {
+                bool isPrimary = (self.characterBody.skillLocator.primary.skillDef == self.skillDef);
+                if (!isPrimary && self.baseRechargeInterval > 0f && (self.cooldownRemaining > 0f || self.stock < self.maxStock) && self.skillDef.skillNameToken != "MAGE_UTILITY_ICE_NAME" && self.skillDef.skillNameToken != "ENGI_SKILL_HARPOON_NAME") // Check that skill has a cooldown and isn't primary, as well as confirming that the skill went on cooldown
+                {
+                    if (!isPrimary && self.characterBody.GetBuffCount(hydrasBonusDamage) == 0)
+                    {
+                        //Debug.Log("Buff is added");
+                        self.characterBody.AddBuff(hydrasBonusDamage);
+                    }
+                }
+            }
+        }
+
+        /*private void TrackPrimarySkillUse(On.RoR2.CharacterBody.orig_OnSkillActivated orig, CharacterBody self, GenericSkill skill)
         {
             orig(self, skill);
             bool isPrimary = (self.skillLocator.primary.skillDef == skill.skillDef);
@@ -107,7 +194,7 @@ namespace Smite_Items.Items
             {
                 lastPrimaryUseTime[self] = Time.time;
             }
-        }
+        }*/
 
         private void HydrasDamageBonus(On.RoR2.HealthComponent.orig_TakeDamage orig, HealthComponent self, DamageInfo damageInfo)
         {
@@ -125,12 +212,12 @@ namespace Smite_Items.Items
                             if (damageInfo.attacker && damageInfo.attacker.GetComponent<CharacterBody>())
                             {
 
-                                bool isPrimaryAttack = false;
+                                /*bool isPrimaryAttack = false;
                                 if (lastPrimaryUseTime.ContainsKey(attackerBody))
                                 {
                                     isPrimaryAttack = (Time.time - lastPrimaryUseTime[attackerBody]) < PRIMARY_SKILL_WINDOW;
-                                }
-                                if (attackerBody.HasBuff(hydrasBonusDamage) && isPrimaryAttack) //&& !damageInfo.damageType.IsDamageSourceSkillBased)
+                                }*/
+                                if (attackerBody.HasBuff(hydrasBonusDamage) && (damageInfo.damageType.damageSource & (DamageSource.SkillMask & DamageSource.Primary)) != 0) // Damage is from primary attack
                                 {
                                     var HydrasDamage = new DamageInfo { };
                                     HydrasDamage.damage = attackerBody.baseDamage * (BonusDamage.Value * stackCount); // Add bonus damage from buff
@@ -155,7 +242,7 @@ namespace Smite_Items.Items
             orig(self, damageInfo);
         }
 
-        private void ApplyHydrasBuff(On.RoR2.CharacterBody.orig_OnSkillActivated orig, CharacterBody self, GenericSkill skill)
+        /*private void ApplyHydrasBuff(On.RoR2.CharacterBody.orig_OnSkillActivated orig, CharacterBody self, GenericSkill skill)
         {
 
             orig(self, skill);
@@ -170,6 +257,6 @@ namespace Smite_Items.Items
                     self.AddBuff(hydrasBonusDamage);
                 }
             }
-        }
+        }*/
     }
 }

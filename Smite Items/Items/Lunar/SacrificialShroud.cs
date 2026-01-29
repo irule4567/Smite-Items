@@ -33,11 +33,11 @@ namespace Smite_Items.Items
             ItemTag.Damage
         };
 
-        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("SacrificalShroudModel.prefab");
+        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("SacrificialShroudModel.prefab");
 
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Sacrificial Shroud Icon.png");
-        private Dictionary<CharacterBody, float> lastPrimaryUseTime = new Dictionary<CharacterBody, float>();
-        private const float PRIMARY_SKILL_WINDOW = 0.5f;
+        //private Dictionary<CharacterBody, float> lastPrimaryUseTime = new Dictionary<CharacterBody, float>();
+        //private const float PRIMARY_SKILL_WINDOW = 0.5f;
 
         public override void Init(ConfigFile config)
         {
@@ -79,11 +79,140 @@ namespace Smite_Items.Items
 
         public override void Hooks()
         {
-            On.RoR2.CharacterBody.OnSkillActivated += ApplySacrificeSelfDamage;
+            //On.RoR2.CharacterBody.OnSkillActivated += ApplySacrificeSelfDamage;
+            On.RoR2.GenericSkill.DeductStock += ApplySacrificeSelfDamageStock; // Skill is special and directly calls deductStock
+            On.RoR2.Skills.SkillDef.OnExecute += ApplySacrificeSelfDamage;
+            On.EntityStates.Mage.Weapon.PrepWall.OnExit += ApplySacrificeSelfDamageOnIceWall; // Artificer Ice wall needs manual exception
+            On.EntityStates.Engi.EngiMissilePainter.Fire.FireMissile += ApplySacrificeSelfDamageOnHarpoon; // Engi harpoon needs manual exception
             On.RoR2.HealthComponent.TakeDamage += ApplySacrificeBonusDamage;
-            On.RoR2.CharacterBody.OnSkillActivated += TrackPrimarySkillUse;
+            //On.RoR2.CharacterBody.OnSkillActivated += TrackPrimarySkillUse;
+            //On.RoR2.CharacterBody.OnDestroy += CleanupBody;
         }
-        private void TrackPrimarySkillUse(On.RoR2.CharacterBody.orig_OnSkillActivated orig, CharacterBody self, GenericSkill skill)
+
+        /*private void CleanupBody(On.RoR2.CharacterBody.orig_OnDestroy orig, CharacterBody self)
+        {
+            lastPrimaryUseTime.Remove(self);
+            orig(self);
+        }*/
+
+        private void ApplySacrificeSelfDamageOnHarpoon(On.EntityStates.Engi.EngiMissilePainter.Fire.orig_FireMissile orig, EntityStates.Engi.EngiMissilePainter.Fire self, HurtBox target, Vector3 position)
+        {
+            orig(self, target, position);
+            var inventoryCount = GetCount(self.characterBody);
+            if (inventoryCount > 0)
+            {
+                //bool isPrimary = (self.characterBody.skillLocator.primary.skillDef == self.skillDef);
+                //if (!isPrimary && self.baseRechargeInterval > 0f && (self.cooldownRemaining > 0f || self.stock < self.maxStock) && self.skillDef.skillNameToken != "MAGE_UTILITY_ICE_NAME") // Check that skill has a cooldown and isn't primary, as well as confirming that the skill went on cooldown
+                //{
+                // Deal damage to player equal to a percentage of maximum health, scaling based on both number of stacks of the item and skill cooldown
+                // Doubled to account for friendly fire damage being naturally halved
+                var skill = self.skillLocator.utilityBonusStockSkill;
+                float hurt = self.characterBody.maxHealth * 2 * (PercentHealthCostPerSecond.Value + PercentHealthCostPerSecondPerStack.Value * (inventoryCount - 1)) * skill.baseRechargeInterval;
+                var SacDamage = new DamageInfo { };
+                SacDamage.damage = hurt;
+                SacDamage.damageColorIndex = DamageColorIndex.Item;
+                SacDamage.procCoefficient = 0f;
+                SacDamage.damageType = DamageType.NonLethal;
+                SacDamage.crit = false;
+                SacDamage.position = self.characterBody.corePosition;
+                SacDamage.inflictor = self.characterBody.gameObject;
+                SacDamage.attacker = self.characterBody.gameObject;
+                self.characterBody.healthComponent.TakeDamage(SacDamage);
+                //}
+            }
+        }
+
+        private void ApplySacrificeSelfDamageOnIceWall(On.EntityStates.Mage.Weapon.PrepWall.orig_OnExit orig, EntityStates.Mage.Weapon.PrepWall self)
+        {
+            if(self.goodPlacement)
+            {
+                if(self.characterBody)
+                {
+                    var inventoryCount = GetCount(self.characterBody);
+                    if (inventoryCount > 0)
+                    {
+                        //bool isPrimary = (self.characterBody.skillLocator.primary.skillDef == self.skillDef);
+                        //if (!isPrimary && self.baseRechargeInterval > 0f && (self.cooldownRemaining > 0f || self.stock < self.maxStock) && self.skillDef.skillNameToken != "MAGE_UTILITY_ICE_NAME") // Check that skill has a cooldown and isn't primary, as well as confirming that the skill went on cooldown
+                        //{
+                        // Deal damage to player equal to a percentage of maximum health, scaling based on both number of stacks of the item and skill cooldown
+                        // Doubled to account for friendly fire damage being naturally halved
+                        var skill = self.skillLocator.utilityBonusStockSkill;
+                        float hurt = self.characterBody.maxHealth * 2 * (PercentHealthCostPerSecond.Value + PercentHealthCostPerSecondPerStack.Value * (inventoryCount - 1)) * skill.baseRechargeInterval;
+                        var SacDamage = new DamageInfo { };
+                        SacDamage.damage = hurt;
+                        SacDamage.damageColorIndex = DamageColorIndex.Item;
+                        SacDamage.procCoefficient = 0f;
+                        SacDamage.damageType = DamageType.NonLethal;
+                        SacDamage.crit = false;
+                        SacDamage.position = self.characterBody.corePosition;
+                        SacDamage.inflictor = self.characterBody.gameObject;
+                        SacDamage.attacker = self.characterBody.gameObject;
+                        self.characterBody.healthComponent.TakeDamage(SacDamage);
+                        //}
+                    }
+                }
+            }
+            orig(self);
+        }
+
+        private void ApplySacrificeSelfDamage(On.RoR2.Skills.SkillDef.orig_OnExecute orig, RoR2.Skills.SkillDef self, GenericSkill skillSlot)
+        {
+            orig(self, skillSlot);
+            // If skill use wasn't primary fire, apply self damage
+            var inventoryCount = GetCount(skillSlot.characterBody);
+            if (self.stockToConsume >= 1)
+            {
+                if (inventoryCount > 0)
+                {
+                    bool isPrimary = (skillSlot.characterBody.skillLocator.primary.skillDef == skillSlot.skillDef);
+                    if (!isPrimary && self.baseRechargeInterval > 0f && (skillSlot.cooldownRemaining > 0f || skillSlot.stock < skillSlot.maxStock) && skillSlot.skillDef.skillNameToken != "MAGE_UTILITY_ICE_NAME" && skillSlot.skillDef.skillNameToken != "ENGI_SKILL_HARPOON_NAME") // Check that skill has a cooldown and isn't primary, as well as confirming that the skill went on cooldown
+                    {
+                        // Deal damage to player equal to a percentage of maximum health, scaling based on both number of stacks of the item and skill cooldown
+                        // Doubled to account for friendly fire damage being naturally halved
+                        float hurt = skillSlot.characterBody.maxHealth * 2 * (PercentHealthCostPerSecond.Value + PercentHealthCostPerSecondPerStack.Value * (inventoryCount - 1)) * self.baseRechargeInterval;
+                        var SacDamage = new DamageInfo { };
+                        SacDamage.damage = hurt;
+                        SacDamage.damageColorIndex = DamageColorIndex.Item;
+                        SacDamage.procCoefficient = 0f;
+                        SacDamage.damageType = DamageType.NonLethal;
+                        SacDamage.crit = false;
+                        SacDamage.position = skillSlot.characterBody.corePosition;
+                        SacDamage.inflictor = skillSlot.characterBody.gameObject;
+                        SacDamage.attacker = skillSlot.characterBody.gameObject;
+                        skillSlot.characterBody.healthComponent.TakeDamage(SacDamage);
+                    }
+                }
+            }
+        }
+
+        private void ApplySacrificeSelfDamageStock(On.RoR2.GenericSkill.orig_DeductStock orig, GenericSkill self, int count)
+        {
+            orig(self, count);
+            // If skill use wasn't primary fire, apply self damage
+            var inventoryCount = GetCount(self.characterBody);
+            if (inventoryCount > 0)
+            {
+                bool isPrimary = (self.characterBody.skillLocator.primary.skillDef == self.skillDef);
+                if (!isPrimary && self.baseRechargeInterval > 0f && (self.cooldownRemaining > 0f || self.stock < self.maxStock) && self.skillDef.skillNameToken != "MAGE_UTILITY_ICE_NAME" && self.skillDef.skillNameToken != "ENGI_SKILL_HARPOON_NAME") // Check that skill has a cooldown and isn't primary, as well as confirming that the skill went on cooldown
+                {
+                    // Deal damage to player equal to a percentage of maximum health, scaling based on both number of stacks of the item and skill cooldown
+                    // Doubled to account for friendly fire damage being naturally halved
+                    float hurt = self.characterBody.maxHealth * 2 * (PercentHealthCostPerSecond.Value + PercentHealthCostPerSecondPerStack.Value * (inventoryCount - 1)) * self.baseRechargeInterval;
+                    var SacDamage = new DamageInfo { };
+                    SacDamage.damage = hurt;
+                    SacDamage.damageColorIndex = DamageColorIndex.Item;
+                    SacDamage.procCoefficient = 0f;
+                    SacDamage.damageType = DamageType.NonLethal;
+                    SacDamage.crit = false;
+                    SacDamage.position = self.characterBody.corePosition;
+                    SacDamage.inflictor = self.characterBody.gameObject;
+                    SacDamage.attacker = self.characterBody.gameObject;
+                    self.characterBody.healthComponent.TakeDamage(SacDamage);
+                }
+            }
+        }
+
+        /*private void TrackPrimarySkillUse(On.RoR2.CharacterBody.orig_OnSkillActivated orig, CharacterBody self, GenericSkill skill)
         {
             orig(self, skill);
             bool isPrimary = (self.skillLocator.primary.skillDef == skill.skillDef);
@@ -91,31 +220,30 @@ namespace Smite_Items.Items
             {
                 lastPrimaryUseTime[self] = Time.time;
             }
-        }
+        }*/
 
         private void ApplySacrificeBonusDamage(On.RoR2.HealthComponent.orig_TakeDamage orig, HealthComponent self, DamageInfo damageInfo)
         {
             if (damageInfo.attacker)
             {
                 CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
-                if (attackerBody.inventory)
+                if (attackerBody && attackerBody.inventory)
                 {
                     var stackCount = GetCount(attackerBody);
 
                     if (stackCount > 0)
                     {
-                        if (damageInfo.attacker && damageInfo.attacker.GetComponent<CharacterBody>())
+                        //bool isPrimaryAttack = false;
+                        /*if (lastPrimaryUseTime.ContainsKey(attackerBody))
                         {
-                            bool isPrimaryAttack = false;
-                            if (lastPrimaryUseTime.ContainsKey(attackerBody))
-                            {
-                                isPrimaryAttack = (Time.time - lastPrimaryUseTime[attackerBody]) < PRIMARY_SKILL_WINDOW;
-                            }
-                            if (damageInfo.damageType.IsDamageSourceSkillBased && !isPrimaryAttack)
-                            {
-                                // If damage is from a skill, multiply it accordingly
-                                damageInfo.damage *= 1 + (SkillBonusDamage.Value + SkillBonusDamagePerStack.Value * (stackCount - 1));
-                            }
+                            isPrimaryAttack = (Time.time - lastPrimaryUseTime[attackerBody]) < PRIMARY_SKILL_WINDOW;
+                        }*/
+
+                        //if (damageInfo.damageType.IsDamageSourceSkillBased && !isPrimaryAttack)
+                        if ((damageInfo.damageType.damageSource & (DamageSource.SkillMask & ~DamageSource.Primary)) != 0)
+                        {
+                            // If damage is from a non-primary skill, multiply it accordingly
+                            damageInfo.damage *= 1 + (SkillBonusDamage.Value + SkillBonusDamagePerStack.Value * (stackCount - 1));
                         }
                     }
                 }
@@ -124,7 +252,7 @@ namespace Smite_Items.Items
             orig(self, damageInfo);
         }
 
-        private void ApplySacrificeSelfDamage(On.RoR2.CharacterBody.orig_OnSkillActivated orig, CharacterBody self, GenericSkill skill)
+        /*private void ApplySacrificeSelfDamage(On.RoR2.CharacterBody.orig_OnSkillActivated orig, CharacterBody self, GenericSkill skill)
         {
             orig(self, skill);
             // If skill use wasn't primary fire, apply self damage
@@ -132,7 +260,7 @@ namespace Smite_Items.Items
             if (inventoryCount > 0)
             {
                 bool isPrimary = (self.skillLocator.primary.skillDef == skill.skillDef);
-                if (!isPrimary && skill.baseRechargeInterval > 0f) // Check that skill has a cooldown and isn't primary
+                if (!isPrimary && skill.baseRechargeInterval > 0f && (skill.cooldownRemaining > 0f || skill.stock < skill.maxStock)) // Check that skill has a cooldown and isn't primary, as well as confirming that the skill went on cooldown
                 {
                     // Deal damage to player equal to a percentage of maximum health, scaling based on both number of stacks of the item and skill cooldown
                     // Doubled to account for friendly fire damage being naturally halved
@@ -149,6 +277,6 @@ namespace Smite_Items.Items
                     self.healthComponent.TakeDamage(SacDamage);
                 }
             }
-        }
+        }*/
     }
 }

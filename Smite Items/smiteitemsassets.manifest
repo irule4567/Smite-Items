@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1043662019
+CRC: 2252912473
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e493fcf1bb27bc714ea0f9f99f8bd5db
+    Hash: 0f51c1947e93186117a81b5799f4fab4
   TypeTreeHash:
     serializedVersion: 2
     Hash: eeb008a4954a20964bedfac9be76f63d
@@ -44,7 +44,7 @@ Assets:
 - Assets/Textures/Icons/Items/Qins Blade/Qins Blade Icon.png
 - Assets/Models/Prefabs/Item/Glorious Pridwen/GloriousPridwenModel.prefab
 - Assets/Materials/Item/Gluttonous Grimoire/Gluttonous Grimoire Face.mat
-- Assets/Models/Prefabs/Item/Sacrifical Shroud/SacrificalShroudModel.prefab
+- Assets/Models/Prefabs/Item/Sacrificial Shroud/SacrificialShroudModel.prefab
 - Assets/Models/Prefabs/Item/Phalanx/PhalanxModel.prefab
 - Assets/Models/Prefabs/Item/Ichaival/IchaivalModel.prefab
 - Assets/Textures/Icons/Items/Cannoneers Cuirass/Cannoneers Cuirass Icon.png
@@ -64,11 +64,11 @@ Assets:
 - Assets/Textures/Icons/Items/Draconic Scale/Draconic Scale Icon.png
 - Assets/Textures/Icons/Items/Regrowth Striders/Regrowth Striders Icon.png
 - Assets/Textures/Icons/Items/Musashis/Dual Blades Icon.png
-- Assets/Textures/Icons/Items/Sacrifical Shroud/Sacrificial Shroud Icon.png
+- Assets/Textures/Icons/Items/Sacrificial Shroud/Sacrificial Shroud Icon.png
 - Assets/Textures/Icons/Items/Aegis Amulet/Aegis Amulet Icon.png
 - Assets/Models/Prefabs/Item/Chronos Pendant/ChronosPendantModel.prefab
 - Assets/Models/Prefabs/Item/Tekko Kagi/TekkoKagiModel.prefab
-- Assets/Materials/Item/Sacrifical Shroud/Sacrifical Shroud Face.mat
+- Assets/Materials/Item/Sacrificial Shroud/Sacrificial Shroud Face.mat
 - Assets/Textures/Icons/Items/Stone of Binding/Stone of Binding Icon.png
 - Assets/Models/Prefabs/Item/Hydras Lament/HydrasLamentModel.prefab
 - Assets/Materials/Item/Tekko Kagi/Tekko Kagi Face.mat
