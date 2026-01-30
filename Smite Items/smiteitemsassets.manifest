@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2252912473
+CRC: 1439941425
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0f51c1947e93186117a81b5799f4fab4
+    Hash: 62f333ad112e90b21246df756672233c
   TypeTreeHash:
     serializedVersion: 2
     Hash: eeb008a4954a20964bedfac9be76f63d
@@ -33,6 +33,7 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/Materials/Item/Bancrofts Claw/Bancrofts Claw Face.mat
 - Assets/Materials/Item/Stone of Binding/Stone of Binding Face.mat
 - Assets/Models/Prefabs/Item/Gluttonous Grimoire/GluttonousGrimoireModel.prefab
 - Assets/Materials/Item/Musahis/Musashis Face.mat
@@ -49,6 +50,7 @@ Assets:
 - Assets/Models/Prefabs/Item/Ichaival/IchaivalModel.prefab
 - Assets/Textures/Icons/Items/Cannoneers Cuirass/Cannoneers Cuirass Icon.png
 - Assets/Materials/Item/Ichaival/Ichaival Face.mat
+- Assets/Models/Prefabs/Item/Curseweaver/CurseweaverModel.prefab
 - Assets/Materials/Item/Regrowth Striders/Icon_T3_RegrowthStriders.png
 - Assets/Textures/Icons/Items/Soul Gem/Soul Gem Icon.png
 - Assets/Textures/Icons/Items/Hydras Lament/Hydras Lament Icon.png
@@ -74,6 +76,7 @@ Assets:
 - Assets/Materials/Item/Tekko Kagi/Tekko Kagi Face.mat
 - Assets/Textures/Icons/Items/Glorious Pridwen/Glorious Pridwen Icon.png
 - Assets/Models/Prefabs/Item/Draconic Scale/DraconicScaleModel.prefab
+- Assets/Textures/Icons/Items/Curseweaver/Curseweaver Icon.png
 - Assets/Models/Prefabs/Item/Mystical Mail/MysticalMailModel.prefab
 - Assets/Textures/Icons/Items/Chronos Pendant/Chronos Pendant Icon.png
 - Assets/Materials/Item/Hydras Lament/Hydras Lament Face.mat
@@ -94,11 +97,10 @@ Assets:
 - Assets/Materials/Item/Draconic Scale/Draconic Face.mat
 - Assets/Models/Prefabs/Item/Stone of Binding/StoneOfBindingModel.prefab
 - Assets/Materials/Item/Eros Bow/Eros Bow Face.mat
-- Assets/Models/Prefabs/Item/Bancrofts Claw/BancroftsClawModel.prefab
 - Assets/Models/Prefabs/Item/Dagger of Frenzy/DaggerOfFrenzyModel.prefab
 - Assets/Materials/Item/Mystical Mail/Mystical Mail Face.mat
 - Assets/Textures/Icons/Items/Tekko Kagi/Tekko Kagi Icon.png
 - Assets/Textures/Icons/Items/Mystical Mail/Mystical Mail Icon.png
 - Assets/Models/Prefabs/Item/Eros Bow/ErosBowModel.prefab
-- Assets/Materials/Item/Bancrofts Claw/Bancrofts Claw Face.mat
+- Assets/Models/Prefabs/Item/Bancrofts Claw/BancroftsClawModel.prefab
 Dependencies: []
