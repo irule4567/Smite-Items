@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1439941425
+CRC: 3085482196
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 62f333ad112e90b21246df756672233c
+    Hash: 8405d073a4a24a186c7ca9eb6e9e63db
   TypeTreeHash:
     serializedVersion: 2
     Hash: eeb008a4954a20964bedfac9be76f63d
@@ -33,6 +33,7 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/Textures/Icons/Items/Eros Bow/Eros Bow Icon.png
 - Assets/Materials/Item/Bancrofts Claw/Bancrofts Claw Face.mat
 - Assets/Materials/Item/Stone of Binding/Stone of Binding Face.mat
 - Assets/Models/Prefabs/Item/Gluttonous Grimoire/GluttonousGrimoireModel.prefab
@@ -57,6 +58,7 @@ Assets:
 - Assets/Materials/Item/Shifters Shield/Shifters Shield Face.mat
 - Assets/Models/Prefabs/Item/Soul Gem/SoulGemModel.prefab
 - Assets/Textures/Icons/Items/Breastplate of Valor/Breastplate Icon.png
+- Assets/Materials/Item/Stormseeker/Stormseeker Face.mat
 - Assets/Materials/Item/Dagger of Frenzy/Dagger of Frenzy Face.mat
 - Assets/Materials/Item/Aegis Amulet/Aegis Amulet Face.mat
 - Assets/Textures/Icons/Items/Shifters Shield/Shifters Shield Icon.png
@@ -66,14 +68,15 @@ Assets:
 - Assets/Textures/Icons/Items/Draconic Scale/Draconic Scale Icon.png
 - Assets/Textures/Icons/Items/Regrowth Striders/Regrowth Striders Icon.png
 - Assets/Textures/Icons/Items/Musashis/Dual Blades Icon.png
-- Assets/Textures/Icons/Items/Sacrificial Shroud/Sacrificial Shroud Icon.png
-- Assets/Textures/Icons/Items/Aegis Amulet/Aegis Amulet Icon.png
 - Assets/Models/Prefabs/Item/Chronos Pendant/ChronosPendantModel.prefab
+- Assets/Textures/Icons/Items/Aegis Amulet/Aegis Amulet Icon.png
+- Assets/Textures/Icons/Items/Sacrificial Shroud/Sacrificial Shroud Icon.png
 - Assets/Models/Prefabs/Item/Tekko Kagi/TekkoKagiModel.prefab
 - Assets/Materials/Item/Sacrificial Shroud/Sacrificial Shroud Face.mat
 - Assets/Textures/Icons/Items/Stone of Binding/Stone of Binding Icon.png
 - Assets/Models/Prefabs/Item/Hydras Lament/HydrasLamentModel.prefab
 - Assets/Materials/Item/Tekko Kagi/Tekko Kagi Face.mat
+- Assets/Models/Prefabs/Item/Stormseeker/StormseekerModel.prefab
 - Assets/Textures/Icons/Items/Glorious Pridwen/Glorious Pridwen Icon.png
 - Assets/Models/Prefabs/Item/Draconic Scale/DraconicScaleModel.prefab
 - Assets/Textures/Icons/Items/Curseweaver/Curseweaver Icon.png
@@ -89,10 +92,10 @@ Assets:
 - Assets/Models/Prefabs/Item/Cannoneers Cuirass/CannoneersCuirassModel.prefab
 - Assets/Models/Prefabs/Item/Regrowth Striders/RegrowthStridersModel.prefab
 - Assets/Materials/Item/Regrowth Striders/Regrowth Striders Face.mat
+- Assets/Textures/Icons/Items/Gluttonous Grimoire/Gluttonous Grimoire Icon.png
 - Assets/Materials/Item/Chronos Pendant/ChronosPendantFace.mat
 - Assets/Materials/Item/Glorious Pridwen/Glorious Pridwen Face.mat
-- Assets/Textures/Icons/Items/Eros Bow/Eros Bow Icon.png
-- Assets/Textures/Icons/Items/Gluttonous Grimoire/Gluttonous Grimoire Icon.png
+- Assets/Models/Prefabs/Item/Eros Bow/ErosBowModel.prefab
 - Assets/Models/Prefabs/Item/Breastplate of Valor/BreastplateModel.prefab
 - Assets/Materials/Item/Draconic Scale/Draconic Face.mat
 - Assets/Models/Prefabs/Item/Stone of Binding/StoneOfBindingModel.prefab
@@ -101,6 +104,6 @@ Assets:
 - Assets/Materials/Item/Mystical Mail/Mystical Mail Face.mat
 - Assets/Textures/Icons/Items/Tekko Kagi/Tekko Kagi Icon.png
 - Assets/Textures/Icons/Items/Mystical Mail/Mystical Mail Icon.png
-- Assets/Models/Prefabs/Item/Eros Bow/ErosBowModel.prefab
+- Assets/Textures/Icons/Items/Stormseeker/Stormseeker Icon.png
 - Assets/Models/Prefabs/Item/Bancrofts Claw/BancroftsClawModel.prefab
 Dependencies: []
