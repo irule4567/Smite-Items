@@ -1,9 +1,9 @@
 ﻿using BepInEx.Configuration;
-using EntityStates.AffixVoid;
 using R2API;
 using RoR2;
 using System;
 using UnityEngine;
+using UnityEngine.Networking;
 using static Smite_Items.Main;
 
 namespace Smite_Items.Items
@@ -18,7 +18,7 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Gain permanent increased attack speed by hitting enemies";
 
-        public override string ItemFullDescription => $"Dealing damage increases your <style=cIsDamage>attack speed permanently</style> by <style=cIsDamage>{AttackSpeedPerStack.Value*100}%</style> <style=cStack>(+{AttackSpeedPerStack.Value * 100}% per stack)</style>, up to a <style=cIsDamage>maximum</style> of <style=cIsDamage>{MaxStacksPerStack.Value* AttackSpeedPerStack.Value * 100}%</style> <style=cStack>(+{MaxStacksPerStack.Value * AttackSpeedPerStack.Value * 100}% per stack).";
+        public override string ItemFullDescription => $"Dealing damage increases your <style=cIsDamage>attack speed permanently</style> by <style=cIsDamage>{AttackSpeedPerStack.Value*100}%</style> <style=cStack>(+{AttackSpeedPerStack.Value * 100}% per stack)</style>, up to a <style=cIsDamage>maximum</style> of <style=cIsDamage>{MaxStacksPerStack.Value* AttackSpeedPerStack.Value * 100}%</style> <style=cStack>(+{MaxStacksPerStack.Value * AttackSpeedPerStack.Value * 100}% per stack)</style>.";
 
         public override string ItemLore => "Item taken from Smite 1.";
 
@@ -43,7 +43,7 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            AttackSpeedPerStack = config.Bind<float>("Item " + ItemName, "Attack speed per stack", 0.0005f, "How much permanant additional attack speed is given per stacks from hits?");
+            AttackSpeedPerStack = config.Bind<float>("Item " + ItemName, "Attack speed per stack", 0.0005f, "How much permanent additional attack speed is given per stacks from hits?");
             MaxStacksPerStack = config.Bind<int>("Item " + ItemName, "Max attack speed stacks", 1000, "How many stacks of bonus attack speed can each stack of the item provide?");
         }
 
@@ -78,27 +78,36 @@ namespace Smite_Items.Items
         private void ApplyStormBuff(On.RoR2.GlobalEventManager.orig_OnHitEnemy orig, GlobalEventManager self, DamageInfo damageInfo, GameObject victim)
         {
             orig(self, damageInfo, victim);
+            if (!NetworkServer.active)
+            {
+                return;
+            }
             if (damageInfo.attacker && damageInfo.procCoefficient > 0f)
             {
-                CharacterBody inflictor = (damageInfo.attacker ? damageInfo.attacker.GetComponent<CharacterBody>() : null);
-                //CharacterMaster master = inflictor.master;
+                CharacterBody inflictor = damageInfo.attacker.GetComponent<CharacterBody>();
+                
                 //Inventory inventory = master.inventory;
                 if (inflictor)
                 {
                     int stormItem = GetCount(inflictor);
                     if (stormItem > 0)
                     {
-                        var tracker = inflictor.GetComponent<StormseekerTracker>();
-                        if (!tracker)
+                        CharacterMaster master = inflictor.master;
+                        if (master)
                         {
-                            tracker = inflictor.gameObject.AddComponent<StormseekerTracker>();
-                        }
-                        if (tracker.attackSpeedStacks < stormItem * MaxStacksPerStack.Value) // Check for maximum stacks
-                        {
-                            tracker.attackSpeedStacks = tracker.attackSpeedStacks + stormItem; // Add one stack per item stack
-                            if (tracker.attackSpeedStacks < stormItem * MaxStacksPerStack.Value) // Set to max if it goes over
+                            var tracker = master.GetComponent<StormseekerTracker>();
+                            if (!tracker)
                             {
-                                tracker.attackSpeedStacks = stormItem * MaxStacksPerStack.Value;
+                                tracker = master.gameObject.AddComponent<StormseekerTracker>();
+                            }
+                            if (tracker.attackSpeedStacks < stormItem * MaxStacksPerStack.Value) // Check for maximum stacks
+                            {
+                                tracker.attackSpeedStacks = tracker.attackSpeedStacks + stormItem; // Add one stack per item stack
+                                if (tracker.attackSpeedStacks > stormItem * MaxStacksPerStack.Value) // Set to max if it goes over
+                                {
+                                    tracker.attackSpeedStacks = stormItem * MaxStacksPerStack.Value;
+                                }
+                                inflictor.statsDirty = true; // Ensure stats immediately get updated
                             }
                         }
                     }
@@ -113,9 +122,15 @@ namespace Smite_Items.Items
                 var itemCount = GetCount(sender);
                 if (itemCount > 0 && sender.healthComponent != null)
                 {
-                    var tracker = sender.GetComponent<StormseekerTracker>();
+                    var tracker = sender.master?.GetComponent<StormseekerTracker>();
                     if (tracker)
                     {
+                        int maxStacks = itemCount * MaxStacksPerStack.Value;
+                        if(tracker.attackSpeedStacks > maxStacks)
+                        {
+                            tracker.attackSpeedStacks = maxStacks;
+                        }
+                        //Debug.Log("Item stacks: " + tracker.attackSpeedStacks);
                         args.baseAttackSpeedAdd += tracker.attackSpeedStacks * AttackSpeedPerStack.Value;
                     }
                 }
