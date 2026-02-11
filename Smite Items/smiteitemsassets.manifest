@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 727780868
+CRC: 774935048
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e644adcbddf21874c4f08d0e0423b720
+    Hash: d85d215d08f0c940c3eb52a36657f76c
   TypeTreeHash:
     serializedVersion: 2
     Hash: eeb008a4954a20964bedfac9be76f63d
@@ -41,6 +41,7 @@ Assets:
 - Assets/Materials/Item/Musahis/Musashis Face.mat
 - Assets/Materials/Item/Breastplate of Valor/BreastplateFace.mat
 - Assets/Textures/Icons/Items/Bancrofts Claw/Bancrofts Claw Icon.png
+- Assets/Materials/Item/Blinking Abyss/Blinking Abyss Face.mat
 - Assets/Materials/Item/Qins Blade/Qins Blade Face.mat
 - Assets/Textures/Icons/Items/Dagger of Frenzy/Dagger of Frenzy Icon.png
 - Assets/Textures/Icons/Items/Phalanx/Phalanx Icon.png
@@ -48,6 +49,7 @@ Assets:
 - Assets/Models/Prefabs/Item/Glorious Pridwen/GloriousPridwenModel.prefab
 - Assets/Materials/Item/Gluttonous Grimoire/Gluttonous Grimoire Face.mat
 - Assets/Models/Prefabs/Item/Sacrificial Shroud/SacrificialShroudModel.prefab
+- Assets/Textures/Icons/Items/Blinking Abyss/Blinking Abyss Icon.png
 - Assets/Models/Prefabs/Item/Phalanx/PhalanxModel.prefab
 - Assets/Models/Prefabs/Item/Ichaival/IchaivalModel.prefab
 - Assets/Textures/Icons/Items/Cannoneers Cuirass/Cannoneers Cuirass Icon.png
@@ -105,6 +107,7 @@ Assets:
 - Assets/Materials/Item/Eros Bow/Eros Bow Face.mat
 - Assets/Models/Prefabs/Item/Dagger of Frenzy/DaggerOfFrenzyModel.prefab
 - Assets/Materials/Item/Mystical Mail/Mystical Mail Face.mat
+- Assets/Models/Prefabs/Item/Blinking Abyss/BlinkingAbyssModel.prefab
 - Assets/Textures/Icons/Items/Tekko Kagi/Tekko Kagi Icon.png
 - Assets/Textures/Icons/Items/Mystical Mail/Mystical Mail Icon.png
 - Assets/Textures/Icons/Items/Stormseeker/Stormseeker Icon.png

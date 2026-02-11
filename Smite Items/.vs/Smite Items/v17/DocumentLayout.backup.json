@@ -3,36 +3,84 @@
   "WorkspaceRootPath": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\spiritrobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\spiritrobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\equipment\\blinkingabyss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:equipment\\blinkingabyss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\draconicscale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\draconicscale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\equipment\\daggeroffrenzy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:equipment\\daggeroffrenzy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\chronospendant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\chronospendant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t1\\shiftersshield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t1\\shiftersshield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\regrowthstriders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\regrowthstriders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\bancroftsclaw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\bancroftsclaw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\breastplatevalor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\breastplatevalor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t3\\curseweaver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t3\\curseweaver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\stormseeker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\stormseeker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\pridwen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\pridwen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t1\\soulgem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t1\\soulgem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\stoneofbinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\stoneofbinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\equipment\\aegis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:equipment\\aegis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\equipment\\erosbow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:equipment\\erosbow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\utils\\mathhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:utils\\mathhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\utils\\miscutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:utils\\miscutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\utils\\itemhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:utils\\itemhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\stormseeker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\stormseeker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\utils\\networkinghelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:utils\\networkinghelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t1\\hydras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t1\\hydras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\ExampleEquipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Equipment\\ExampleEquipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\spiritrobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\spiritrobe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\regrowthstriders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\regrowthstriders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\stoneofbinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\stoneofbinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\musashis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,32 +95,12 @@
       "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\itembase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t1\\shiftersshield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t1\\shiftersshield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\utils\\components\\materialcontrollercomponents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:utils\\components\\materialcontrollercomponents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\utils\\networkinghelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:utils\\networkinghelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\utils\\miscutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:utils\\miscutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\utils\\mathhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:utils\\mathhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t1\\ichaival.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t1\\ichaival.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t3\\curseweaver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t3\\curseweaver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\lunar\\sacrificialshroud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -99,40 +127,12 @@
       "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t3\\qinsblade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\bancroftsclaw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\bancroftsclaw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t1\\hydras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t1\\hydras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\pridwen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\pridwen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\equipment\\erosbow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:equipment\\erosbow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\equipment\\equipmentbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:equipment\\equipmentbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\equipment\\daggeroffrenzy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:equipment\\daggeroffrenzy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\equipment\\aegis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:equipment\\aegis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t2\\breastplatevalor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|solutionrelative:items\\t2\\breastplatevalor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3659B82-0507-4997-BA7D-5C0E1C79FEE0}|Smite Items.csproj|c:\\various stuff\\miscellaneous gaming content\\ror2 mod creation\\smite-items\\smite items\\items\\t1\\mysticalmail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -159,240 +159,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SpiritRobe.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\SpiritRobe.cs",
-              "RelativeDocumentMoniker": "Items\\T2\\SpiritRobe.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\SpiritRobe.cs",
-              "RelativeToolTip": "Items\\T2\\SpiritRobe.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAUwK0AAAANAAAAAAAAAA==",
+              "Title": "BlinkingAbyss.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\BlinkingAbyss.cs",
+              "RelativeDocumentMoniker": "Equipment\\BlinkingAbyss.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\BlinkingAbyss.cs",
+              "RelativeToolTip": "Equipment\\BlinkingAbyss.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAYwJ8AAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T16:22:43.034Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Stormseeker.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\Stormseeker.cs",
-              "RelativeDocumentMoniker": "Items\\T2\\Stormseeker.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\Stormseeker.cs",
-              "RelativeToolTip": "Items\\T2\\Stormseeker.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA3wC0AAAC5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T17:11:10.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ExampleItem.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ExampleItem.cs",
-              "RelativeDocumentMoniker": "Items\\ExampleItem.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ExampleItem.cs",
-              "RelativeToolTip": "Items\\ExampleItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T14:35:44.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Musashis.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\Musashis.cs",
-              "RelativeDocumentMoniker": "Items\\T2\\Musashis.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\Musashis.cs",
-              "RelativeToolTip": "Items\\T2\\Musashis.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:43:52.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RegrowthStriders.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\RegrowthStriders.cs",
-              "RelativeDocumentMoniker": "Items\\T2\\RegrowthStriders.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\RegrowthStriders.cs",
-              "RelativeToolTip": "Items\\T2\\RegrowthStriders.cs",
-              "ViewState": "AgIAALwAAAAAAAAAAAAAAEkAAADFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T14:55:16.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ItemBase.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ItemBase.cs",
-              "RelativeDocumentMoniker": "Items\\ItemBase.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ItemBase.cs",
-              "RelativeToolTip": "Items\\ItemBase.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T17:56:13.602Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ShiftersShield.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\ShiftersShield.cs",
-              "RelativeDocumentMoniker": "Items\\T1\\ShiftersShield.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\ShiftersShield.cs",
-              "RelativeToolTip": "Items\\T1\\ShiftersShield.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAFcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:43:44.151Z",
+              "WhenOpened": "2026-02-11T15:48:50.613Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "MaterialControllerComponents.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\Components\\MaterialControllerComponents.cs",
-              "RelativeDocumentMoniker": "Utils\\Components\\MaterialControllerComponents.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\Components\\MaterialControllerComponents.cs",
-              "RelativeToolTip": "Utils\\Components\\MaterialControllerComponents.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T15:31:22.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StoneOfBinding.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\StoneOfBinding.cs",
-              "RelativeDocumentMoniker": "Items\\T2\\StoneOfBinding.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\StoneOfBinding.cs",
-              "RelativeToolTip": "Items\\T2\\StoneOfBinding.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAAGgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:43:53.987Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "MiscUtils.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\MiscUtils.cs",
               "RelativeDocumentMoniker": "Utils\\MiscUtils.cs",
               "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\MiscUtils.cs",
               "RelativeToolTip": "Utils\\MiscUtils.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAwwEwAAACaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T15:45:36.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ItemHelpers.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\ItemHelpers.cs",
-              "RelativeDocumentMoniker": "Utils\\ItemHelpers.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\ItemHelpers.cs",
-              "RelativeToolTip": "Utils\\ItemHelpers.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAAAJcAAAANAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DaggerOfFrenzy.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\DaggerOfFrenzy.cs",
+              "RelativeDocumentMoniker": "Equipment\\DaggerOfFrenzy.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\DaggerOfFrenzy.cs",
+              "RelativeToolTip": "Equipment\\DaggerOfFrenzy.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAswHMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T17:39:27.452Z",
+              "WhenOpened": "2025-12-03T16:44:10.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "QinsBlade.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T3\\QinsBlade.cs",
-              "RelativeDocumentMoniker": "Items\\T3\\QinsBlade.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T3\\QinsBlade.cs",
-              "RelativeToolTip": "Items\\T3\\QinsBlade.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAtwGkAAAA8AAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "Aegis.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\Aegis.cs",
+              "RelativeDocumentMoniker": "Equipment\\Aegis.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\Aegis.cs",
+              "RelativeToolTip": "Equipment\\Aegis.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwDUAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:44:07.857Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Hydras.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\Hydras.cs",
-              "RelativeDocumentMoniker": "Items\\T1\\Hydras.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\Hydras.cs",
-              "RelativeToolTip": "Items\\T1\\Hydras.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T14:35:24.901Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SoulGem.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\SoulGem.cs",
-              "RelativeDocumentMoniker": "Items\\T1\\SoulGem.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\SoulGem.cs",
-              "RelativeToolTip": "Items\\T1\\SoulGem.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAQwGkAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:43:44.801Z",
+              "WhenOpened": "2025-12-03T16:44:11.217Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "CannoneersCuirass.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T3\\CannoneersCuirass.cs",
-              "RelativeDocumentMoniker": "Items\\T3\\CannoneersCuirass.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T3\\CannoneersCuirass.cs",
-              "RelativeToolTip": "Items\\T3\\CannoneersCuirass.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAAAF8AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:44:06.272Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Phalanx.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\Phalanx.cs",
-              "RelativeDocumentMoniker": "Items\\T1\\Phalanx.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\Phalanx.cs",
-              "RelativeToolTip": "Items\\T1\\Phalanx.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAADwv20AAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:43:40.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "GluttonousGrimoire.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\Lunar\\GluttonousGrimoire.cs",
-              "RelativeDocumentMoniker": "Items\\Lunar\\GluttonousGrimoire.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\Lunar\\GluttonousGrimoire.cs",
-              "RelativeToolTip": "Items\\Lunar\\GluttonousGrimoire.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T14:42:46.31Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Ichaival.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\Ichaival.cs",
-              "RelativeDocumentMoniker": "Items\\T1\\Ichaival.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\Ichaival.cs",
-              "RelativeToolTip": "Items\\T1\\Ichaival.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAqwGgAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:43:37.923Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 11,
               "Title": "MathHelpers.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\MathHelpers.cs",
               "RelativeDocumentMoniker": "Utils\\MathHelpers.cs",
               "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\MathHelpers.cs",
               "RelativeToolTip": "Utils\\MathHelpers.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T15:45:24.404Z",
               "EditorCaption": ""
@@ -400,6 +224,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "ItemHelpers.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\ItemHelpers.cs",
+              "RelativeDocumentMoniker": "Utils\\ItemHelpers.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\ItemHelpers.cs",
+              "RelativeToolTip": "Utils\\ItemHelpers.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAJcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:39:27.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Pridwen.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\Pridwen.cs",
+              "RelativeDocumentMoniker": "Items\\T2\\Pridwen.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\Pridwen.cs",
+              "RelativeToolTip": "Items\\T2\\Pridwen.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAH8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T16:43:53.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "NetworkingHelpers.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\NetworkingHelpers.cs",
               "RelativeDocumentMoniker": "Utils\\NetworkingHelpers.cs",
@@ -412,7 +262,269 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Hydras.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\Hydras.cs",
+              "RelativeDocumentMoniker": "Items\\T1\\Hydras.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\Hydras.cs",
+              "RelativeToolTip": "Items\\T1\\Hydras.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAswEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T14:35:24.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ErosBow.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\ErosBow.cs",
+              "RelativeDocumentMoniker": "Equipment\\ErosBow.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\ErosBow.cs",
+              "RelativeToolTip": "Equipment\\ErosBow.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAAADsBAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T16:42:34.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SoulGem.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\SoulGem.cs",
+              "RelativeDocumentMoniker": "Items\\T1\\SoulGem.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\SoulGem.cs",
+              "RelativeToolTip": "Items\\T1\\SoulGem.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAJIAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T16:43:44.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Stormseeker.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\Stormseeker.cs",
+              "RelativeDocumentMoniker": "Items\\T2\\Stormseeker.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\Stormseeker.cs",
+              "RelativeToolTip": "Items\\T2\\Stormseeker.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAYwC0AAAC5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T17:11:10.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BancroftsClaw.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\BancroftsClaw.cs",
+              "RelativeDocumentMoniker": "Items\\T2\\BancroftsClaw.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\BancroftsClaw.cs",
+              "RelativeToolTip": "Items\\T2\\BancroftsClaw.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwGEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T17:34:23.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Curseweaver.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T3\\Curseweaver.cs",
+              "RelativeDocumentMoniker": "Items\\T3\\Curseweaver.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T3\\Curseweaver.cs",
+              "RelativeToolTip": "Items\\T3\\Curseweaver.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T15:40:53.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BreastplateValor.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\BreastplateValor.cs",
+              "RelativeDocumentMoniker": "Items\\T2\\BreastplateValor.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\BreastplateValor.cs",
+              "RelativeToolTip": "Items\\T2\\BreastplateValor.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAkwFIAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T16:43:48.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShiftersShield.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\ShiftersShield.cs",
+              "RelativeDocumentMoniker": "Items\\T1\\ShiftersShield.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\ShiftersShield.cs",
+              "RelativeToolTip": "Items\\T1\\ShiftersShield.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T16:43:44.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ExampleEquipment.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\ExampleEquipment.cs",
+              "RelativeDocumentMoniker": "Equipment\\ExampleEquipment.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\ExampleEquipment.cs",
+              "RelativeToolTip": "Equipment\\ExampleEquipment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T15:48:57.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SpiritRobe.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\SpiritRobe.cs",
+              "RelativeDocumentMoniker": "Items\\T2\\SpiritRobe.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\SpiritRobe.cs",
+              "RelativeToolTip": "Items\\T2\\SpiritRobe.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAUwHQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T16:22:43.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "QinsBlade.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T3\\QinsBlade.cs",
+              "RelativeDocumentMoniker": "Items\\T3\\QinsBlade.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T3\\QinsBlade.cs",
+              "RelativeToolTip": "Items\\T3\\QinsBlade.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAtwGkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T16:44:07.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "StoneOfBinding.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\StoneOfBinding.cs",
+              "RelativeDocumentMoniker": "Items\\T2\\StoneOfBinding.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\StoneOfBinding.cs",
+              "RelativeToolTip": "Items\\T2\\StoneOfBinding.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAGgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T16:43:53.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ItemBase.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ItemBase.cs",
+              "RelativeDocumentMoniker": "Items\\ItemBase.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ItemBase.cs",
+              "RelativeToolTip": "Items\\ItemBase.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T17:56:13.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MaterialControllerComponents.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\Components\\MaterialControllerComponents.cs",
+              "RelativeDocumentMoniker": "Utils\\Components\\MaterialControllerComponents.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Utils\\Components\\MaterialControllerComponents.cs",
+              "RelativeToolTip": "Utils\\Components\\MaterialControllerComponents.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T15:31:22.338Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 18,
+              "Title": "RegrowthStriders.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\RegrowthStriders.cs",
+              "RelativeDocumentMoniker": "Items\\T2\\RegrowthStriders.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\RegrowthStriders.cs",
+              "RelativeToolTip": "Items\\T2\\RegrowthStriders.cs",
+              "ViewState": "AgIAALwAAAAAAAAAAAAAAEkAAADFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:55:16.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Musashis.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\Musashis.cs",
+              "RelativeDocumentMoniker": "Items\\T2\\Musashis.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\Musashis.cs",
+              "RelativeToolTip": "Items\\T2\\Musashis.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T16:43:52.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ExampleItem.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ExampleItem.cs",
+              "RelativeDocumentMoniker": "Items\\ExampleItem.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\ExampleItem.cs",
+              "RelativeToolTip": "Items\\ExampleItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T14:35:44.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CannoneersCuirass.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T3\\CannoneersCuirass.cs",
+              "RelativeDocumentMoniker": "Items\\T3\\CannoneersCuirass.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T3\\CannoneersCuirass.cs",
+              "RelativeToolTip": "Items\\T3\\CannoneersCuirass.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAF8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T16:44:06.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Phalanx.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\Phalanx.cs",
+              "RelativeDocumentMoniker": "Items\\T1\\Phalanx.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\Phalanx.cs",
+              "RelativeToolTip": "Items\\T1\\Phalanx.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAADwv20AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T16:43:40.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "GluttonousGrimoire.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\Lunar\\GluttonousGrimoire.cs",
+              "RelativeDocumentMoniker": "Items\\Lunar\\GluttonousGrimoire.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\Lunar\\GluttonousGrimoire.cs",
+              "RelativeToolTip": "Items\\Lunar\\GluttonousGrimoire.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T14:42:46.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Ichaival.cs",
+              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\Ichaival.cs",
+              "RelativeDocumentMoniker": "Items\\T1\\Ichaival.cs",
+              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\Ichaival.cs",
+              "RelativeToolTip": "Items\\T1\\Ichaival.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAqwGgAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T16:43:37.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "SacrificialShroud.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\Lunar\\SacrificialShroud.cs",
               "RelativeDocumentMoniker": "Items\\Lunar\\SacrificialShroud.cs",
@@ -424,19 +536,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Curseweaver.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T3\\Curseweaver.cs",
-              "RelativeDocumentMoniker": "Items\\T3\\Curseweaver.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T3\\Curseweaver.cs",
-              "RelativeToolTip": "Items\\T3\\Curseweaver.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAswAUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T15:40:53.635Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "TekkoKagi.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T1\\TekkoKagi.cs",
               "RelativeDocumentMoniker": "Items\\T1\\TekkoKagi.cs",
@@ -448,79 +548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Pridwen.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\Pridwen.cs",
-              "RelativeDocumentMoniker": "Items\\T2\\Pridwen.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\Pridwen.cs",
-              "RelativeToolTip": "Items\\T2\\Pridwen.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAmwFIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:43:53.171Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "BreastplateValor.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\BreastplateValor.cs",
-              "RelativeDocumentMoniker": "Items\\T2\\BreastplateValor.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\BreastplateValor.cs",
-              "RelativeToolTip": "Items\\T2\\BreastplateValor.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAA7wFIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:43:48.251Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "BancroftsClaw.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\BancroftsClaw.cs",
-              "RelativeDocumentMoniker": "Items\\T2\\BancroftsClaw.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\BancroftsClaw.cs",
-              "RelativeToolTip": "Items\\T2\\BancroftsClaw.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAxwGEAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T17:34:23.29Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ErosBow.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\ErosBow.cs",
-              "RelativeDocumentMoniker": "Equipment\\ErosBow.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\ErosBow.cs",
-              "RelativeToolTip": "Equipment\\ErosBow.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAAADsBAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:42:34.818Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "Aegis.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\Aegis.cs",
-              "RelativeDocumentMoniker": "Equipment\\Aegis.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\Aegis.cs",
-              "RelativeToolTip": "Equipment\\Aegis.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAArwCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:44:11.217Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "DaggerOfFrenzy.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\DaggerOfFrenzy.cs",
-              "RelativeDocumentMoniker": "Equipment\\DaggerOfFrenzy.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\DaggerOfFrenzy.cs",
-              "RelativeToolTip": "Equipment\\DaggerOfFrenzy.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA0wEUAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:44:10.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
               "Title": "Main.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Main.cs",
               "RelativeDocumentMoniker": "Main.cs",
@@ -532,7 +560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "EquipmentBase.cs",
               "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Equipment\\EquipmentBase.cs",
               "RelativeDocumentMoniker": "Equipment\\EquipmentBase.cs",
@@ -577,74 +605,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T16:44:02.957Z"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "92aaab65-37ca-4d4d-9538-0d717e614d25",
-        "Display": 0,
-        "X": 675,
-        "Y": 195,
-        "Width": 2217,
-        "Height": 1161,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ChronosPendant.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\ChronosPendant.cs",
-              "RelativeDocumentMoniker": "Items\\T2\\ChronosPendant.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\ChronosPendant.cs",
-              "RelativeToolTip": "Items\\T2\\ChronosPendant.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAgwEoAAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:43:49.099Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "4678164a-5eb9-48cf-bcb9-5ed0fa3bc3f2",
-        "Display": 0,
-        "X": 1410,
-        "Y": 156,
-        "Width": 935,
-        "Height": 1159,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DraconicScale.cs",
-              "DocumentMoniker": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\DraconicScale.cs",
-              "RelativeDocumentMoniker": "Items\\T2\\DraconicScale.cs",
-              "ToolTip": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Items\\T2\\DraconicScale.cs",
-              "RelativeToolTip": "Items\\T2\\DraconicScale.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAqwGwAAABpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T16:43:50.017Z",
-              "EditorCaption": ""
             }
           ]
         }
