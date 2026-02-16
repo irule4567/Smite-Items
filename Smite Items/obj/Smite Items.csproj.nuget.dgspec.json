@@ -92,6 +92,10 @@
               "target": "Package",
               "version": "[1.6.3, )"
             },
+            "R2API.Sound": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "RiskOfRain2.GameLibs": {
               "target": "Package",
               "version": "[1.4.0-r.0, )"

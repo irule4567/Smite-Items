@@ -3,6 +3,7 @@ using Newtonsoft.Json.Utilities;
 using R2API;
 using RoR2;
 using Smite_Items.Utils;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -43,11 +44,16 @@ namespace Smite_Items.Equipment
             CreateConfig(config);
             CreateLang();
             CreateBuff();
+            CreateEffects();
+            CreateEquipment();
+            Hooks();
+        }
+
+        private void CreateEffects()
+        {
             cachedExplosionEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/moon2/MoonBatteryDesignPulse.prefab").WaitForCompletion();
             var effect = cachedExplosionEffect.AddComponent<EffectComponent>();
             ContentAddition.AddEffect(cachedExplosionEffect);
-            CreateEquipment();
-            Hooks();
         }
 
         protected override void CreateConfig(ConfigFile config)
@@ -97,6 +103,16 @@ namespace Smite_Items.Equipment
             if(Physics.Raycast(aimRay, out var hitInfo, MaxBlinkDistance.Value, LayerIndex.world.mask, QueryTriggerInteraction.Ignore))
             {
                 TeleportHelper.TeleportBody(slot.characterBody, hitInfo.point, false);
+                NetworkSoundEventDef myNetworkSound = ScriptableObject.CreateInstance<NetworkSoundEventDef>();
+                myNetworkSound.eventName = "Blink_sfx";
+                if (NetworkServer.active)
+                {
+                    EffectManager.SimpleSoundEffect(
+                        myNetworkSound.index,
+                        slot.characterBody.transform.position,
+                        transmit: true
+                        );
+                }
                 //Xoroshiro128Plus rng = new Xoroshiro128Plus(Run.instance.treasureRng.nextUlong);
                 //MiscUtils.TeleportBody(slot.characterBody, hitInfo.point, cachedExplosionEffect, HullClassification.Human, rng, 0, 0, false);
                 slot.StartCoroutine(DelayedExplosion(slot.characterBody));

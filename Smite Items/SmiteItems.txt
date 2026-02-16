@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1256202815	Play			\Default Work Unit\Play	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	401743183	Blink_sfx	.cache\C5\{C53782E7-AFFF-D084-39E3-0469A7E03F4B}.wem		\Containers\Default Work Unit\Blink_sfx		219420
+

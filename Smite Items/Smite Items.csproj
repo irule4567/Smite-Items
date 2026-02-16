@@ -13,10 +13,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="SmiteItems.bnk" />
+    <None Remove="SmiteItems.txt" />
     <None Remove="smiteitemsassets" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="SmiteItems.bnk" />
+    <EmbeddedResource Include="SmiteItems.txt" />
     <EmbeddedResource Include="smiteitemsassets" />
   </ItemGroup>
 
@@ -32,6 +36,7 @@
     <PackageReference Include="R2API.Prefab" Version="1.1.1" />
     <PackageReference Include="R2API.Director" Version="[2.3.6,)" />
     <PackageReference Include="R2API.RecalculateStats" Version="1.6.3" />
+    <PackageReference Include="R2API.Sound" Version="1.0.3" />
     <PackageReference Include="RiskOfRain2.GameLibs" Version="1.4.0-r.0" />
     <PackageReference Include="UnityEngine.Modules" Version="2021.3.33" />
     <PackageReference Include="MMHOOK.RoR2" Version="2025.11.19" NoWarn="NU1701">

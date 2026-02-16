@@ -57,6 +57,13 @@ namespace Smite_Items
                 MainAssets = AssetBundle.LoadFromStream(stream);
             }
 
+            using (var bankStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Smite_Items.SmiteItems.bnk"))
+            {
+                var bytes = new byte[bankStream.Length];
+                bankStream.Read(bytes, 0, bytes.Length);
+                SoundAPI.SoundBanks.Add(bytes);
+            }
+
             ShaderConversion(MainAssets);
 
             //This section automatically scans the project for all artifacts

@@ -17,6 +17,7 @@
           "R2API.Language": "1.0.1",
           "R2API.Prefab": "1.1.1",
           "R2API.RecalculateStats": "1.6.3",
+          "R2API.Sound": "1.0.3",
           "RiskOfRain2.GameLibs": "1.4.0-r.0",
           "UnityEngine.Modules": "2021.3.33"
         },
@@ -252,6 +253,23 @@
           "lib/netstandard2.1/R2API.RecalculateStats.dll": {
             "assemblyVersion": "1.6.3.0",
             "fileVersion": "1.6.3.0"
+          }
+        }
+      },
+      "R2API.Sound/1.0.3": {
+        "dependencies": {
+          "BepInEx.Core": "5.4.21",
+          "MMHOOK.RoR2": "2025.11.19",
+          "R2API.ContentManagement": "1.0.10",
+          "R2API.Core": "5.2.0",
+          "RiskOfRain2.GameLibs": "1.4.0-r.0",
+          "RoR2BepInExPack": "1.38.0",
+          "UnityEngine.Modules": "2021.3.33"
+        },
+        "runtime": {
+          "lib/netstandard2.1/R2API.Sound.dll": {
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "1.0.3.0"
           }
         }
       },
@@ -836,6 +854,13 @@
       "sha512": "sha512-pbkdi/Ub2qGwCP4bJUP/Dlwfzc0diFcchkwOrAUNqNBkTKh3XWIwJdIMOWSAn4DSw7HjrnpYC+AcTffk5YMflQ==",
       "path": "r2api.recalculatestats/1.6.3",
       "hashPath": "r2api.recalculatestats.1.6.3.nupkg.sha512"
+    },
+    "R2API.Sound/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PabtwzR5EmJ06rBZMxfqH3BDd5R6aqJIoRqmd0/hguLl6vmxN3+RMggTCSCswIO/S7oXJ4Vz2WHqTLnRhOdpWA==",
+      "path": "r2api.sound/1.0.3",
+      "hashPath": "r2api.sound.1.0.3.nupkg.sha512"
     },
     "RiskOfRain2.GameLibs/1.4.0-r.0": {
       "type": "package",

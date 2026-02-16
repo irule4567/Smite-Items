@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bA/F0XetA3Q=",
+  "dgSpecHash": "MGdD4Meu36w=",
   "success": true,
   "projectFilePath": "C:\\Various stuff\\Miscellaneous Gaming content\\RoR2 mod creation\\Smite-Items\\Smite Items\\Smite Items.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\Kyle\\.nuget\\packages\\r2api.language\\1.0.1\\r2api.language.1.0.1.nupkg.sha512",
     "C:\\Users\\Kyle\\.nuget\\packages\\r2api.prefab\\1.1.1\\r2api.prefab.1.1.1.nupkg.sha512",
     "C:\\Users\\Kyle\\.nuget\\packages\\r2api.recalculatestats\\1.6.3\\r2api.recalculatestats.1.6.3.nupkg.sha512",
+    "C:\\Users\\Kyle\\.nuget\\packages\\r2api.sound\\1.0.3\\r2api.sound.1.0.3.nupkg.sha512",
     "C:\\Users\\Kyle\\.nuget\\packages\\riskofrain2.gamelibs\\1.4.0-r.0\\riskofrain2.gamelibs.1.4.0-r.0.nupkg.sha512",
     "C:\\Users\\Kyle\\.nuget\\packages\\ror2bepinexpack\\1.38.0\\ror2bepinexpack.1.38.0.nupkg.sha512",
     "C:\\Users\\Kyle\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

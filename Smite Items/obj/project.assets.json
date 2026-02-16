@@ -342,6 +342,28 @@
           }
         }
       },
+      "R2API.Sound/1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "BepInEx.Core": "5.4.19",
+          "MMHOOK.RoR2": "2024.8.28",
+          "R2API.ContentManagement": "1.0.5",
+          "R2API.Core": "5.1.1",
+          "RiskOfRain2.GameLibs": "1.3.1.275-r.0",
+          "RoR2BepInExPack": "1.7.0",
+          "UnityEngine.Modules": "2021.3.33"
+        },
+        "compile": {
+          "lib/netstandard2.1/R2API.Sound.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/R2API.Sound.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "RiskOfRain2.GameLibs/1.4.0-r.0": {
         "type": "package",
         "compile": {
@@ -1237,6 +1259,19 @@
         "lib/netstandard2.1/R2API.RecalculateStats.xml",
         "r2api.recalculatestats.1.6.3.nupkg.sha512",
         "r2api.recalculatestats.nuspec"
+      ]
+    },
+    "R2API.Sound/1.0.3": {
+      "sha512": "PabtwzR5EmJ06rBZMxfqH3BDd5R6aqJIoRqmd0/hguLl6vmxN3+RMggTCSCswIO/S7oXJ4Vz2WHqTLnRhOdpWA==",
+      "type": "package",
+      "path": "r2api.sound/1.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.1/R2API.Sound.dll",
+        "lib/netstandard2.1/R2API.Sound.xml",
+        "r2api.sound.1.0.3.nupkg.sha512",
+        "r2api.sound.nuspec"
       ]
     },
     "RiskOfRain2.GameLibs/1.4.0-r.0": {
@@ -3176,6 +3211,7 @@
       "R2API.Language >= 1.0.1",
       "R2API.Prefab >= 1.1.1",
       "R2API.RecalculateStats >= 1.6.3",
+      "R2API.Sound >= 1.0.3",
       "RiskOfRain2.GameLibs >= 1.4.0-r.0",
       "UnityEngine.Modules >= 2021.3.33"
     ]
@@ -3271,6 +3307,10 @@
           "R2API.RecalculateStats": {
             "target": "Package",
             "version": "[1.6.3, )"
+          },
+          "R2API.Sound": {
+            "target": "Package",
+            "version": "[1.0.3, )"
           },
           "RiskOfRain2.GameLibs": {
             "target": "Package",
