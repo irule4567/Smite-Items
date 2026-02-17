@@ -37,22 +37,36 @@ namespace Smite_Items.Equipment
 
         private static GameObject cachedExplosionEffect;
 
-        public static BuffDef blinkDamageIndicator;
+        //public static BuffDef blinkDamageIndicator;
+
+        NetworkSoundEventDef blinkSoundEvent;
 
         public override void Init(ConfigFile config)
         {
             CreateConfig(config);
             CreateLang();
-            CreateBuff();
+            //CreateBuff();
             CreateEffects();
+            CreateSound();
             CreateEquipment();
             Hooks();
         }
 
+        private void CreateSound()
+        {
+            blinkSoundEvent = ScriptableObject.CreateInstance<NetworkSoundEventDef>();
+            blinkSoundEvent.eventName = "Blink_sfx";
+            ContentAddition.AddNetworkSoundEventDef(blinkSoundEvent);
+        }
+
         private void CreateEffects()
         {
-            cachedExplosionEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/moon2/MoonBatteryDesignPulse.prefab").WaitForCompletion();
-            var effect = cachedExplosionEffect.AddComponent<EffectComponent>();
+            var originalPrefab = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/moon2/MoonBatteryDesignPulse.prefab").WaitForCompletion();
+            cachedExplosionEffect = PrefabAPI.InstantiateClone(originalPrefab, "BlinkingAbyssExplosion");
+            if (!cachedExplosionEffect.GetComponent<EffectComponent>())
+            {
+                cachedExplosionEffect.AddComponent<EffectComponent>();
+            }
             ContentAddition.AddEffect(cachedExplosionEffect);
         }
 
@@ -65,7 +79,7 @@ namespace Smite_Items.Equipment
             Damage = config.Bind<float>("Equipment " + EquipmentName, "Damage", 3f, "What percentage of base damage is dealt by the post-blink damage effect?");
         }
 
-        public void CreateBuff()
+        /*public void CreateBuff()
         {
             blinkDamageIndicator = ScriptableObject.CreateInstance<BuffDef>();
             blinkDamageIndicator.canStack = false;
@@ -74,7 +88,7 @@ namespace Smite_Items.Equipment
             blinkDamageIndicator.isCooldown = false;
             blinkDamageIndicator.iconSprite = MainAssets.LoadAsset<Sprite>("Blinking Abyss Icon.png");
             ContentAddition.AddBuffDef(blinkDamageIndicator);
-        }
+        }*/
         public override ItemDisplayRuleDict CreateItemDisplayRules()
         {
             var mpp = EquipmentModel.AddComponent<ModelPanelParameters>();
@@ -102,22 +116,27 @@ namespace Smite_Items.Equipment
             Ray aimRay = slot.GetAimRay();
             if(Physics.Raycast(aimRay, out var hitInfo, MaxBlinkDistance.Value, LayerIndex.world.mask, QueryTriggerInteraction.Ignore))
             {
-                TeleportHelper.TeleportBody(slot.characterBody, hitInfo.point, false);
-                NetworkSoundEventDef myNetworkSound = ScriptableObject.CreateInstance<NetworkSoundEventDef>();
-                myNetworkSound.eventName = "Blink_sfx";
-                if (NetworkServer.active)
-                {
-                    EffectManager.SimpleSoundEffect(
-                        myNetworkSound.index,
-                        slot.characterBody.transform.position,
-                        transmit: true
-                        );
-                }
-                //Xoroshiro128Plus rng = new Xoroshiro128Plus(Run.instance.treasureRng.nextUlong);
-                //MiscUtils.TeleportBody(slot.characterBody, hitInfo.point, cachedExplosionEffect, HullClassification.Human, rng, 0, 0, false);
-                slot.StartCoroutine(DelayedExplosion(slot.characterBody));
-                return true;
+                TeleportHelper.TeleportBody(slot.characterBody, hitInfo.point + hitInfo.normal, false);
+            } //hitInfo.normal added to prevent clipping into geometry
+            else
+            {
+                Vector3 telePosition = aimRay.GetPoint(MaxBlinkDistance.Value);
+                TeleportHelper.TeleportBody(slot.characterBody, telePosition, false);
             }
+            //Util.PlaySound("Blink_sfx", slot.characterBody.gameObject);
+            //AkSoundEngine.PostEvent(401743183, slot.characterBody.gameObject);
+            
+            if (NetworkServer.active)
+            {
+                EffectManager.SimpleSoundEffect(
+                    blinkSoundEvent.index,
+                    slot.characterBody.transform.position,
+                    transmit: true
+                    );
+            }
+            //Xoroshiro128Plus rng = new Xoroshiro128Plus(Run.instance.treasureRng.nextUlong);
+            //MiscUtils.TeleportBody(slot.characterBody, hitInfo.point, cachedExplosionEffect, HullClassification.Human, rng, 0, 0, false);
+            slot.StartCoroutine(DelayedExplosion(slot.characterBody));
             return true;
         }
 
@@ -170,9 +189,9 @@ namespace Smite_Items.Equipment
                     BlastAttack.Result result = blastAttack.Fire();
                     int enemiesHit = result.hitCount;
                     float cooldownFraction = 1f;
-                    for (int i = 0; i < enemiesHit; i++)
+                    for (int i = 0; i < enemiesHit; i++) // Note: Single enemy with multiple hitboxes, like magma worm, would proc on each hitbox. Let's call that intended
                     {
-                        cooldownFraction = cooldownFraction / 2;
+                        cooldownFraction = cooldownFraction * (1-CooldownRefund.Value);
                         body.inventory.DeductActiveEquipmentCooldown(Cooldown*cooldownFraction);
                     }
                 }
