@@ -2,6 +2,7 @@
 using HG;
 using R2API;
 using RoR2;
+using Smite_Items.Utils;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,13 +20,14 @@ namespace Smite_Items.Items
         public ConfigEntry<float> BuffDuration;
         public ConfigEntry<float> BladeCooldown;
         public ConfigEntry<float> BladeDropLifetime;
+        //public ConfigEntry<float> BladeBeginBlinking;
         public override string ItemName => "Bladed Boomerang";
 
         public override string ItemLangTokenName => "BLADED_BOOMERANG_ITEM";
 
         public override string ItemPickupDesc => "Hitting enemies spawns pickups that grant critical strike chance.";
 
-        public override string ItemFullDescription => $"Once every <style=cIsUtility>{BladeCooldown.Value}</style> seconds, hitting an enemy spawns a <style=cIsDamage>blade</style> that when picked up grant <style=cIsDamage>+{CritChanceBuff.Value*100}%</style> <style=cStack>(+{BonusCritChanceBuffPerStack.Value*100}% per stack)</style> <style=cIsDamage>critical strike chance</style> up to <style=cIsUtility>{MaxBuffStacks.Value} times</style>. Lasts {BuffDuration.Value} seconds.";
+        public override string ItemFullDescription => $"Once every <style=cIsUtility>{BladeCooldown.Value}</style> seconds, hitting an enemy spawns a <style=cIsDamage>blade</style> that when picked up grant <style=cIsDamage>+{CritChanceBuff.Value}%</style> <style=cStack>(+{BonusCritChanceBuffPerStack.Value}% per stack)</style> <style=cIsDamage>critical strike chance</style> up to <style=cIsUtility>{MaxBuffStacks.Value} times</style>. Lasts {BuffDuration.Value} seconds.";
 
         public override string ItemLore => "Item taken from Smite 1.";
 
@@ -93,12 +95,13 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            CritChanceBuff = config.Bind<float>("Item " + ItemName, "Bonus Crit Chance from Buff", 0.06f, "How much crit chance does each stack of the bladed boomerang buff give?");
-            BonusCritChanceBuffPerStack = config.Bind<float>("Item " + ItemName, "Bonus Crit Chance from Buff per stack", 0.06f, "How much additional crit chance does each stack of the bladed boomerang buff give per additional stack of the item?");
+            CritChanceBuff = config.Bind<float>("Item " + ItemName, "Bonus Crit Chance from Buff", 6, "How much crit chance does each stack of the bladed boomerang buff give?");
+            BonusCritChanceBuffPerStack = config.Bind<float>("Item " + ItemName, "Bonus Crit Chance from Buff per stack", 6, "How much additional crit chance does each stack of the bladed boomerang buff give per additional stack of the item?");
             MaxBuffStacks = config.Bind<int>("Item " + ItemName, "Max buff stacks", 3, "What is the maximum number of bladed boomerang buff stacks a player can have?");
-            BuffDuration = config.Bind<float>("Item " + ItemName, "Blade Buff Duration", 4, "How long, in seconds, does the bladed boomerang buff last?");
+            BuffDuration = config.Bind<float>("Item " + ItemName, "Blade Buff Duration", 8, "How long, in seconds, does the bladed boomerang buff last?");
             BladeCooldown = config.Bind<float>("Item" + ItemName, "Blade cooldown", 2, "How much time, in seconds, must pass from a blade dropping for a new blade to be allowed to spawn?");
             BladeDropLifetime = config.Bind<float>("Item" + ItemName, "Blade drop lifetime", 10, "How much time, in seconds, does a bladed boomerang drop last after being spawned?");
+            //BladeBeginBlinking = config.Bind<float>("Item" + ItemName, "Blade begin blinking time", 9, "How much time, in seconds, after being spawned does a bladed boomerang drop start blinking?");
         }
 
         private void CreateBuff()
@@ -156,6 +159,7 @@ namespace Smite_Items.Items
             int stackCount = GetCount(sender);
             if (buffCount > 0 && stackCount > 0)
             {
+                //Debug.Log("Gets in adding crit chance");
                 args.critAdd += buffCount * (CritChanceBuff.Value + (stackCount - 1) * BonusCritChanceBuffPerStack.Value);
             }
         }
@@ -177,6 +181,10 @@ namespace Smite_Items.Items
             {
                 //itemActive = false;
                 bladeRechargeTimers.Remove(self);
+                if(self.GetBuffCount(bladedBoomerangReady) > 0)
+                {
+                    self.RemoveBuff(bladedBoomerangReady);
+                }
             }
         }
 
@@ -213,12 +221,13 @@ namespace Smite_Items.Items
                 {
                     if(attackerBody.GetBuffCount(bladedBoomerangReady) >= 1)
                     {
-                        Debug.Log("Gets to right part of check");
+                        //Debug.Log("Gets to right part of check");
                         //GameObject bladeDrop = UnityEngine.Object.Instantiate(bladeDropPrefab, damageInfo.position, UnityEngine.Random.rotation);
-                        TeamFilter teamFilter = new TeamFilter();
-                        teamFilter.teamIndex = attackerBody.teamComponent ? attackerBody.teamComponent.teamIndex : TeamIndex.None;
+                        //TeamFilter teamFilter = attackerBody.GetComponent<TeamFilter>();
+                        TeamIndex teamIndex = attackerBody.teamComponent ? attackerBody.teamComponent.teamIndex : TeamIndex.None;
+                        //TeamIndex attackerTeamIndex = damageInfo.attacker.GetComponent<TeamIndex>();
                         Vector3 spawnPos = victim.GetComponent<CharacterBody>().corePosition + Vector3.up * 1f;
-                        PickupSpawner.SpawnPickupAt(spawnPos, teamFilter);
+                        PickupSpawner.SpawnPickupAt(spawnPos, teamIndex);
                         //var pickup = bladeDrop.GetComponentInChildren<BladePickup>();
                         //pickup.team = teamFilter;
                         //pickup.baseObject = bladeDrop;
@@ -236,11 +245,13 @@ namespace Smite_Items.Items
             if(currentBuffs < instance.MaxBuffStacks.Value)
             {
                 originalPickupBody.AddTimedBuff(bladedBoomerangCritChance, instance.BuffDuration.Value);
+                ItemHelpers.RefreshTimedBuffs(originalPickupBody, bladedBoomerangCritChance, instance.BuffDuration.Value);
             }
         }
 
         public static GameObject CreatePickupPrefab()
         {
+            //Debug.Log("CreatePickupPrefab runs");
             GameObject pickupObject = new GameObject("BladeOrb");
 
             // Visual - simple sphere for now, replace with your mesh
@@ -258,8 +269,29 @@ namespace Smite_Items.Items
 
             // Add Rigidbody so trigger events fire properly
             Rigidbody rb = pickupObject.AddComponent<Rigidbody>();
-            rb.isKinematic = true;
-            rb.useGravity = false;
+            // Settings copied from monster tooth heal pack
+            rb.isKinematic = false;
+            rb.useGravity = true;
+            rb.drag = 2;
+            rb.angularDrag = 0.05f;
+            rb.mass = 1;
+            rb.detectCollisions = true;
+            rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
+
+            pickupObject.AddComponent<TeamFilter>();
+
+            DestroyOnTimer dt = pickupObject.AddComponent<DestroyOnTimer>();
+            dt.duration = BladedBoomerang.instance.BladeDropLifetime.Value;
+            dt.enabled = true;
+
+            // Tried and failed to get blinking when about to disappear; would be easier with proper model
+            /*BeginRapidlyActivatingAndDeactivating bd = pickupObject.AddComponent<BeginRapidlyActivatingAndDeactivating>();
+            bd.blinkFrequency = 20f;
+            bd.delayBeforeBeginningBlinking = dt.duration - 1f;
+            bd.blinkingRootObject = pickupObject.gameObject;
+            bd.enabled = true;
+            bd.fixedAge = 0;
+            bd.blinkAge = 0;*/
 
             // Add your pickup behavior script
             pickupObject.AddComponent<BladePickup>();
@@ -275,26 +307,29 @@ namespace Smite_Items.Items
 
         public class BladePickup : MonoBehaviour
         {
-            public TeamFilter team;
+            //public TeamFilter team;
             public GameObject baseObject;
             private void OnTriggerEnter(Collider other)
             {
-                Debug.Log("Something enters trigger");
+                //Debug.Log("Something enters trigger");
                 //Debug.Log(this.team);
-                if (!NetworkServer.active || /*!this.team ||*/ !other)
+                if (!NetworkServer.active || !this.GetComponent<TeamFilter>() || !other)
                 {
-                    Debug.Log("Fails due to something missing");
+                    /*Debug.Log("Fails due to something missing");
+                    Debug.Log(NetworkServer.active);
+                    Debug.Log(this.GetComponent<TeamFilter>());
+                    Debug.Log(other);*/
                     return;
                 }
-                /*if (TeamComponent.GetObjectTeam(other.gameObject) != this.team.teamIndex)
+                if (TeamComponent.GetObjectTeam(other.gameObject) != this.GetComponent<TeamFilter>().teamIndex)
                 {
-                    Debug.Log("Fails due to incorrect team");
+                    //Debug.Log("Fails due to incorrect team");
                     return;
-                }*/
+                }
                 CharacterBody body = other.GetComponent<CharacterBody>();
                 if (body != null)
                 {
-                    Debug.Log("Gets to adding buff");
+                    //Debug.Log("Gets to adding buff");
                     BladedBoomerang.AddBladeBuff(body);
                     UnityEngine.Object.Destroy(gameObject);
                 }
@@ -303,37 +338,42 @@ namespace Smite_Items.Items
 
         public static class PickupSpawner
         {
-            private static GameObject _pickupPrefab = CreatePickupPrefab();
-
+            //private static GameObject _pickupPrefab = CreatePickupPrefab();
+            private static GameObject _pickupPrefab;
             public static void Init()
             {
-                _pickupPrefab = CreatePickupPrefab();
+                //_pickupPrefab = CreatePickupPrefab();
                 // If using asset bundle instead:
                 // _pickupPrefab = myBundle.LoadAsset<GameObject>("MyBuffOrb");
             }
 
             // Call this wherever your trigger event occurs
-            public static void SpawnPickupAt(Vector3 position, TeamFilter team)
+            public static void SpawnPickupAt(Vector3 position, TeamIndex team)
             {
-                Debug.Log(team);
+                //Debug.Log(team);
+                _pickupPrefab = CreatePickupPrefab();
                 if (_pickupPrefab == null)
                 {
-                    Debug.Log("null prefab");
+                    //Debug.Log("null prefab");
                     return;
                 }
-                Debug.Log("Before setting team");
-                _pickupPrefab.GetComponent<BladePickup>().team = team;
-                Debug.Log("After setting team");
-
                 GameObject instance = UnityEngine.Object.Instantiate(
                     _pickupPrefab,
                     position,
                     Quaternion.identity
                 );
-                Debug.Log("Creates orb");
+                //Debug.Log("Creates orb");
+                TeamFilter teamFilter = instance.GetComponent<TeamFilter>();
+                //Debug.Log("Before setting team");
+                if (teamFilter != null)
+                {
+                    //Debug.Log("Gets in setting team");
+                    teamFilter.teamIndex = team;
+                }
+                //Debug.Log("After setting team");
 
                 // Optional: auto-destroy after some time if not collected
-                UnityEngine.Object.Destroy(instance, BladedBoomerang.instance.BladeDropLifetime.Value);
+                //UnityEngine.Object.Destroy(instance, BladedBoomerang.instance.BladeDropLifetime.Value);
             }
         }
     }

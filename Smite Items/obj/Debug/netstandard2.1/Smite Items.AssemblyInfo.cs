@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Smite Items")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b628e1b1a7e77d0f19add0b22d55dc116a7bc279")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb0bb13b8c7f4f4db50e239f3ebcfbef3736b4d7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Smite Items")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Smite Items")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
