@@ -25,7 +25,7 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Activating non-Primary skills also blasts nearby enemies and grants temporary barrier. Recharges over time.";
 
-        public override string ItemFullDescription => $"Activating a <style=cIsUtility>Non-Primary skill</style> also unleashes a <style=cIsDamage>consuming blast</style> around you, dealing <style=cIsDamage>{BaseDamage.Value}%</style> <style=cStack>(+{BonusBaseDamagePerStack.Value}% per stack)</style> base damage. Each target hit also grants a <style=cIsHealing>temporary barrier</style> for <style=cIsHealing>{MaxHPBarrier.Value}%</style> of <style=cIsHealing>maximum health</style>. " +
+        public override string ItemFullDescription => $"Activating a <style=cIsUtility>Non-Primary skill</style> unleashes a <style=cIsDamage>consuming blast</style> around you, dealing <style=cIsDamage>{BaseDamage.Value}%</style> <style=cStack>(+{BonusBaseDamagePerStack.Value}% per stack)</style> base damage. Each target hit also grants a <style=cIsHealing>temporary barrier</style> for <style=cIsHealing>{MaxHPBarrier.Value}%</style> of <style=cIsHealing>maximum health</style>. " +
             $"Can hold up to <style=cIsUtility>{MaxHungerStacks.Value}</style> <style=cStack>(+{BonusMaxHungerStacksPerStack.Value} per stack)</style> <style=cIsDamage>charges</style> which all reload over <style=cIsUtility>{Recharge.Value}</style> seconds.";
 
         public override string ItemLore => "Item taken from Smite 1.";

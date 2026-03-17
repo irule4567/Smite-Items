@@ -29,8 +29,8 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Charge by using skills to get bonus damage and area healing.";
 
-        public override string ItemFullDescription => $"Activating <style=cIsUtility>skills</style> stores a charge, up to <style=cIsUtility>3 charges</style>. " +
-            $"Requires <style=cIsUtility>3 charges</style> for your next hit to deal <style=cIsDamage>{BonusDamage.Value*100}%</style> <style=cStack>(+{BonusDamagePerStack.Value * 100}% per stack)</style> base damage and <style=cIsHealing>heal</style> yourself and allies for <style=cIsHealing>{HealValue.Value}</style> <style=cStack>(+{HealValuePerStack.Value} per stack)</style> within <style=cIsHealing>{HealRadius.Value}m</style> <style=cStack>(+{HealRadiusPerStack.Value}m per stack)</style>.";
+        public override string ItemFullDescription => $"Activating a <style=cIsUtility>Non-Primary skill</style> stores a charge, up to <style=cIsUtility>3 charges</style>. " +
+            $"Requires <style=cIsUtility>3 charges</style> for your next hit to hit with an extra <style=cIsDamage>{BonusDamage.Value*100}%</style> <style=cStack>(+{BonusDamagePerStack.Value * 100}% per stack)</style> base damage and <style=cIsHealing>heal</style> yourself and allies for <style=cIsHealing>{HealValue.Value}</style> <style=cStack>(+{HealValuePerStack.Value} per stack)</style> within <style=cIsHealing>{HealRadius.Value}m</style> <style=cStack>(+{HealRadiusPerStack.Value}m per stack)</style>.";
 
         public override string ItemLore => "Item taken from Smite 2";
 

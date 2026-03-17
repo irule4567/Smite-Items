@@ -18,7 +18,7 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Gain permanent increased attack speed by hitting enemies";
 
-        public override string ItemFullDescription => $"Dealing damage increases your <style=cIsDamage>attack speed permanently</style> by <style=cIsDamage>{AttackSpeedPerStack.Value*100}%</style> <style=cStack>(+{AttackSpeedPerStack.Value * 100}% per stack)</style>, up to a <style=cIsDamage>maximum</style> of <style=cIsDamage>{MaxStacksPerStack.Value* AttackSpeedPerStack.Value * 100}%</style> <style=cStack>(+{MaxStacksPerStack.Value * AttackSpeedPerStack.Value * 100}% per stack)</style>.";
+        public override string ItemFullDescription => $"Dealing damage increases your <style=cIsDamage>attack speed permanently</style> by <style=cIsDamage>{AttackSpeedPerStack.Value*100}%</style> <style=cStack>(+{AttackSpeedPerStack.Value * 100}% per stack)</style>, up to a <style=cIsDamage>maximum</style> increase of <style=cIsDamage>{MaxStacksPerStack.Value* AttackSpeedPerStack.Value * 100}%</style> <style=cStack>(+{MaxStacksPerStack.Value * AttackSpeedPerStack.Value * 100}% per stack)</style>.";
 
         public override string ItemLore => "Item taken from Smite 1.";
 

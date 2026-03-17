@@ -19,7 +19,7 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Gain movement speed on skill use.";
 
-        public override string ItemFullDescription => $"After using a non-primary skill, gain a stack of <style=cIsUtility>{MoveSpeedPerStack.Value * 100}%</style> movement speed up to <style=cIsUtility>{MaxStacks.Value * MoveSpeedPerStack.Value * 100}%</style> <style=cStack>(+{MaxStacks.Value * MoveSpeedPerStack.Value * 100}% per stack)</style> that lasts <style=cIsUtility>{StackDuration.Value}</style> seconds.";
+        public override string ItemFullDescription => $"Activating a non-Primary skill grants a stack of <style=cIsUtility>{MoveSpeedPerStack.Value * 100}%</style> movement speed up to <style=cIsUtility>{MaxStacks.Value * MoveSpeedPerStack.Value * 100}%</style> <style=cStack>(+{MaxStacks.Value * MoveSpeedPerStack.Value * 100}% per stack)</style> that lasts <style=cIsUtility>{StackDuration.Value}</style> seconds.";
 
         public override string ItemLore => "Item taken from Smite 2.";
 

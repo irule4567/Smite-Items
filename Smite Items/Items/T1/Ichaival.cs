@@ -26,8 +26,8 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Steal damage from enemies";
 
-        public override string ItemFullDescription => $"Dealing damage increases your damage by <style=cIsDamage>{DamageBuff.Value*100}%</style> up to <style=cIsUtility>{MaxBuffStacks.Value}</style> <style=cStack>(+{AdditionalMaxBuffStacksPerStack.Value} per stack)</style>, for <style=cIsUtility>{BuffDuration.Value}s</style>. " +
-            $"The enemy hit has their damage reduced by <style=cIsDamage>{DamageDebuff.Value*100}%</style> up to <style=cIsUtility>{MaxDebuffStacks.Value}</style> <style=cStack>(+{AdditionalMaxDebuffStacksPerStack.Value} per stack)</style>, for <style=cIsUtility>{DebuffDuration.Value}s</style>. Maximum damage reduction through this method is <style=cIsDamage>{HardMaxDamageDebuffStacks.Value * DamageDebuff.Value * 100}%</style>.";
+        public override string ItemFullDescription => $"Dealing damage increases your damage by <style=cIsDamage>{DamageBuff.Value*100}%</style> up to <style=cIsUtility>{MaxBuffStacks.Value}</style> <style=cStack>(+{AdditionalMaxBuffStacksPerStack.Value} per stack)</style> times, for <style=cIsUtility>{BuffDuration.Value}s</style>. " +
+            $"The enemy hit has their damage reduced by <style=cIsDamage>{DamageDebuff.Value*100}%</style> up to <style=cIsUtility>{MaxDebuffStacks.Value}</style> <style=cStack>(+{AdditionalMaxDebuffStacksPerStack.Value} per stack)</style> times, for <style=cIsUtility>{DebuffDuration.Value}s</style>. Maximum damage reduction through this method is <style=cIsDamage>{HardMaxDamageDebuffStacks.Value * DamageDebuff.Value * 100}%</style>.";
 
         public override string ItemLore => "Item taken from Smite 1.";
 

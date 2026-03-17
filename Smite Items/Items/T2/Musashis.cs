@@ -21,7 +21,7 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "'Critical Strikes' increase movement speed. Stacks 3 times.";
 
-        public override string ItemFullDescription => $"Gain <style=cIsDamage>{baseCritChance.Value}% critical chance</style>.<style=cIsDamage> Critical strikes</style> increase <style=cIsUtility>movement speed</style> by <style=cIsUtility>{moveSpeedPerStack.Value * 100}%</style>. " +
+        public override string ItemFullDescription => $"Gain <style=cIsDamage>{baseCritChance.Value}% critical chance</style>.<style=cIsDamage> Critical strikes</style> increase <style=cIsUtility>movement speed</style> by <style=cIsUtility>{moveSpeedPerStack.Value * 100}%</style> for <style=cIsUtility>{stackDuration.Value}s</style>. " +
             $"Maximum cap of <style=cIsUtility>{baseStackCount.Value*moveSpeedPerStack.Value * 100}%</style> <style=cStack>(+{stackCountPerAdditionalItem.Value*moveSpeedPerStack.Value * 100}% per stack)</style> <style=cIsUtility>movement speed</style>.";
 
         public override string ItemLore => "Item taken from Smite 2.";

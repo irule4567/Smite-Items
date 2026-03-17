@@ -27,7 +27,7 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Hitting enemies spawns pickups that grant critical strike chance.";
 
-        public override string ItemFullDescription => $"Once every <style=cIsUtility>{BladeCooldown.Value}</style> seconds, hitting an enemy spawns a <style=cIsDamage>blade</style> that when picked up grant <style=cIsDamage>+{CritChanceBuff.Value}%</style> <style=cStack>(+{BonusCritChanceBuffPerStack.Value}% per stack)</style> <style=cIsDamage>critical strike chance</style> up to <style=cIsUtility>{MaxBuffStacks.Value} times</style>. Lasts {BuffDuration.Value} seconds.";
+        public override string ItemFullDescription => $"Once every <style=cIsUtility>{BladeCooldown.Value}</style> seconds, hitting an enemy spawns a <style=cIsDamage>blade</style> that when picked up grants <style=cIsDamage>+{CritChanceBuff.Value}%</style> <style=cStack>(+{BonusCritChanceBuffPerStack.Value}% per stack)</style> <style=cIsDamage>critical strike chance</style> up to <style=cIsUtility>{MaxBuffStacks.Value} times</style>. Lasts {BuffDuration.Value} seconds.";
 
         public override string ItemLore => "Item taken from Smite 1.";
 

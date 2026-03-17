@@ -20,7 +20,7 @@ namespace Smite_Items.Equipment
 
         public override string EquipmentPickupDesc => $"Your next {NumAttacks.Value} Primary skill uses are buffed. Kills reduce cooldown.";
 
-        public override string EquipmentFullDescription => $"Your next <style=cIsDamage>{NumAttacks.Value}</style> uses of your <style=cIsUtility>Primary skill</style> have their <style=cIsDamage>attack speed</style> increased by <style=cIsDamage>{BonusAttackSpeed.Value*100}%</style>. <style=cIsDamage>Kills reduce</style> <style=cIsUtility>this equipments cooldown</style> by <style=cIsUtility>{SecondsReducedPerKill.Value}s</style>.";
+        public override string EquipmentFullDescription => $"Your next <style=cIsDamage>{NumAttacks.Value}</style> uses of your <style=cIsUtility>Primary skill</style> have their <style=cIsDamage>attack speed</style> increased by <style=cIsDamage>{BonusAttackSpeed.Value*100}%</style>. <style=cIsDamage>Kills reduce</style> <style=cIsUtility>your equipment cooldown</style> by <style=cIsUtility>{SecondsReducedPerKill.Value}s</style>.";
 
         public override string EquipmentLore => "Item taken from Smite 2.";
 

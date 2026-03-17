@@ -25,7 +25,7 @@ namespace Smite_Items.Equipment
 
         public override string EquipmentPickupDesc => "Teleport forward and damage enemies after a short delay.";
 
-        public override string EquipmentFullDescription => $"<style=cIsUtility>Blink</style> up to <style=cIsUtility>{MaxBlinkDistance.Value}m</style> forward. After {AOEDelay.Value} second, <style=cIsDamage>damage</style> enemies within a <style=cIsDamage>{DamageRadius.Value}m radius</style> for <style=cIsDamage>{Damage.Value*100}% damage</style>. Each enemy damaged this way reduces your next equipment cooldown by <style=cIsDamage>{CooldownRefund.Value*100}%</style> (multiplicatively).";
+        public override string EquipmentFullDescription => $"<style=cIsUtility>Blink</style> up to <style=cIsUtility>{MaxBlinkDistance.Value}m</style> forward. After {AOEDelay.Value} second, <style=cIsDamage>damage</style> enemies within a <style=cIsDamage>{DamageRadius.Value}m radius</style> for <style=cIsDamage>{Damage.Value*100}% base damage</style>. Each enemy damaged this way reduces your next equipment cooldown by <style=cIsDamage>{CooldownRefund.Value*100}%</style> (multiplicatively).";
 
         public override string EquipmentLore => "Equipment taken from Smite 2.";
 

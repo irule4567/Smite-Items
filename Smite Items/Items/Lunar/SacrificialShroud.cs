@@ -22,7 +22,7 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => $"Skills deal bonus damage...<style=cIsHealth> BUT cost health to use.</style>";
 
-        public override string ItemFullDescription => $"All <style=cIsUtility>non-primary skills</style> deal <style=cIsDamage>{SkillBonusDamage.Value*100}%</style> <style=cStack>(+{SkillBonusDamagePerStack.Value*100}% per stack)</style> <style=cIsDamage>bonus damage</style>. Activating a <style=cIsUtility>non-primary skill</style> deals <style=cIsDamage>{PercentHealthCostPerSecond.Value*100}%</style> <style=cStack>(+{PercentHealthCostPerSecondPerStack.Value*100}% per stack)</style> of your max health per second of the skill's base cooldown to you.";
+        public override string ItemFullDescription => $"All <style=cIsUtility>non-Primary skills</style> deal <style=cIsDamage>{SkillBonusDamage.Value*100}%</style> <style=cStack>(+{SkillBonusDamagePerStack.Value*100}% per stack)</style> <style=cIsDamage>bonus damage</style>. Activating a <style=cIsUtility>non-Primary skill</style> deals <style=cIsDamage>{PercentHealthCostPerSecond.Value*100}%</style> <style=cStack>(+{PercentHealthCostPerSecondPerStack.Value*100}% per stack)</style> of your max health per second of the skill's base cooldown to you.";
 
         public override string ItemLore => "Item taken from Smite 1.";
 

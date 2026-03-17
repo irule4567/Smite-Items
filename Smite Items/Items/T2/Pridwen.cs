@@ -23,8 +23,8 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Gain a shield that explodes when destroyed.";
 
-        public override string ItemFullDescription => $"Gain a <style=cIsHealing>shield</style> equal to <style=cIsHealing>{ShieldPercent.Value*100}%</style> of your maximum health. " +
-            $"Whenever your <style=cIsHealing>shield</style> breaks, <style=cIsDamage>explode</style> in a <style=cIsDamage>{ExplosionRadius.Value}m</style> <style=cStack>(+{ExplosionRadiusStack.Value}m per stack)</style> radius for <style=cIsDamage>{ShieldDamageMultiplier.Value}</style> <style=cStack>(+{ShieldDamageMultiplierPerStack.Value} per stack)</style> <style=cIsDamage>times</style> your <style=cIsHealing>maximum shield</style> in <style=cIsDamage>damage</style>.";
+        public override string ItemFullDescription => $"Whenever your <style=cIsHealing>shield</style> breaks, <style=cIsDamage>explode</style> in a <style=cIsDamage>{ExplosionRadius.Value}m</style> <style=cStack>(+{ExplosionRadiusStack.Value}m per stack)</style> radius for <style=cIsDamage>{ShieldDamageMultiplier.Value}</style> <style=cStack>(+{ShieldDamageMultiplierPerStack.Value} per stack)</style> <style=cIsDamage>times</style> your <style=cIsHealing>maximum shield</style> in <style=cIsDamage>damage</style>." + 
+            $"Gain a <style=cIsHealing>shield</style> equal to <style=cIsHealing>{ShieldPercent.Value*100}%</style> of your maximum health. ";
 
         public override string ItemLore => "Item taken from Smite 2.";
 

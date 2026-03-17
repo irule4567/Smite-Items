@@ -21,7 +21,7 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Periodically lower ability cooldowns.";
 
-        public override string ItemFullDescription => $"Every <style=cIsUtility>{ItemCooldown.Value}</style> seconds, lower all ability cooldowns by <style=cIsUtility>{CooldownsRemovedPerActivation.Value}</style> <style=cStack>(+{CooldownsRemovedPerActivation.Value} per stack)</style> seconds.";
+        public override string ItemFullDescription => $"Every <style=cIsUtility>{ItemCooldown.Value}</style> seconds, lower all skill cooldowns by <style=cIsUtility>{CooldownsRemovedPerActivation.Value}</style> <style=cStack>(+{CooldownsRemovedPerActivation.Value} per stack)</style> seconds.";
 
         public override string ItemLore => "Item taken from Smite 2.";
 

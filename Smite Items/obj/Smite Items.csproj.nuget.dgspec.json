@@ -59,7 +59,7 @@
             },
             "BepInEx.Core": {
               "target": "Package",
-              "version": "[5.4.21, )"
+              "version": "[5.*, )"
             },
             "MMHOOK.RoR2": {
               "target": "Package",
@@ -70,35 +70,35 @@
             },
             "R2API.Director": {
               "target": "Package",
-              "version": "[2.3.6, )"
+              "version": "[2.3.9, )"
             },
             "R2API.Elites": {
               "target": "Package",
-              "version": "[1.0.8, )"
+              "version": "[1.*, )"
             },
             "R2API.Items": {
               "target": "Package",
-              "version": "[1.0.7, )"
+              "version": "[1.*, )"
             },
             "R2API.Language": {
               "target": "Package",
-              "version": "[1.0.1, )"
+              "version": "[1.*, )"
             },
             "R2API.Prefab": {
               "target": "Package",
-              "version": "[1.1.1, )"
+              "version": "[1.*, )"
             },
             "R2API.RecalculateStats": {
               "target": "Package",
-              "version": "[1.6.3, )"
+              "version": "[1.*, )"
             },
             "R2API.Sound": {
               "target": "Package",
-              "version": "[1.0.3, )"
+              "version": "[1.*, )"
             },
             "RiskOfRain2.GameLibs": {
               "target": "Package",
-              "version": "[1.4.0-r.0, )"
+              "version": "[1.4.1-r.0, )"
             },
             "UnityEngine.Modules": {
               "target": "Package",
