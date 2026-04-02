@@ -37,20 +37,24 @@ namespace Smite_Items.Items
 
         public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Mystical Mail Icon.png");
 
+        public static GameObject originalPulseEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/moon2/MoonBatteryDesignPulse.prefab").WaitForCompletion();
+        public static GameObject cachedPulseEffect;
         public static GameObject AOEDamageField;
 
         //public GameObject mailPulsePrefab;
         //public static GameObject originalPulseEffect;
-
-        public static GameObject cachedPulseEffect;
+        
 
         public override void Init(ConfigFile config)
         {
             CreateConfig(config);
             CreateLang();
             //CreateAOE();
+            CreateEffect();
             CreateItem();
-            cachedPulseEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/moon2/MoonBatteryDesignPulse.prefab").WaitForCompletion();
+            
+            
+            
             //cachedPulseEffect = GameObject.Instantiate(originalPulseEffect);
             //var effect = cachedPulseEffect.AddComponent<EffectComponent>();
             //ContentAddition.AddEffect(cachedPulseEffect);
@@ -64,6 +68,48 @@ namespace Smite_Items.Items
 
             ContentAddition.AddEffect(mailPulsePrefab);*/
             Hooks();
+        }
+
+        private void CreateEffect()
+        {
+            //cachedPulseEffect = PrefabAPI.InstantiateClone(originalPulseEffect, "MysticalMailEffect", false);
+            //cachedPulseEffect.AddComponent<NetworkIdentity>();
+            //var effectComponent = cachedPulseEffect.GetComponent<EffectComponent>();
+            //effectComponent.soundName = "";
+            cachedPulseEffect = GameObject.Instantiate(originalPulseEffect);
+            cachedPulseEffect.name = "MysticalMailEffect";
+            UnityEngine.Object.DontDestroyOnLoad(cachedPulseEffect);
+            cachedPulseEffect.SetActive(false);
+            cachedPulseEffect.GetComponent<RTPCController>().enabled = false;
+            if(!cachedPulseEffect.GetComponent<EffectComponent>())
+            {
+                cachedPulseEffect.AddComponent<EffectComponent>();
+            }
+            //Debug.Log("Gets in create");
+            ContentAddition.AddEffect(cachedPulseEffect);
+            /*foreach (var akEvent in cachedPulseEffect.GetComponentsInChildren<AkEvent>(true))
+            {
+                Debug.Log("Removes AkEvent");
+                UnityEngine.Object.Destroy(akEvent);
+            }
+
+            // Remove Wwise-aware game object markers
+            foreach (var akGameObj in cachedPulseEffect.GetComponentsInChildren<AkGameObj>(true))
+            {
+                Debug.Log("Removes AkGameObj");
+                UnityEngine.Object.Destroy(akGameObj);
+            }
+
+            // Some effects may also have AkAmbient components
+            foreach (var akAmbient in cachedPulseEffect.GetComponentsInChildren<AkAmbient>(true))
+            {
+                Debug.Log("Removes AkAmbient");
+                UnityEngine.Object.Destroy(akAmbient);
+            }*/
+            
+
+            //ModifyEffect(cachedPulseEffect);
+            //ContentAddition.AddEffect(cachedPulseEffect);
         }
 
         public override void CreateConfig(ConfigFile config)
@@ -109,7 +155,7 @@ namespace Smite_Items.Items
         private void CharacterBody_OnInventoryChanged(On.RoR2.CharacterBody.orig_OnInventoryChanged orig, RoR2.CharacterBody self)
         {
             orig(self);
-
+            
             self.AddItemBehavior<MysticalMailBehavior>(GetCount(self));
         }
     }
@@ -117,6 +163,26 @@ namespace Smite_Items.Items
     {
 
         private float aoeDamageTimer;
+
+       
+
+        //public static GameObject cachedPulseEffect;
+
+        /*private void OnEnable()
+        {
+            Debug.Log("Gets in enable");
+            LoadEffect();
+        }
+        public void LoadEffect()
+        {
+            
+            
+        }*/
+
+        /*private void ModifyEffect(GameObject prefab)
+        {
+            
+        }*/
         private void FixedUpdate()
         {
             if (!body || !body.skillLocator)
