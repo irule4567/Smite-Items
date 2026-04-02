@@ -23,7 +23,7 @@ namespace Smite_Items
     {
         public const string ModGuid = "com.irule4567.SmiteItems";
         public const string ModName = "Smite Items";
-        public const string ModVer = "1.0.0";
+        public const string ModVer = "1.0.1";
 
         public static AssetBundle MainAssets;
 

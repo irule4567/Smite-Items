@@ -1,0 +1,11 @@
+C:\Various stuff\Miscellaneous Gaming content\RoR2 mod creation\Smite-Items\Smite Items\bin\Release\netstandard2.1\Smite Items.deps.json
+C:\Various stuff\Miscellaneous Gaming content\RoR2 mod creation\Smite-Items\Smite Items\bin\Release\netstandard2.1\Smite Items.dll
+C:\Various stuff\Miscellaneous Gaming content\RoR2 mod creation\Smite-Items\Smite Items\bin\Release\netstandard2.1\Smite Items.pdb
+C:\Various stuff\Miscellaneous Gaming content\RoR2 mod creation\Smite-Items\Smite Items\obj\Release\netstandard2.1\Smite Items.csproj.AssemblyReference.cache
+C:\Various stuff\Miscellaneous Gaming content\RoR2 mod creation\Smite-Items\Smite Items\obj\Release\netstandard2.1\Smite Items.GeneratedMSBuildEditorConfig.editorconfig
+C:\Various stuff\Miscellaneous Gaming content\RoR2 mod creation\Smite-Items\Smite Items\obj\Release\netstandard2.1\Smite Items.AssemblyInfoInputs.cache
+C:\Various stuff\Miscellaneous Gaming content\RoR2 mod creation\Smite-Items\Smite Items\obj\Release\netstandard2.1\Smite Items.AssemblyInfo.cs
+C:\Various stuff\Miscellaneous Gaming content\RoR2 mod creation\Smite-Items\Smite Items\obj\Release\netstandard2.1\Smite Items.csproj.CoreCompileInputs.cache
+C:\Various stuff\Miscellaneous Gaming content\RoR2 mod creation\Smite-Items\Smite Items\obj\Release\netstandard2.1\Smite Items.sourcelink.json
+C:\Various stuff\Miscellaneous Gaming content\RoR2 mod creation\Smite-Items\Smite Items\obj\Release\netstandard2.1\Smite Items.dll
+C:\Various stuff\Miscellaneous Gaming content\RoR2 mod creation\Smite-Items\Smite Items\obj\Release\netstandard2.1\Smite Items.pdb
