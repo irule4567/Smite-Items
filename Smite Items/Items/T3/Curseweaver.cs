@@ -60,10 +60,10 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            DebuffDuration = config.Bind<int>("Item " + ItemName, "Duration of debuff in seconds", 4, "How long does the Curseweaver debuff last?");
-            BonusDebuffDurationPerStack = config.Bind<int>("Item " + ItemName, "Added duration of debuff per item stack", 4, "How much longer does the Curseweaver debuff last per additional item stack?");
-            PercentMaxHPDamage = config.Bind<float>("Item " + ItemName, "Percent max hp damage", 0.05f, "What percentage of max health is dealt to the target when a skill is used with the debuff active?");
-            PercentDamageHealed = config.Bind<float>("Item " + ItemName, "Percent damage healed", 0.01f, "What percentage of damage dealt by the Curseweaver debuff is healed to the debuff applier?");
+            DebuffDuration = config.Bind<int>("Item: " + ItemName, "Duration of debuff in seconds", 4, "How long does the Curseweaver debuff last?");
+            BonusDebuffDurationPerStack = config.Bind<int>("Item: " + ItemName, "Added duration of debuff per item stack", 4, "How much longer does the Curseweaver debuff last per additional item stack?");
+            PercentMaxHPDamage = config.Bind<float>("Item: " + ItemName, "Percent max hp damage", 0.05f, "What percentage of max health is dealt to the target when a skill is used with the debuff active?");
+            PercentDamageHealed = config.Bind<float>("Item: " + ItemName, "Percent damage healed", 0.01f, "What percentage of damage dealt by the Curseweaver debuff is healed to the debuff applier?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

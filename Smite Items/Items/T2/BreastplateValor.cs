@@ -58,8 +58,8 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            CooldownsReducedPerActivation = config.Bind<float>("Item " + ItemName, "Ability cooldowns reduced per activation", 1, "How many seconds removed from each ability cooldown per item proc?");
-            PercentHealthLostToTrigger = config.Bind<float>("Item " + ItemName, "Percent health lost to trigger item", 0.25f, "How much of a characters max health needs to be lost to trigger the item?");
+            CooldownsReducedPerActivation = config.Bind<float>("Item: " + ItemName, "Ability cooldowns reduced per activation", 1, "How many seconds removed from each ability cooldown per item proc?");
+            PercentHealthLostToTrigger = config.Bind<float>("Item: " + ItemName, "Percent health lost to trigger item", 0.25f, "How much of a characters max health needs to be lost to trigger the item?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

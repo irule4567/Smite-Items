@@ -73,15 +73,15 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            DamageBuff = config.Bind<float>("Item " + ItemName, "Damage buff per buff stack", 0.025f, "By how much does each stack of the Ichaival damage buff increase damage?");
-            DamageDebuff = config.Bind<float>("Item " + ItemName, "Damage debuff per debuff stack", 0.025f, "By how much does each stack of the Ichaival damage debuff decrease damage?");
-            HardMaxDamageDebuffStacks = config.Bind<int>("Item " + ItemName, "Maximum number of damage debuff stacks from Ichaival that can be afflicted at once", 20, "What is the hard limit on the number of Ichaival damage debuff stacks that can be applied to a single character?");
-            MaxBuffStacks = config.Bind<int>("Item " + ItemName, "Maximum number of buff stacks", 4, "What is the maximum number of buff stacks that one stack of Ichaival can apply to a single character?");
-            MaxDebuffStacks = config.Bind<int>("Item " + ItemName, "Maximum number of debuff stacks", 4, "What is the maximum number of debuff stacks that one stack of Ichaival can apply to a single character?");
-            AdditionalMaxBuffStacksPerStack = config.Bind<int>("Item " + ItemName, "Increased maximum buff stacks per item stack", 4, "How many additional buff stacks can be applied per additional stack of Ichaival?");
-            AdditionalMaxDebuffStacksPerStack = config.Bind<int>("Item " + ItemName, "Increased maximum debuff stacks per item stack", 4, "How many additional debuff stacks can be applied per additional stack of Ichaival?");
-            BuffDuration = config.Bind<int>("Item " + ItemName, "Duration in seconds of Ichaival buff stacks", 6, "How long (in seconds) does the Ichaival damage buff last?");
-            DebuffDuration = config.Bind<int>("Item " + ItemName, "Duration in seconds of Ichaival debuff stacks", 6, "How long (in seconds) does the Ichaival damage debuff last?");
+            DamageBuff = config.Bind<float>("Item: " + ItemName, "Damage buff per buff stack", 0.025f, "By how much does each stack of the Ichaival damage buff increase damage?");
+            DamageDebuff = config.Bind<float>("Item: " + ItemName, "Damage debuff per debuff stack", 0.025f, "By how much does each stack of the Ichaival damage debuff decrease damage?");
+            HardMaxDamageDebuffStacks = config.Bind<int>("Item: " + ItemName, "Maximum number of damage debuff stacks from Ichaival that can be afflicted at once", 20, "What is the hard limit on the number of Ichaival damage debuff stacks that can be applied to a single character?");
+            MaxBuffStacks = config.Bind<int>("Item: " + ItemName, "Maximum number of buff stacks", 4, "What is the maximum number of buff stacks that one stack of Ichaival can apply to a single character?");
+            MaxDebuffStacks = config.Bind<int>("Item: " + ItemName, "Maximum number of debuff stacks", 4, "What is the maximum number of debuff stacks that one stack of Ichaival can apply to a single character?");
+            AdditionalMaxBuffStacksPerStack = config.Bind<int>("Item: " + ItemName, "Increased maximum buff stacks per item stack", 4, "How many additional buff stacks can be applied per additional stack of Ichaival?");
+            AdditionalMaxDebuffStacksPerStack = config.Bind<int>("Item: " + ItemName, "Increased maximum debuff stacks per item stack", 4, "How many additional debuff stacks can be applied per additional stack of Ichaival?");
+            BuffDuration = config.Bind<int>("Item: " + ItemName, "Duration in seconds of Ichaival buff stacks", 6, "How long (in seconds) does the Ichaival damage buff last?");
+            DebuffDuration = config.Bind<int>("Item: " + ItemName, "Duration in seconds of Ichaival debuff stacks", 6, "How long (in seconds) does the Ichaival damage debuff last?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

@@ -67,11 +67,11 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            MoveSpeedPerStack = config.Bind<float>("Item " + ItemName, "Bonus Movement Speed per Buff Stack", 0.01f, "By what percentage is movement speed increased per buff stack?");
-            BaseBuffDuration = config.Bind<float>("Item " + ItemName, "Base Duration of Buff", 0.5f, "How long, in seconds, does each buff stack last when only having one stack of the item?");
-            AddedBuffDurationPerStack = config.Bind<float>("Item " + ItemName, "Added Duration of Buff Per Stack", 0.1f, "How much longer, in seconds, does each buff stack last per additional stack of the item?");
-            MaxBuffStacks = config.Bind<int>("Item " + ItemName, "Maximum Buff Stacks", 50, "What is the maximum number of buff stacks a character can have?");
-            PercentMaxHpForBuff = config.Bind<float>("Item " + ItemName, "Percent Max Health Healed for Buff", 0.01f, "What percentage of maximum health needs to be healed to get one buff stack?");
+            MoveSpeedPerStack = config.Bind<float>("Item: " + ItemName, "Bonus Movement Speed per Buff Stack", 0.01f, "By what percentage is movement speed increased per buff stack?");
+            BaseBuffDuration = config.Bind<float>("Item: " + ItemName, "Base Duration of Buff", 0.5f, "How long, in seconds, does each buff stack last when only having one stack of the item?");
+            AddedBuffDurationPerStack = config.Bind<float>("Item: " + ItemName, "Added Duration of Buff Per Stack", 0.1f, "How much longer, in seconds, does each buff stack last per additional stack of the item?");
+            MaxBuffStacks = config.Bind<int>("Item: " + ItemName, "Maximum Buff Stacks", 50, "What is the maximum number of buff stacks a character can have?");
+            PercentMaxHpForBuff = config.Bind<float>("Item: " + ItemName, "Percent Max Health Healed for Buff", 0.01f, "What percentage of maximum health needs to be healed to get one buff stack?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

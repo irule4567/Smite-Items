@@ -58,8 +58,8 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            ItemCooldown = config.Bind<int>("Item " + ItemName, "Item Cooldown", 10, "How many seconds between each item proc?");
-            CooldownsRemovedPerActivation = config.Bind<float>("Item " + ItemName, "Ability cooldowns removed per activation", 1, "How many seconds removed from each ability cooldown per item proc?");
+            ItemCooldown = config.Bind<int>("Item: " + ItemName, "Item Cooldown", 10, "How many seconds between each item proc?");
+            CooldownsRemovedPerActivation = config.Bind<float>("Item: " + ItemName, "Ability cooldowns removed per activation", 1, "How many seconds removed from each ability cooldown per item proc?");
         }
 
         protected override void CreateLang()

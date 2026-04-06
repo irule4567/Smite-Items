@@ -43,8 +43,8 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            AttackSpeedPerStack = config.Bind<float>("Item " + ItemName, "Attack speed per stack", 0.0005f, "How much permanent additional attack speed is given per stacks from hits?");
-            MaxStacksPerStack = config.Bind<int>("Item " + ItemName, "Max attack speed stacks", 1000, "How many stacks of bonus attack speed can each stack of the item provide?");
+            AttackSpeedPerStack = config.Bind<float>("Item: " + ItemName, "Attack speed per stack", 0.0005f, "How much permanent additional attack speed is given per stacks from hits?");
+            MaxStacksPerStack = config.Bind<int>("Item: " + ItemName, "Max attack speed stacks", 1000, "How many stacks of bonus attack speed can each stack of the item provide?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

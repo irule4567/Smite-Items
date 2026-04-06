@@ -61,11 +61,11 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            baseCritChance = config.Bind<float>("Item " + ItemName, "Base critical hit chance", 5, "How much critical chance is granted on the first item stack?");
-            moveSpeedPerStack = config.Bind<float>("Item " + ItemName, "Percentage movement speed increase per critical strike", 0.12f, "How much movement speed is granted for each critical strike?");
-            stackDuration = config.Bind<float>("Item " + ItemName, "Movement speed duration", 3, "How many seconds does the movement speed buff last?");
-            baseStackCount = config.Bind<int>("Item " + ItemName, "Base maximum movement speed stacks", 3, "What is the maximum number of stacks of the movement speed buff the first stack of the item allows?");
-            stackCountPerAdditionalItem = config.Bind<int>("Item " + ItemName, "Additional movement speed stacks allowed per additional item stack", 2, "By how many stacks does the maximum stack count of the movement speed buff increase per additional item?");
+            baseCritChance = config.Bind<float>("Item: " + ItemName, "Base critical hit chance", 5, "How much critical chance is granted on the first item stack?");
+            moveSpeedPerStack = config.Bind<float>("Item: " + ItemName, "Percentage movement speed increase per critical strike", 0.12f, "How much movement speed is granted for each critical strike?");
+            stackDuration = config.Bind<float>("Item: " + ItemName, "Movement speed duration", 3, "How many seconds does the movement speed buff last?");
+            baseStackCount = config.Bind<int>("Item: " + ItemName, "Base maximum movement speed stacks", 3, "What is the maximum number of stacks of the movement speed buff the first stack of the item allows?");
+            stackCountPerAdditionalItem = config.Bind<int>("Item: " + ItemName, "Additional movement speed stacks allowed per additional item stack", 2, "By how many stacks does the maximum stack count of the movement speed buff increase per additional item?");
         }
         protected override void CreateLang()
         {

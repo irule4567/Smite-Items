@@ -69,13 +69,13 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            ItemCooldown = config.Bind<float>("Item " + ItemName, "Time between each activation of the item", 7, "How many seconds does the item need before it can activate again?");
-            ExplosionRadius = config.Bind<float>("Item " + ItemName, "Radius of the item explosion in meters", 10, "What is the radius of the explosion triggered by the item effect?");
-            BonusExplosionRadiusPerStack = config.Bind<float>("Item " + ItemName, "Additional radius of the item explosion in meters per additional stack", 2, "How much does each additional stack of the item increase the explosion radius by?");
-            PercentHealthExplosionDamage = config.Bind<float>("Item " + ItemName, "Percent maximum health explosion damage", 0.1f, "What percentage of the targets maximum health does the explosion deal?");
-            BonusPercentHealthExplosionDamagePerStack = config.Bind<float>("Item " + ItemName, "Additional percent maximum health explosion damage per additional stack", 0.05f, "How much does each additional stack of the item increase the percentage of maximum health the explosion deals?");
-            BaseGoldOnProc = config.Bind<int>("Item " + ItemName, "Base gold on item proc", 8, "What is the base gold an activation of the item grants?");
-            BonusGoldPerStack = config.Bind<int>("Item " + ItemName, "Additional base gold on item proc per additional item stack", 8, "How much does each additional stack of the item increase the base gold of an item activation?");
+            ItemCooldown = config.Bind<float>("Item: " + ItemName, "Time between each activation of the item", 7, "How many seconds does the item need before it can activate again?");
+            ExplosionRadius = config.Bind<float>("Item: " + ItemName, "Radius of the item explosion in meters", 10, "What is the radius of the explosion triggered by the item effect?");
+            BonusExplosionRadiusPerStack = config.Bind<float>("Item: " + ItemName, "Additional radius of the item explosion in meters per additional stack", 2, "How much does each additional stack of the item increase the explosion radius by?");
+            PercentHealthExplosionDamage = config.Bind<float>("Item: " + ItemName, "Percent maximum health explosion damage", 0.1f, "What percentage of the targets maximum health does the explosion deal?");
+            BonusPercentHealthExplosionDamagePerStack = config.Bind<float>("Item: " + ItemName, "Additional percent maximum health explosion damage per additional stack", 0.05f, "How much does each additional stack of the item increase the percentage of maximum health the explosion deals?");
+            BaseGoldOnProc = config.Bind<int>("Item: " + ItemName, "Base gold on item proc", 8, "What is the base gold an activation of the item grants?");
+            BonusGoldPerStack = config.Bind<int>("Item: " + ItemName, "Additional base gold on item proc per additional item stack", 8, "How much does each additional stack of the item increase the base gold of an item activation?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

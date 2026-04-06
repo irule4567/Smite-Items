@@ -59,10 +59,10 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            ScaleArmorFlat = config.Bind<float>("Item " + ItemName, "Flat armor per scale stack", 2f, "How much flat armor is given per stack of Draconic Scale buff?");
-            ScaleArmorPercent = config.Bind<float>("Item " + ItemName, "Percent armor boost per scale stack", 0.03f, "By what percentage does each stack of Draconic Scale buff increase armor?");
-            BuffDuration = config.Bind<float>("Item " + ItemName, "Duration of buff stacks", 1.5f, "How long does each stack of the Draconic Scale buff last?");
-            MaxStacks = config.Bind<int>("Item " + ItemName, "Maximum scale buff stacks", 7, "What is the maximum amount of buff stacks Draconic Scale can apply?");
+            ScaleArmorFlat = config.Bind<float>("Item: " + ItemName, "Flat armor per scale stack", 2f, "How much flat armor is given per stack of Draconic Scale buff?");
+            ScaleArmorPercent = config.Bind<float>("Item: " + ItemName, "Percent armor boost per scale stack", 0.03f, "By what percentage does each stack of Draconic Scale buff increase armor?");
+            BuffDuration = config.Bind<float>("Item: " + ItemName, "Duration of buff stacks", 1.5f, "How long does each stack of the Draconic Scale buff last?");
+            MaxStacks = config.Bind<int>("Item: " + ItemName, "Maximum scale buff stacks", 7, "What is the maximum amount of buff stacks Draconic Scale can apply?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

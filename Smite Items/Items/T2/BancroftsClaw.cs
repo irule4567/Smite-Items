@@ -68,13 +68,13 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            BaseDamage = config.Bind<float>("Item " + ItemName, "Base Damage", 500f, "What percentage of base damage does the blast deal?");
-            BonusBaseDamagePerStack = config.Bind<float>("Item " + ItemName, "Bonus Base Damage Per Stack", 100f, "How much does additional stack of the item increase the percentage base damage by?");
-            Recharge = config.Bind<int>("Item " + ItemName, "Recharge", 20, "How long, in seconds, does it take for all stacks of hunger to recharge?");
-            MaxHungerStacks = config.Bind<int>("Item " + ItemName, "Max Hunger Stacks", 3, "What is the maximum number of stacks of hunger that can be stored at a time?");
-            BonusMaxHungerStacksPerStack = config.Bind<int>("Item " + ItemName, "Bonus Max Hunger Stacks Per Stack", 1, "How many additional stacks of hunger can be stored per additional item stack?");
-            MaxHPBarrier = config.Bind<float>("Item " + ItemName, "Max HP Barrier", 10f, "What percentage of maximum HP is given as barrier?");
-            Radius = config.Bind<float>("Item " + ItemName, "Radius", 10f, "What is the radius of the claw effect?");
+            BaseDamage = config.Bind<float>("Item: " + ItemName, "Base Damage", 500f, "What percentage of base damage does the blast deal?");
+            BonusBaseDamagePerStack = config.Bind<float>("Item: " + ItemName, "Bonus Base Damage Per Stack", 100f, "How much does additional stack of the item increase the percentage base damage by?");
+            Recharge = config.Bind<int>("Item: " + ItemName, "Recharge", 20, "How long, in seconds, does it take for all stacks of hunger to recharge?");
+            MaxHungerStacks = config.Bind<int>("Item: " + ItemName, "Max Hunger Stacks", 3, "What is the maximum number of stacks of hunger that can be stored at a time?");
+            BonusMaxHungerStacksPerStack = config.Bind<int>("Item: " + ItemName, "Bonus Max Hunger Stacks Per Stack", 1, "How many additional stacks of hunger can be stored per additional item stack?");
+            MaxHPBarrier = config.Bind<float>("Item: " + ItemName, "Max HP Barrier", 10f, "What percentage of maximum HP is given as barrier?");
+            Radius = config.Bind<float>("Item: " + ItemName, "Radius", 10f, "What is the radius of the claw effect?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

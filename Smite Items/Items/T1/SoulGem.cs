@@ -76,13 +76,13 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            BonusDamage = config.Bind<float>("Item " + ItemName, "Bonus Damage", 0.4f, "How much bonus damage (as a percent of base damage) does a proc of Soul Gem deal?");
-            BonusDamagePerStack = config.Bind<float>("Item " + ItemName, "Bonus Damage Per Stack", 0.4f, "How much additional bonus damage (as a percent of base damage) does a proc of Soul Gem deal per additional stack of the item?");
-            StacksNeeded = config.Bind<int>("Item " + ItemName, "Stacks Needed", 3, "How many Soul Gem buff stacks until Soul Gem activates?");
-            HealValue = config.Bind<float>("Item " + ItemName, "Heal Value", 30, "How much health does an activation of Soul Gem heal?");
-            HealValuePerStack = config.Bind<float>("Item " + ItemName, "Heal Value Per Stack", 30, "How much extra health does an activation of Soul Gem heal per additional stack of the item?");
-            HealRadius = config.Bind<float>("Item " + ItemName, "Heal Radius", 5, "In what radius around the character does the Soul Gem activation heal in meters?");
-            HealRadiusPerStack = config.Bind<float>("Item " + ItemName, "Heal Radius Per Stack", 2.5f, "How much does each stack of the item increase the heal radius by in meters?");
+            BonusDamage = config.Bind<float>("Item: " + ItemName, "Bonus Damage", 0.4f, "How much bonus damage (as a percent of base damage) does a proc of Soul Gem deal?");
+            BonusDamagePerStack = config.Bind<float>("Item: " + ItemName, "Bonus Damage Per Stack", 0.4f, "How much additional bonus damage (as a percent of base damage) does a proc of Soul Gem deal per additional stack of the item?");
+            StacksNeeded = config.Bind<int>("Item: " + ItemName, "Stacks Needed", 3, "How many Soul Gem buff stacks until Soul Gem activates?");
+            HealValue = config.Bind<float>("Item: " + ItemName, "Heal Value", 30, "How much health does an activation of Soul Gem heal?");
+            HealValuePerStack = config.Bind<float>("Item: " + ItemName, "Heal Value Per Stack", 30, "How much extra health does an activation of Soul Gem heal per additional stack of the item?");
+            HealRadius = config.Bind<float>("Item: " + ItemName, "Heal Radius", 5, "In what radius around the character does the Soul Gem activation heal in meters?");
+            HealRadiusPerStack = config.Bind<float>("Item: " + ItemName, "Heal Radius Per Stack", 2.5f, "How much does each stack of the item increase the heal radius by in meters?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

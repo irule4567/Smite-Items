@@ -68,12 +68,12 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            AttackSpeedBonus = config.Bind<float>("Item " + ItemName, "Attack Speed Buff", 0.075f, "How much does each buff stack increase attack speed by?");
+            AttackSpeedBonus = config.Bind<float>("Item: " + ItemName, "Attack Speed Buff", 0.075f, "How much does each buff stack increase attack speed by?");
             //AttackSpeedBonusPerStack = config.Bind<float>("Item " + ItemName, "Attack Speed Buff increase per stack", 0.05f, "How much does each additional stack of the item increase the attack speed buff by?");
-            MaxBuffStacks = config.Bind<int>("Item " + ItemName, "Max stacks of buff", 3, "What is the maximum number of stacks of the attack speed buff a character can have at once?");
-            MaxBuffStacksPerStack = config.Bind<int>("Item " + ItemName, "Additional max stacks of buff per stack", 3, "How many additional stacks of the buff are allowed per additional stack of the item?");
-            BuffRadius = config.Bind<float>("Item " + ItemName, "Buff Radius", 20, "What is the radius, in meters, in which the attack speed buff is shared?");
-            BuffDuration = config.Bind<int>("Item " + ItemName, "Buff Duration", 10, "How long, in seconds, does the item buff last?");
+            MaxBuffStacks = config.Bind<int>("Item: " + ItemName, "Max stacks of buff", 3, "What is the maximum number of stacks of the attack speed buff a character can have at once?");
+            MaxBuffStacksPerStack = config.Bind<int>("Item: " + ItemName, "Additional max stacks of buff per stack", 3, "How many additional stacks of the buff are allowed per additional stack of the item?");
+            BuffRadius = config.Bind<float>("Item: " + ItemName, "Buff Radius", 20, "What is the radius, in meters, in which the attack speed buff is shared?");
+            BuffDuration = config.Bind<int>("Item: " + ItemName, "Buff Duration", 10, "How long, in seconds, does the item buff last?");
             //BuffDurationPerStack = config.Bind<int>("Item " + ItemName, "Added Buff Duration per stack", 5, "How long, in seconds, does each additional stack of the item increase the buff duration by?");
         }
 

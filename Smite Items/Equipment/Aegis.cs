@@ -35,7 +35,7 @@ namespace Smite_Items.Equipment
 
         protected override void CreateConfig(ConfigFile config)
         {
-            InvulnDuration = config.Bind<float>("Equipment " + EquipmentName, "Number of seconds of invulnerability from the equipment", 1.5f, "How many seconds does the equipment effect last?");
+            InvulnDuration = config.Bind<float>("Equipment: " + EquipmentName, "Number of seconds of invulnerability from the equipment", 1.5f, "How many seconds does the equipment effect last?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

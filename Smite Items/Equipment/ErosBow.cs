@@ -47,7 +47,7 @@ namespace Smite_Items.Equipment
 
         protected override void CreateConfig(ConfigFile config)
         {
-            PercentMaxHpHeal = config.Bind<float>("Equipment " + EquipmentName, "Percent Max Health Heal", 0.01f, "What percentage of max health is healed to the target when the effect activates?");
+            PercentMaxHpHeal = config.Bind<float>("Equipment: " + EquipmentName, "Percent Max Health Heal", 0.01f, "What percentage of max health is healed to the target when the effect activates?");
         }
 
         protected override void CreateLang()

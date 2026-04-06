@@ -62,11 +62,11 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            BuffArmor = config.Bind<int>("Item " + ItemName, "Armor from buff", 40, "How much armor does the Spirit Robe buff provide?");
-            ExtraArmorPerStack = config.Bind<int>("Item " + ItemName, "Additional armor from buff per stack", 40, "How much armor does the Spirit Robe buff provide per additional stack of the item?");
-            PercentMaxHpPerSecond = config.Bind<float>("Item " + ItemName, "Percent max hp healed per second from buff", 0.01f, "What percentage of maximum health is restored per second while the Spirit Robe buff is active?");
-            BonusPercentMaxHpPerStack = config.Bind<float>("Item " + ItemName, "Percent max hp healed per second from buff per additional stack", 0.01f, "What additional percentage of maximum health is restored per second while the Spirit Robe buff is active per item stack?");
-            BuffDuration = config.Bind<int>("Item " + ItemName, "Spirit Robe buff duration", 6, "How many seconds does the Spirit Robe buff last?");
+            BuffArmor = config.Bind<int>("Item: " + ItemName, "Armor from buff", 40, "How much armor does the Spirit Robe buff provide?");
+            ExtraArmorPerStack = config.Bind<int>("Item: " + ItemName, "Additional armor from buff per stack", 40, "How much armor does the Spirit Robe buff provide per additional stack of the item?");
+            PercentMaxHpPerSecond = config.Bind<float>("Item: " + ItemName, "Percent max hp healed per second from buff", 0.01f, "What percentage of maximum health is restored per second while the Spirit Robe buff is active?");
+            BonusPercentMaxHpPerStack = config.Bind<float>("Item: " + ItemName, "Percent max hp healed per second from buff per additional stack", 0.01f, "What additional percentage of maximum health is restored per second while the Spirit Robe buff is active per item stack?");
+            BuffDuration = config.Bind<int>("Item: " + ItemName, "Spirit Robe buff duration", 6, "How many seconds does the Spirit Robe buff last?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

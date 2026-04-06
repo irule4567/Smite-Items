@@ -59,7 +59,7 @@ namespace Smite_Items.Items
         {
             //string name = ItemName == "Hydra's Lament" ? "Hydras Lament" : ItemName;
             //Debug.Log(name);
-            BonusDamage = config.Bind<float>("Item " + ItemName, "Bonus primary damage", 0.30f, "What percentage of base damage is added to primary skill?");
+            BonusDamage = config.Bind<float>("Item: " + ItemName, "Bonus primary damage", 0.30f, "What percentage of base damage is added to primary skill?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

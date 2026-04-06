@@ -68,8 +68,8 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            PercentHealingConverted = config.Bind<float>("Item " + ItemName, "Percent healing converted", 0.25f, "What percentage of healing is converted to bonus damage on next primary skill hit?");
-            PercentHealingConvertedAtMax = config.Bind<float>("Item " + ItemName, "Percent healing converted while at max health", 0.4f, "What percentage of healing is converted to bonus damage on next primary skill hit while at maximum health?");
+            PercentHealingConverted = config.Bind<float>("Item: " + ItemName, "Percent healing converted", 0.25f, "What percentage of healing is converted to bonus damage on next primary skill hit?");
+            PercentHealingConvertedAtMax = config.Bind<float>("Item: " + ItemName, "Percent healing converted while at max health", 0.4f, "What percentage of healing is converted to bonus damage on next primary skill hit while at maximum health?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

@@ -95,12 +95,12 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            CritChanceBuff = config.Bind<float>("Item " + ItemName, "Bonus Crit Chance from Buff", 6, "How much crit chance does each stack of the bladed boomerang buff give?");
-            BonusCritChanceBuffPerStack = config.Bind<float>("Item " + ItemName, "Bonus Crit Chance from Buff per stack", 6, "How much additional crit chance does each stack of the bladed boomerang buff give per additional stack of the item?");
-            MaxBuffStacks = config.Bind<int>("Item " + ItemName, "Max buff stacks", 3, "What is the maximum number of bladed boomerang buff stacks a player can have?");
-            BuffDuration = config.Bind<float>("Item " + ItemName, "Blade Buff Duration", 8, "How long, in seconds, does the bladed boomerang buff last?");
-            BladeCooldown = config.Bind<float>("Item" + ItemName, "Blade cooldown", 2, "How much time, in seconds, must pass from a blade dropping for a new blade to be allowed to spawn?");
-            BladeDropLifetime = config.Bind<float>("Item" + ItemName, "Blade drop lifetime", 10, "How much time, in seconds, does a bladed boomerang drop last after being spawned?");
+            CritChanceBuff = config.Bind<float>("Item: " + ItemName, "Bonus Crit Chance from Buff", 6, "How much crit chance does each stack of the bladed boomerang buff give?");
+            BonusCritChanceBuffPerStack = config.Bind<float>("Item: " + ItemName, "Bonus Crit Chance from Buff per stack", 6, "How much additional crit chance does each stack of the bladed boomerang buff give per additional stack of the item?");
+            MaxBuffStacks = config.Bind<int>("Item: " + ItemName, "Max buff stacks", 3, "What is the maximum number of bladed boomerang buff stacks a player can have?");
+            BuffDuration = config.Bind<float>("Item: " + ItemName, "Blade Buff Duration", 8, "How long, in seconds, does the bladed boomerang buff last?");
+            BladeCooldown = config.Bind<float>("Item: " + ItemName, "Blade cooldown", 2, "How much time, in seconds, must pass from a blade dropping for a new blade to be allowed to spawn?");
+            BladeDropLifetime = config.Bind<float>("Item: " + ItemName, "Blade drop lifetime", 10, "How much time, in seconds, does a bladed boomerang drop last after being spawned?");
             //BladeBeginBlinking = config.Bind<float>("Item" + ItemName, "Blade begin blinking time", 9, "How much time, in seconds, after being spawned does a bladed boomerang drop start blinking?");
         }
 

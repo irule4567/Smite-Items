@@ -55,11 +55,11 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            ShieldPercent = config.Bind<float>("Item " + ItemName, "Percent Max Health Shield", 0.1f, "What percentage of maximum health should the first stack of the item provide in shield?");
-            ExplosionRadius = config.Bind<float>("Item " + ItemName, "Explosion Radius", 20f, "What is the base radius of the explosion when losing all shield?");
-            ExplosionRadiusStack = config.Bind<float>("Item " + ItemName, "Explosion Radius Per Stack", 4f, "How much does each stack of the item increase the explosion radius by?");
-            ShieldDamageMultiplier = config.Bind<float>("Item " + ItemName, "Shield Damage Multiplier", 10f, "How much is the characters max shield multiplied by to get the explosion damage?");
-            ShieldDamageMultiplierPerStack = config.Bind<float>("Item " + ItemName, "Shield Damage Multiplier Per Stack", 6f, "How much does each additional stack of the item add to the shield damage multiplier?");
+            ShieldPercent = config.Bind<float>("Item: " + ItemName, "Percent Max Health Shield", 0.1f, "What percentage of maximum health should the first stack of the item provide in shield?");
+            ExplosionRadius = config.Bind<float>("Item: " + ItemName, "Explosion Radius", 20f, "What is the base radius of the explosion when losing all shield?");
+            ExplosionRadiusStack = config.Bind<float>("Item: " + ItemName, "Explosion Radius Per Stack", 4f, "How much does each stack of the item increase the explosion radius by?");
+            ShieldDamageMultiplier = config.Bind<float>("Item: " + ItemName, "Shield Damage Multiplier", 10f, "How much is the characters max shield multiplied by to get the explosion damage?");
+            ShieldDamageMultiplierPerStack = config.Bind<float>("Item: " + ItemName, "Shield Damage Multiplier Per Stack", 6f, "How much does each additional stack of the item add to the shield damage multiplier?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

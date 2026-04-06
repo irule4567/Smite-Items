@@ -44,9 +44,9 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            PercentBonusDamage = config.Bind<float>("Item " + ItemName, "Percent bonus damage", 0.1f, "How much bonus damage is given when above the health threshold?");
-            LowHealthArmor = config.Bind<int>("Item " + ItemName, "Low health armor", 10, "How much armor is given when below the health threshold?");
-            ShiftHealthThreshold = config.Bind<float>("Item " + ItemName, "Shift health threshold", 0.5f, "What percentage of maximum health is treated as the threshold to swap conditions?");
+            PercentBonusDamage = config.Bind<float>("Item: " + ItemName, "Percent bonus damage", 0.1f, "How much bonus damage is given when above the health threshold?");
+            LowHealthArmor = config.Bind<int>("Item: " + ItemName, "Low health armor", 10, "How much armor is given when below the health threshold?");
+            ShiftHealthThreshold = config.Bind<float>("Item: " + ItemName, "Shift health threshold", 0.5f, "What percentage of maximum health is treated as the threshold to swap conditions?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

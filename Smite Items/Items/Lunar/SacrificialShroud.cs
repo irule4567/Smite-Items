@@ -49,10 +49,10 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            SkillBonusDamage = config.Bind<float>("Item " + ItemName, "Percent skill bonus damage", 0.5f, "By what percent is skill damage increased by?");
-            SkillBonusDamagePerStack = config.Bind<float>("Item " + ItemName, "Percent skill bonus damage per item stack", 0.5f, "By what percent is skill damage increased by per additional item stack?");
-            PercentHealthCostPerSecond = config.Bind<float>("Item " + ItemName, "Percent maximum health cost per skill cooldown second", 0.01f, "What percentage of maximum health is taken as damage per second of cooldown of a skill?");
-            PercentHealthCostPerSecondPerStack = config.Bind<float>("Item " + ItemName, "Additional percent maximum health cost per skill cooldown second per item stack", 0.01f, "What percentage of maximum health is taken as damage per second of cooldown of a skill per additional stack of the item?");
+            SkillBonusDamage = config.Bind<float>("Item: " + ItemName, "Percent skill bonus damage", 0.5f, "By what percent is skill damage increased by?");
+            SkillBonusDamagePerStack = config.Bind<float>("Item: " + ItemName, "Percent skill bonus damage per item stack", 0.5f, "By what percent is skill damage increased by per additional item stack?");
+            PercentHealthCostPerSecond = config.Bind<float>("Item: " + ItemName, "Percent maximum health cost per skill cooldown second", 0.01f, "What percentage of maximum health is taken as damage per second of cooldown of a skill?");
+            PercentHealthCostPerSecondPerStack = config.Bind<float>("Item: " + ItemName, "Additional percent maximum health cost per skill cooldown second per item stack", 0.01f, "What percentage of maximum health is taken as damage per second of cooldown of a skill per additional stack of the item?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

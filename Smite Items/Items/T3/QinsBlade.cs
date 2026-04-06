@@ -41,8 +41,8 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            PercentHPBonusDamage = config.Bind<float>("Item " + ItemName, "Percent Max Health Bonus Damage", 0.01f, "What percentage of the targets maximum health is taken as bonus damage?");
-            PercentHPBonusDamagePerStack = config.Bind<float>("Item " + ItemName, "Percent Max Health Bonus Damage Added Per Additional Stack", 0.01f, "How much does each additional stack of the item increase the maximum health bonus damage by?");
+            PercentHPBonusDamage = config.Bind<float>("Item: " + ItemName, "Percent Max Health Bonus Damage", 0.01f, "What percentage of the targets maximum health is taken as bonus damage?");
+            PercentHPBonusDamagePerStack = config.Bind<float>("Item: " + ItemName, "Percent Max Health Bonus Damage Added Per Additional Stack", 0.01f, "How much does each additional stack of the item increase the maximum health bonus damage by?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

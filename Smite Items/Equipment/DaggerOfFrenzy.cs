@@ -44,9 +44,9 @@ namespace Smite_Items.Equipment
         protected override void CreateConfig(ConfigFile config)
         {
             //BonusDamage = config.Bind<float>("Equipment " + EquipmentName, "Percentage increase in damage from the buff", 0.5f, "How much bonus damage does the buff provide to primary skill fires?");
-            BonusAttackSpeed = config.Bind<float>("Equipment " + EquipmentName, "Percentage increase in primary skill attack speed", 0.5f, "How much bonus attack speed is the primary skill given from the buff?");
-            NumAttacks = config.Bind<int>("Equipment " + EquipmentName, "Number of buffed attacks", 6, "How many primary skill activations does the buff apply to?");
-            SecondsReducedPerKill = config.Bind<int>("Equipment " + EquipmentName, "Seconds reduced off cooldown per kill", 2, "How much is the equipment cooldown reduced by on kill?");
+            BonusAttackSpeed = config.Bind<float>("Equipment: " + EquipmentName, "Percentage increase in primary skill attack speed", 0.5f, "How much bonus attack speed is the primary skill given from the buff?");
+            NumAttacks = config.Bind<int>("Equipment: " + EquipmentName, "Number of buffed attacks", 6, "How many primary skill activations does the buff apply to?");
+            SecondsReducedPerKill = config.Bind<int>("Equipment: " + EquipmentName, "Seconds reduced off cooldown per kill", 2, "How much is the equipment cooldown reduced by on kill?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()

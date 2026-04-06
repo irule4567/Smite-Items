@@ -72,11 +72,11 @@ namespace Smite_Items.Equipment
 
         protected override void CreateConfig(ConfigFile config)
         {
-            MaxBlinkDistance = config.Bind<float>("Equipment " + EquipmentName, "Maximum distance of blink", 50f, "What is the maximum distance of the blink effect?");
-            DamageRadius = config.Bind<float>("Equipment " + EquipmentName, "Damage radius", 25f, "What is the radius of the post-blink damage effect?");
-            AOEDelay = config.Bind<float>("Equipment " + EquipmentName, "Damage delay", 1f, "How long, in seconds, does it take for the post-blink damage effect to activate after blinking?");
-            CooldownRefund = config.Bind<float>("Equipment " + EquipmentName, "Cooldown refund per enemy", 0.5f, "What percentage of the equipment cooldown is removed per enemy hit by the post-blink damage effect?");
-            Damage = config.Bind<float>("Equipment " + EquipmentName, "Damage", 3f, "What percentage of base damage is dealt by the post-blink damage effect?");
+            MaxBlinkDistance = config.Bind<float>("Equipment: " + EquipmentName, "Maximum distance of blink", 50f, "What is the maximum distance of the blink effect?");
+            DamageRadius = config.Bind<float>("Equipment: " + EquipmentName, "Damage radius", 25f, "What is the radius of the post-blink damage effect?");
+            AOEDelay = config.Bind<float>("Equipment: " + EquipmentName, "Damage delay", 1f, "How long, in seconds, does it take for the post-blink damage effect to activate after blinking?");
+            CooldownRefund = config.Bind<float>("Equipment: " + EquipmentName, "Cooldown refund per enemy", 0.5f, "What percentage of the equipment cooldown is removed per enemy hit by the post-blink damage effect?");
+            Damage = config.Bind<float>("Equipment: " + EquipmentName, "Damage", 3f, "What percentage of base damage is dealt by the post-blink damage effect?");
         }
 
         /*public void CreateBuff()

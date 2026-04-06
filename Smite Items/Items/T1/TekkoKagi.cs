@@ -59,9 +59,9 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            MaxStacks = config.Bind<int>("Item " + ItemName, "Maximum Stacks", 3, "What is the maximum number of stacks of movement speed?");
-            MoveSpeedPerStack = config.Bind<float>("Item " + ItemName, "Percent movement speed increase per stack", 0.08f, "How much movement speed does the character get per stack of the buff?");
-            StackDuration = config.Bind<int>("Item " + ItemName, "Duration of movement speed stacks in seconds", 10, "How long do movement speed stacks last before reseting?");
+            MaxStacks = config.Bind<int>("Item: " + ItemName, "Maximum Stacks", 3, "What is the maximum number of stacks of movement speed?");
+            MoveSpeedPerStack = config.Bind<float>("Item: " + ItemName, "Percent movement speed increase per stack", 0.08f, "How much movement speed does the character get per stack of the buff?");
+            StackDuration = config.Bind<int>("Item: " + ItemName, "Duration of movement speed stacks in seconds", 10, "How long do movement speed stacks last before reseting?");
 
         }
 

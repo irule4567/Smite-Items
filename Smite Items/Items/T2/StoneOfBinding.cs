@@ -59,10 +59,10 @@ namespace Smite_Items.Items
 
         public override void CreateConfig(ConfigFile config)
         {
-            ArmorReduction = config.Bind<float>("Item " + ItemName, "Armor Reduction", 10f, "How much armor is reduced by per debuff stack?");
-            ArmorReductionDuration = config.Bind<float>("Item " + ItemName, "Armor Reduction Duration", 4f, "How long does the armor reduction debuff last?");
-            ArmorReductionDurationPerStack = config.Bind<float>("Item " + ItemName, "Armor Reduction Duration per Stack", 4f, "How much longer does each stack of the item make the debuff?");
-            MaxDebuffStacks = config.Bind<int>("Item " + ItemName, "Max Armor Reduction Stacks", 4, "What is the maximum amount of instances of the armor reduction debuff?");
+            ArmorReduction = config.Bind<float>("Item: " + ItemName, "Armor Reduction", 10f, "How much armor is reduced by per debuff stack?");
+            ArmorReductionDuration = config.Bind<float>("Item: " + ItemName, "Armor Reduction Duration", 4f, "How long does the armor reduction debuff last?");
+            ArmorReductionDurationPerStack = config.Bind<float>("Item: " + ItemName, "Armor Reduction Duration per Stack", 4f, "How much longer does each stack of the item make the debuff?");
+            MaxDebuffStacks = config.Bind<int>("Item: " + ItemName, "Max Armor Reduction Stacks", 4, "What is the maximum amount of instances of the armor reduction debuff?");
         }
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()
