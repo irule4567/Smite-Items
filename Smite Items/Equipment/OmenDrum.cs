@@ -18,13 +18,13 @@ namespace Smite_Items.Equipment
 
         public override string EquipmentPickupDesc => "Mark all enemies hit for 5 seconds. Afterwards, deal a fraction of damage dealt to all marked targets to all marked targets.";
 
-        public override string EquipmentFullDescription => "";
+        public override string EquipmentFullDescription => $"All enemies hit for the next <style=cIsUtility>{Duration.Value} seconds</style> are marked, with the mark duplicating <style=cIsDamage>{PercentEchoedDamage.Value*100}% of all damage taken</style> and sending it to a global damage pool. When the duration expires, ALL marked enemies suffer <style=cIsDamage>100% pooled damage</style>.";
 
         public override string EquipmentLore => "Item taken from Smite 2.";
 
-        public override GameObject EquipmentModel => MainAssets.LoadAsset<GameObject>("DaggerOfFrenzyModel.prefab");
+        public override GameObject EquipmentModel => MainAssets.LoadAsset<GameObject>("OmenDrumModel.prefab");
 
-        public override Sprite EquipmentIcon => MainAssets.LoadAsset<Sprite>("Dagger of Frenzy Icon.png");
+        public override Sprite EquipmentIcon => MainAssets.LoadAsset<Sprite>("Omen Drum Icon.png");
 
         public override float Cooldown => 90;
         private List<CharacterBody> MarkedEnemies = new List<CharacterBody>();
@@ -47,6 +47,23 @@ namespace Smite_Items.Equipment
 
         public override ItemDisplayRuleDict CreateItemDisplayRules()
         {
+            var mpp = EquipmentModel.AddComponent<ModelPanelParameters>();
+            GameObject focusPoint = new GameObject("FocusPoint");
+            focusPoint.transform.SetParent(EquipmentModel.transform);
+            focusPoint.transform.localPosition = Vector3.zero; // Center of model
+            focusPoint.transform.localRotation = Quaternion.identity;
+
+            // Create camera position transform (defines viewing angle)
+            GameObject cameraPosition = new GameObject("CameraPosition");
+            cameraPosition.transform.SetParent(EquipmentModel.transform);
+            cameraPosition.transform.localPosition = new Vector3(1f, 0f, 0f); // Offset from focus point
+            cameraPosition.transform.localRotation = Quaternion.identity;
+            mpp.focusPointTransform = focusPoint.transform; //EquipmentModel.transform.Find("Target");
+            mpp.cameraPositionTransform = cameraPosition.transform; //EquipmentModel.transform.Find("Source");
+            mpp.minDistance = 100f;
+            mpp.maxDistance = 200f;
+            mpp.modelRotation = Quaternion.Euler(new Vector3(0, 90, 0));
+            mpp.modelPositionOffset = new Vector3(0, 50, 0);
             return new ItemDisplayRuleDict();
         }
 
@@ -110,7 +127,7 @@ namespace Smite_Items.Equipment
             omenBuff.isDebuff = false;
             omenBuff.name = "omenBuff";
             omenBuff.isCooldown = false;
-            omenBuff.iconSprite = MainAssets.LoadAsset<Sprite>("Dagger of Frenzy Icon.png");
+            omenBuff.iconSprite = MainAssets.LoadAsset<Sprite>("Omen Drum Icon.png");
             ContentAddition.AddBuffDef(omenBuff);
         }
 

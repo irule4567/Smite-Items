@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3716566741
+CRC: 2804882720
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 39eb4a8a442f84617982f7a7a544ff89
+    Hash: 2f487fd17b627db11db93da7792f743c
   TypeTreeHash:
     serializedVersion: 2
     Hash: eeb008a4954a20964bedfac9be76f63d
@@ -35,11 +35,12 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Textures/Icons/Items/Eros Bow/Eros Bow Icon.png
 - Assets/Materials/Item/Bancrofts Claw/Bancrofts Claw Face.mat
-- Assets/Models/Prefabs/Item/Bancrofts Claw/BancroftsClawModel.prefab
+- Assets/Textures/Icons/Items/Omen Drum/Omen Drum Icon.png
 - Assets/Models/Prefabs/Item/Eros Bow/ErosBowModel.prefab
 - Assets/Models/Prefabs/Item/Gluttonous Grimoire/GluttonousGrimoireModel.prefab
 - Assets/Materials/Item/Musahis/Musashis Face.mat
 - Assets/Materials/Item/Breastplate of Valor/BreastplateFace.mat
+- Assets/Models/Prefabs/Item/Bancrofts Claw/BancroftsClawModel.prefab
 - Assets/Textures/Icons/Items/Bancrofts Claw/Bancrofts Claw Icon.png
 - Assets/Materials/Item/Stone of Binding/Stone of Binding Face.mat
 - Assets/Materials/Item/Blinking Abyss/Blinking Abyss Face.mat
@@ -54,8 +55,9 @@ Assets:
 - Assets/Models/Prefabs/Item/Phalanx/PhalanxModel.prefab
 - Assets/Models/Prefabs/Item/Ichaival/IchaivalModel.prefab
 - Assets/Textures/Icons/Items/Cannoneers Cuirass/Cannoneers Cuirass Icon.png
-- Assets/Materials/Item/Ichaival/Ichaival Face.mat
+- Assets/Materials/Item/Omen Drum/Omen Drum Face.mat
 - Assets/Models/Prefabs/Item/Curseweaver/CurseweaverModel.prefab
+- Assets/Materials/Item/Ichaival/Ichaival Face.mat
 - Assets/Materials/Item/Regrowth Striders/Icon_T3_RegrowthStriders.png
 - Assets/Textures/Icons/Items/Soul Gem/Soul Gem Icon.png
 - Assets/Textures/Icons/Items/Hydras Lament/Hydras Lament Icon.png
@@ -88,6 +90,7 @@ Assets:
 - Assets/Models/Prefabs/Item/Bladed Boomerang/BladedBoomerangModel.prefab
 - Assets/Textures/Icons/Items/Aegis Amulet/Aegis Amulet Icon.png
 - Assets/Models/Prefabs/Item/Mystical Mail/MysticalMailModel.prefab
+- Assets/Models/Prefabs/Item/Omen Drum/OmenDrumModel.prefab
 - Assets/Textures/Icons/Items/Chronos Pendant/Chronos Pendant Icon.png
 - Assets/Materials/Item/Hydras Lament/Hydras Lament Face.mat
 - Assets/Models/Prefabs/Item/Musahis/MusashisModel.prefab
