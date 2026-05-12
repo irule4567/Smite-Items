@@ -20,15 +20,15 @@ namespace Smite_Items.Items
 
         public override string ItemPickupDesc => "Attacks heal from the front and deal bonus damage from behind.";
 
-        public override string ItemFullDescription => "";
+        public override string ItemFullDescription => $"Dealing damage from the front <style=cIsHealing>heals</style> you for <style=cIsHealing>{FrontHeal.Value}</style> <style=cStack>(+{FrontHealPerStack.Value} per stack)</style> <style=cIsHealing>health</style>. Damage dealt from behind deal a bonus <style=cIsDamage>{BackDamageBonus.Value*100}% TOTAL damage</style> <style=cStack>(+{BackDamageBonusPerStack.Value*100}% per stack)</style>.";
 
         public override string ItemLore => "Item taken from Smite 1.";
 
-        public override ItemTier Tier => ItemTier.Tier1;
+        public override ItemTier Tier => ItemTier.Tier2;
 
-        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("DraconicScaleModel.prefab");
+        public override GameObject ItemModel => MainAssets.LoadAsset<GameObject>("EquinoxModel.prefab");
 
-        public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Draconic Scale Icon.png");
+        public override Sprite ItemIcon => MainAssets.LoadAsset<Sprite>("Equinox Icon.png");
 
         public override void Init(ConfigFile config)
         {
@@ -88,7 +88,7 @@ namespace Smite_Items.Items
                             if (RoR2.BackstabManager.IsBackstab(-(attackerBody.corePosition - damageInfo.position), self.body))
                             {
                                 var EquinoxDamage = new DamageInfo { };
-                                EquinoxDamage.damage = attackerBody.baseDamage * (BackDamageBonus.Value + (BackDamageBonusPerStack.Value * (stackCount - 1))); // Add bonus damage from backstab
+                                EquinoxDamage.damage = damageInfo.damage * (BackDamageBonus.Value + (BackDamageBonusPerStack.Value * (stackCount - 1))); // Add bonus damage from backstab
                                 EquinoxDamage.damageColorIndex = DamageColorIndex.Item;
                                 EquinoxDamage.procCoefficient = 0f;
                                 EquinoxDamage.damageType = DamageType.Generic;
