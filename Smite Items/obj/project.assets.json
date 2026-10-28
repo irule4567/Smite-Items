@@ -65,7 +65,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "MMHOOK.RoR2/2025.11.19": {
+      "MMHOOK.RoR2/2026.10.8": {
         "type": "package",
         "compile": {
           "lib/MMHOOK_RoR2.dll": {}
@@ -171,14 +171,14 @@
           }
         }
       },
-      "R2API.ContentManagement/1.0.10": {
+      "R2API.ContentManagement/1.0.11": {
         "type": "package",
         "dependencies": {
-          "BepInEx.Core": "5.4.19",
-          "MMHOOK.RoR2": "2025.6.3",
-          "R2API.Core": "5.1.5",
-          "RiskOfRain2.GameLibs": "1.3.9-r.0",
-          "RoR2BepInExPack": "1.30.0",
+          "BepInEx.Core": "5.4.21",
+          "MMHOOK.RoR2": "2025.11.19",
+          "R2API.Core": "5.3.0",
+          "RiskOfRain2.GameLibs": "1.4.1-r.0",
+          "RoR2BepInExPack": "1.41.0",
           "UnityEngine.Modules": "2021.3.33"
         },
         "compile": {
@@ -234,14 +234,14 @@
           }
         }
       },
-      "R2API.Elites/1.1.1": {
+      "R2API.Elites/1.1.3": {
         "type": "package",
         "dependencies": {
           "BepInEx.Core": "5.4.21",
-          "MMHOOK.RoR2": "2025.11.19",
-          "R2API.ContentManagement": "1.0.10",
+          "MMHOOK.RoR2": "2026.10.8",
+          "R2API.ContentManagement": "1.0.11",
           "R2API.Core": "5.3.0",
-          "RiskOfRain2.GameLibs": "1.4.1-r.0",
+          "RiskOfRain2.GameLibs": "1.5.0-r.1",
           "RoR2BepInExPack": "1.41.0",
           "UnityEngine.Modules": "2021.3.33"
         },
@@ -321,13 +321,13 @@
           }
         }
       },
-      "R2API.RecalculateStats/1.6.6": {
+      "R2API.RecalculateStats/1.7.0": {
         "type": "package",
         "dependencies": {
           "BepInEx.Core": "5.4.21",
-          "MMHOOK.RoR2": "2025.11.19",
+          "MMHOOK.RoR2": "2026.10.8",
           "R2API.Core": "5.3.0",
-          "RiskOfRain2.GameLibs": "1.4.1-r.0",
+          "RiskOfRain2.GameLibs": "1.5.0-r.1",
           "RoR2BepInExPack": "1.41.0",
           "UnityEngine.Modules": "2021.3.33"
         },
@@ -364,7 +364,7 @@
           }
         }
       },
-      "RiskOfRain2.GameLibs/1.4.1-r.0": {
+      "RiskOfRain2.GameLibs/1.5.0-r.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/AK.Wwise.Unity.API.WwiseTypes.dll": {},
@@ -373,6 +373,8 @@
           "lib/netstandard2.0/AK.Wwise.Unity.Timeline.dll": {},
           "lib/netstandard2.0/Ak.Wwise.Api.WAAPI.dll": {},
           "lib/netstandard2.0/Assembly-CSharp.dll": {},
+          "lib/netstandard2.0/AsyncManagement.dll": {},
+          "lib/netstandard2.0/Decalicious.dll": {},
           "lib/netstandard2.0/Grumpy.dll": {},
           "lib/netstandard2.0/HGCSharpUtils.dll": {},
           "lib/netstandard2.0/HGUnityUtils.dll": {},
@@ -384,6 +386,7 @@
           "lib/netstandard2.0/RoR2.dll": {},
           "lib/netstandard2.0/SimpleJSON.dll": {},
           "lib/netstandard2.0/Unity.Addressables.dll": {},
+          "lib/netstandard2.0/Unity.Postprocessing.Runtime.dll": {},
           "lib/netstandard2.0/Unity.ResourceManager.dll": {},
           "lib/netstandard2.0/Unity.TextMeshPro.dll": {},
           "lib/netstandard2.0/UnityEngine.UI.dll": {},
@@ -396,6 +399,8 @@
           "lib/netstandard2.0/AK.Wwise.Unity.Timeline.dll": {},
           "lib/netstandard2.0/Ak.Wwise.Api.WAAPI.dll": {},
           "lib/netstandard2.0/Assembly-CSharp.dll": {},
+          "lib/netstandard2.0/AsyncManagement.dll": {},
+          "lib/netstandard2.0/Decalicious.dll": {},
           "lib/netstandard2.0/Grumpy.dll": {},
           "lib/netstandard2.0/HGCSharpUtils.dll": {},
           "lib/netstandard2.0/HGUnityUtils.dll": {},
@@ -407,6 +412,7 @@
           "lib/netstandard2.0/RoR2.dll": {},
           "lib/netstandard2.0/SimpleJSON.dll": {},
           "lib/netstandard2.0/Unity.Addressables.dll": {},
+          "lib/netstandard2.0/Unity.Postprocessing.Runtime.dll": {},
           "lib/netstandard2.0/Unity.ResourceManager.dll": {},
           "lib/netstandard2.0/Unity.TextMeshPro.dll": {},
           "lib/netstandard2.0/UnityEngine.UI.dll": {},
@@ -1067,15 +1073,15 @@
         "runtime.json"
       ]
     },
-    "MMHOOK.RoR2/2025.11.19": {
-      "sha512": "KWSWIE3e48MkAdyo1tVX22ekCAVr+fzyqoktjno6Wn5kh0OwdrCv0xQ4MVhvaysLaqFEbzN7cYF8OIKFu+sTIg==",
+    "MMHOOK.RoR2/2026.10.8": {
+      "sha512": "tMNp53bjmw8PgSkpFq2pfqQ5J10oG2fJTTBH4nMEFspWbPyzzg41EqJAcYqv3+Gqbuy2XoY4cyNRsXyeKQBcZw==",
       "type": "package",
-      "path": "mmhook.ror2/2025.11.19",
+      "path": "mmhook.ror2/2026.10.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/MMHOOK_RoR2.dll",
-        "mmhook.ror2.2025.11.19.nupkg.sha512",
+        "mmhook.ror2.2026.10.8.nupkg.sha512",
         "mmhook.ror2.nuspec"
       ]
     },
@@ -1157,16 +1163,16 @@
         "r2api.addressables.nuspec"
       ]
     },
-    "R2API.ContentManagement/1.0.10": {
-      "sha512": "9016lfc4/vy4jOBe6emTH6fH9onLQFSmmJF0NKlGekM6OSbJ16A2xbeRw0TJMixEgpEXgVn+ind/AbHdRLKPpQ==",
+    "R2API.ContentManagement/1.0.11": {
+      "sha512": "RIsUJXkSIA0P97Lb9DAbscY9UAeqSjVwRj3CZBoIuCqZf5uWERDsD+U1KyltQqvKmQbQvE7gMocyms/IF+HqvA==",
       "type": "package",
-      "path": "r2api.contentmanagement/1.0.10",
+      "path": "r2api.contentmanagement/1.0.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/R2API.ContentManagement.dll",
         "lib/netstandard2.1/R2API.ContentManagement.xml",
-        "r2api.contentmanagement.1.0.10.nupkg.sha512",
+        "r2api.contentmanagement.1.0.11.nupkg.sha512",
         "r2api.contentmanagement.nuspec"
       ]
     },
@@ -1196,16 +1202,16 @@
         "r2api.director.nuspec"
       ]
     },
-    "R2API.Elites/1.1.1": {
-      "sha512": "E/a9JIiE+4JjdwDrYNUeVLoC+gbZMbIOs/U3biEe+fW3pAH+PG6bTV1nuDsilexhRG/Rtml0WGzNuzXb7LF3CA==",
+    "R2API.Elites/1.1.3": {
+      "sha512": "OldlvuB1E0VN5XGl5ojMhKwGVtBZuMW7lWa765CfD/E06SLOr3hLIGk2QvTMei6Z5Z72c64n0C96h6H0qacwyg==",
       "type": "package",
-      "path": "r2api.elites/1.1.1",
+      "path": "r2api.elites/1.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/R2API.Elites.dll",
         "lib/netstandard2.1/R2API.Elites.xml",
-        "r2api.elites.1.1.1.nupkg.sha512",
+        "r2api.elites.1.1.3.nupkg.sha512",
         "r2api.elites.nuspec"
       ]
     },
@@ -1248,16 +1254,16 @@
         "r2api.prefab.nuspec"
       ]
     },
-    "R2API.RecalculateStats/1.6.6": {
-      "sha512": "NRcqp2Uw07VysV3VAEMTU8CDWZB4impUGmvYNykAfpAF+4qEW+yEXRcn+EHUTAKsn56tRNGxZjqdiE9MAF2SdA==",
+    "R2API.RecalculateStats/1.7.0": {
+      "sha512": "D84XzCxtKKynDKexVg5XyRSU2LxgGE9njRBrHAqYg04kroQLo0fK06hJH4RRpMczbWHko2yF+FhJGltnd0J3Lg==",
       "type": "package",
-      "path": "r2api.recalculatestats/1.6.6",
+      "path": "r2api.recalculatestats/1.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/R2API.RecalculateStats.dll",
         "lib/netstandard2.1/R2API.RecalculateStats.xml",
-        "r2api.recalculatestats.1.6.6.nupkg.sha512",
+        "r2api.recalculatestats.1.7.0.nupkg.sha512",
         "r2api.recalculatestats.nuspec"
       ]
     },
@@ -1274,10 +1280,10 @@
         "r2api.sound.nuspec"
       ]
     },
-    "RiskOfRain2.GameLibs/1.4.1-r.0": {
-      "sha512": "tHEoWsMc3DfbAcI0FH4sqGCgIcxGlbrIqwzM4a3d6wwRC2VIZntL1pJpkGjhZHdyf0It7wKYFkAQygfYltj0jg==",
+    "RiskOfRain2.GameLibs/1.5.0-r.1": {
+      "sha512": "fhheZL7gx5sDqc+PEHundf2FZhkSZNusz0xwgkulTfMnzYHptcqoFnQtNHqUazAU4WvAmAtQeTprfPNEFxR1gg==",
       "type": "package",
-      "path": "riskofrain2.gamelibs/1.4.1-r.0",
+      "path": "riskofrain2.gamelibs/1.5.0-r.1",
       "files": [
         ".nupkg.metadata",
         "lib/netstandard2.0/AK.Wwise.Unity.API.WwiseTypes.dll",
@@ -1286,6 +1292,8 @@
         "lib/netstandard2.0/AK.Wwise.Unity.Timeline.dll",
         "lib/netstandard2.0/Ak.Wwise.Api.WAAPI.dll",
         "lib/netstandard2.0/Assembly-CSharp.dll",
+        "lib/netstandard2.0/AsyncManagement.dll",
+        "lib/netstandard2.0/Decalicious.dll",
         "lib/netstandard2.0/Grumpy.dll",
         "lib/netstandard2.0/HGCSharpUtils.dll",
         "lib/netstandard2.0/HGUnityUtils.dll",
@@ -1297,11 +1305,12 @@
         "lib/netstandard2.0/RoR2.dll",
         "lib/netstandard2.0/SimpleJSON.dll",
         "lib/netstandard2.0/Unity.Addressables.dll",
+        "lib/netstandard2.0/Unity.Postprocessing.Runtime.dll",
         "lib/netstandard2.0/Unity.ResourceManager.dll",
         "lib/netstandard2.0/Unity.TextMeshPro.dll",
         "lib/netstandard2.0/UnityEngine.UI.dll",
         "lib/netstandard2.0/com.unity.multiplayer-hlapi.Runtime.dll",
-        "riskofrain2.gamelibs.1.4.1-r.0.nupkg.sha512",
+        "riskofrain2.gamelibs.1.5.0-r.1.nupkg.sha512",
         "riskofrain2.gamelibs.nuspec"
       ]
     },
@@ -3204,7 +3213,7 @@
     ".NETStandard,Version=v2.1": [
       "BepInEx.Analyzers >= 1.0.*",
       "BepInEx.Core >= 5.*",
-      "MMHOOK.RoR2 >= 2025.11.19",
+      "MMHOOK.RoR2 >= 2026.10.8",
       "R2API.Director >= 2.3.9",
       "R2API.Elites >= 1.*",
       "R2API.Items >= 1.*",
@@ -3212,7 +3221,7 @@
       "R2API.Prefab >= 1.*",
       "R2API.RecalculateStats >= 1.*",
       "R2API.Sound >= 1.*",
-      "RiskOfRain2.GameLibs >= 1.4.1-r.0",
+      "RiskOfRain2.GameLibs >= 1.5.0-r.1",
       "UnityEngine.Modules >= 2021.3.33"
     ]
   },
@@ -3261,7 +3270,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "netstandard2.1": {
@@ -3279,7 +3288,7 @@
           },
           "MMHOOK.RoR2": {
             "target": "Package",
-            "version": "[2025.11.19, )",
+            "version": "[2026.10.8, )",
             "noWarn": [
               "NU1701"
             ]
@@ -3314,7 +3323,7 @@
           },
           "RiskOfRain2.GameLibs": {
             "target": "Package",
-            "version": "[1.4.1-r.0, )"
+            "version": "[1.5.0-r.1, )"
           },
           "UnityEngine.Modules": {
             "target": "Package",
@@ -3337,7 +3346,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.320\\RuntimeIdentifierGraph.json"
       }
     }
   }

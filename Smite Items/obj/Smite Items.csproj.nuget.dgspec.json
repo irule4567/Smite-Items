@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "netstandard2.1": {
@@ -63,7 +63,7 @@
             },
             "MMHOOK.RoR2": {
               "target": "Package",
-              "version": "[2025.11.19, )",
+              "version": "[2026.10.8, )",
               "noWarn": [
                 "NU1701"
               ]
@@ -98,7 +98,7 @@
             },
             "RiskOfRain2.GameLibs": {
               "target": "Package",
-              "version": "[1.4.1-r.0, )"
+              "version": "[1.5.0-r.1, )"
             },
             "UnityEngine.Modules": {
               "target": "Package",
@@ -121,7 +121,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.320\\RuntimeIdentifierGraph.json"
         }
       }
     }

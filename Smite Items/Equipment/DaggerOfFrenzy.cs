@@ -75,11 +75,11 @@ namespace Smite_Items.Equipment
         {
             //On.RoR2.CharacterBody.OnSkillActivated += ApplyDaggerAttackSpeedBuff;
             On.RoR2.GenericSkill.OnExecute += ApplyDaggerAttackSpeedBuff;
-            On.RoR2.GlobalEventManager.OnCharacterDeath += ApplyDaggerCooldownReduction;
+            On.RoR2.GlobalEventManager.HandleCharacterDeath += ApplyDaggerCooldownReduction;
             //On.RoR2.GlobalEventManager.ProcessHitEnemy += ApplyDaggerDamageBuff;
         }
 
-        private void ApplyDaggerCooldownReduction(On.RoR2.GlobalEventManager.orig_OnCharacterDeath orig, GlobalEventManager self, DamageReport damageReport)
+        private void ApplyDaggerCooldownReduction(On.RoR2.GlobalEventManager.orig_HandleCharacterDeath orig, GlobalEventManager self, DamageReport damageReport)
         {
             orig(self, damageReport);
             if(!damageReport.attacker || !damageReport.attackerBody || !damageReport.victim || !damageReport.victimBody)
